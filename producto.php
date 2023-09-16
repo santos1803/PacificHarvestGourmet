@@ -2,16 +2,19 @@
 
 //Configuracion para mostrar en la pagina solo los productos de la base de datos de la tabla producto cuyo valor de su fila activo sea igual a uno, sin importar la categoria
 
-require '../php/config.php';
-require '../php/dtbbase.php';
+require './php/config.php';
+require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1 ");
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'mariscos'  ");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
+$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'pescado'  ");
+$sqls->execute();
+$resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
 // session_destroy();
@@ -32,597 +35,15 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Pacific Harvest Gourmet</title>
-    <link rel="stylesheet" href="../css/productos.css">
-    <link rel="stylesheet" href="../css/registro.css">
-    <link rel="stylesheet" href="../medias_css/productos.css">
-    <link rel="stylesheet" href="../medias_css/registro.css">
-    <link rel="stylesheet" href="../medias_css/navmedia.css">
-    <link rel="stylesheet" href="../medias_css/tarjetasbuttom.css">
-    <link rel="stylesheet" href="../medias_css/index.css">
+    <link rel="stylesheet" href="./css/productos.css">
+
 
 </head>
 
 <body>
     <!--Cabecera de la pagina-->
 
-    <header>
-        <nav id="nave">
 
-
-            <!-- menu responsivo -->
-            <header class="hero">
-
-                <nav class="nav containerr" id="nav">
-
-                    <!-- logo responsivo -->
-                    <a href="../index.php" id="imagen__link"><img src="../recursos/SVGLogo.svg" class="nav__logo" id="logo"></a>
-                    <!-- fin logo responsivo -->
-
-                    <!-- Opciones del menú responsivo -->
-                    <ul class="nav__links">
-
-                        <!-- Productos menú responsivo -->
-                        <div class="primary-navigation3">
-
-                            <ul>
-                                <li class="nav__item"><a href="../productos/producto.php" style="display: inline-block;">Productos</a>
-                                    <!-- <ul class="dropdown4"> -->
-
-                                    <!---Links comoentados a la espera de aprobacion de la pagina-->
-
-                                    <!-- <li class="nav__link"><a href="../productos/mariscos.php">Mariscos</a></li> -->
-                                    <!--  <li class="nav__link"><a href="../productos/pescados.php">Pescados</a></li> -->
-                                    <!-- <li class="nav__link"><a href="../productos/congelado.php">Congelados</a></li>
-                                        <li class="nav__link"><a href="../productos/exportacion.php"> Seleccion de
-                                                Exportacion</a></li>
-                                        <li class="nav__link"><a href="../productos/sopa.php">Sopas</a></li>
-                                        <li class="nav__link"><a href="../productos/saludable.php">Lo mas Saludable</a>
-                                        </li> -->
-                                    <!-- <li class="nav__link"><a href="../productos/pack.php">Pack</a></li> -->
-                                    <!-- <li class="nav__link"><a href="../productos/regalo.php">Regalos</a></li> -->
-                                    <!-- <li class="nav__link"><a href="../php/productoautomotive.php">Para
-                                                Mayoristas</a></li>
-                                        <li class="nav__link"><a href="../productos/paracompartir.php">Para
-                                                Compartir</a></li> -->
-
-
-
-                                    <!-- </ul> -->
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        <!-- Final Productos menú responsivo -->
-
-                        <!-- Somos Geomar menú responsivo -->
-                        <div class="primary-navigation3">
-
-                            <ul>
-                                <li class="nav__item"><a href="../html/beneficios_enlatados.php">Benefecios de los enlatados </a>
-                                    <!-- <ul class="dropdown">
-
-                                        <li class="nav__link"><a href="../html/nuestra_historia.php">Nosotros</a></li>
-                                        <li class="nav__link"><a href="../html/faqs.php">Faqs</a></li>
-                                        <li class="nav__link"><a href="../html/beneficios_enlatados.php">Beneficios de
-                                                los enlatados</a></li>
-
-
-                                    </ul> -->
-
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-                        <!-- Final Somos Geomar menú responsivo -->
-
-                        <!-- Sustentabilidad menú responsivo -->
-                        <div class="soloRes">
-
-                            <ul>
-                                <li class="nav__item" id="item"><a href="../html/sustentabilidad.php">Sustentabilidad</a>
-                                    <ul class="dropdown2">
-
-                                        <li class="nav__link"><a href="../html/nuestra_historia.php">Nosotros</a></li>
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </div>
-                        <!-- Final Sustentabilidad menú responsivo -->
-
-                        <!-- Recetas menú responsivo -->
-                        <div class="soloRes">
-
-                            <ul>
-                                <li class="nav__item"><a href="../html/recetas.php">Recetas</a>
-                                    <ul class="dropdown2">
-
-                                        <li class="nav__link"><a href="../html/nuestra_historia.php">Nosotros</a></li>
-
-
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </div>
-                        <!-- Final Recetas menú responsivo -->
-
-                        <!-- Miembros exclusivos menú responsivo -->
-                        <!-- <div class="primary-navigation3">
-                            <ul>
-                                <li class="nav__item">Miembros Exclusivos &dtrif;
-                                    <ul class="dropdown" id="exclusivo">
-
-                                        <li class="nav__link"><a href="../html/miembros_exclusivos.php">Revisa los
-                                                precios de suscripcion</a></li>
-
-
-
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-                        </div> -->
-                        <!--  Final Miembros exclusivos menú responsivo -->
-
-                        <!-- Contacto menú responsivo -->
-                        <div class="soloRes">
-
-                            <ul>
-                                <li class="nav__item" id="item"><a href="../html/contact.php">Contacto</a>
-                                    <ul class="dropdown2">
-
-                                        <li class="nav__link"><a href="">Nosotros</a></li>
-
-
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </div>
-                        <!-- Final Contacto menú responsivo -->
-
-                         <!-- Fletes menú responsivo -->
-
-                        <div class="soloRes">
-
-                            <ul>
-                                <li class="nav__item" id="item"><a href="../html/fletes.php">Fletes</a>
-                                    <ul class="dropdown2">
-
-                                        <li class="nav__link"><a href="../html/nuestra_historia.php">Nosotros</a></li>
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </div>
-                        <!-- Final Fletes menú responsivo -->
-
-                        <!-- Log in menú responsivo -->
-                        <div class="soloRes">
-
-                            <ul>
-                                <?php if (isset($_SESSION['user_id'])) { ?>
-
-                                    <div class="dropdown mb-1">
-                                        <button class="btn btn-ligth btn-sm dropdown-toggle" type="button" id="btn_session" data-bs-toggle="dropdown" aria-expanded="false">
-
-                                            <h6>
-                                                <?php echo $_SESSION['user_name']; ?>
-                                            </h6>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="btn_session">
-                                            <li><a class="dropdown-item" href="../productos/compras.php">Mis compras</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="../productos/logout.php">Cerrar sesion</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                <?php } else { ?>
-                                    <li class="nav__item" id="item" style="height: 71px;"> <a href="../productos/login.php" class="btn mt-3">Login</a> </li>
-                                <?php } ?>
-
-
-
-                            </ul>
-
-
-
-
-                        </div>
-                        <!-- Final Log in menú responsivo -->
-
-                        <!-- Lenguaje menú responsivo -->
-
-                        <div class="primary-navigation3">
-
-                            <ul>
-                                <li class="nav__item">Lenguaje &dtrif;
-                                    <ul class="dropdown" id="len__link">
-
-                                        <li class="nav__link"><a href="../productos/producto.php">Español</a></li>
-                                        <li class="nav__link"><a href="../productos/products_english.php">Ingles</a></li>
-
-
-
-                                    </ul>
-
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-                        <!-- Final Lenguaje menú responsivo -->
-
-                    </ul>
-                    <!-- Final Opciones del menú responsivo -->
-
-                    <!-- Icono de hamburguesa menú responsivo -->
-
-                    <a href="#nav" class="nav__hamburguer">
-
-                        <img src="../recursos/burger_menu.png" style="width: 30px; height: 30px;" class="nav__icon">
-
-                    </a>
-
-                    <a href="#" class="nav__close">
-
-                        <img src="../recursos/letterx_83737.png" style="width: 30px; height: 30px;" class="nav__icon">
-
-                    </a>
-                    <!-- Final Icono de hamburguesa menú responsivo -->
-
-
-
-                </nav>
-
-
-
-
-            </header>
-            <!-- final menu responsivo -->
-
-            <!-- Inicio menu desktop -->
-            <!-- logo -->
-            <div class="logo">
-
-                <a href="../index.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
-
-            </div>
-
-            <!-- Final logo -->
-
-            <!-- barra de busqueda -->
-            <div class="busqueda">
-                <!-- <section class="search">
-                    <input type="text" class="search__input" placeholder="Buscar">
-                    <button class="search__button">
-                        <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-                            <g>
-                                <path
-                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </section> -->
-
-            </div>
-
-            <!-- Final barra de busqueda -->
-
-            <!-- Seccion de log in, lenguaje y carrito -->
-            <div class="navi">
-
-                <!-- log in -->
-                <section class="" id="iniciarSesion">
-                    <?php if (isset($_SESSION['user_id'])) { ?>
-
-                        <div class="dropdown mb-1">
-                            <button class="btn btn-ligth btn-sm dropdown-toggle" type="button" id="btn_session" data-bs-toggle="dropdown" aria-expanded="false">
-
-                                <?php echo $_SESSION['user_name']; ?>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="btn_session">
-                                <li><a class="dropdown-item" href="../productos/compras.php">Mis compras</a></li>
-                                <li><a class="dropdown-item" href="../productos/logout.php">Cerrar sesion</a></li>
-                            </ul>
-                        </div>
-
-                    <?php } else { ?>
-                        <a href="../productos/login.php" class="btn ms-2" style="margin: 0 15px 5px 0"><img src="../recursos/icons8-account-64.png" alt="" width="35px"></a>
-                    <?php } ?>
-
-                </section>
-                <!-- Final log in -->
-
-                <!-- Lenguaje -->
-
-                <nav role="navigation" class="primary-navigation" id="leng">
-                    <ul>
-
-                        <li id="menul"><a href="#" style="margin-top: 8xp;">Lenguaje &dtrif;</a>
-                            <ul class="dropdown">
-                                <li><a href="../productos/producto.php">Español</a></li>
-                                <li><a href="../productos/products_english.php">English</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </nav>
-                <!-- Final Lenguaje -->
-
-
-                <!-- Carrito -->
-                <section id="carrito">
-
-
-                    <a href="../productos/agregarcarrito.php" id="log2"><img src="https://img.icons8.com/ios/50/000000/shopping-bag--v1.png" alt="shopping-bag--v1" /></a>
-                    <?php if ($num_cart > 0) { ?>
-                        <span id="num_cart" class="badge bg-secondary carritosss">
-                            <?php echo $num_cart; ?>
-                        </span>
-                    <?php } else { ?>
-                        <span id="num_cart" class="badge bg-secondary carritosss"></span>
-                    <?php } ?>
-                </section>
-                <!-- Final Carrito -->
-
-
-            </div>
-            <!-- Final Seccion de log in, lenguaje y carrito -->
-
-        </nav>
-
-        <!-- navegador links desktop -->
-
-        <div class="navegador">
-
-            <section class="contenedorNavegador">
-                <!-- Productos -->
-
-                <div class="primary-navigation3">
-                    <ul>
-
-                        <!---Links comoentados a la espera de aprobacion de la pagina-->
-
-                        <li id="menulen2"><a href="../productos/producto.php" id="a">Productos</a>
-                            <!-- <ul class="dropdown"> -->
-                            <!-- <li>
-                                    <a href="../productos/mariscos.php">
-                                        Mariscos
-                                    </a>
-                                </li> -->
-                            <!-- <li>
-                                    <a href="../productos/pescados.php">
-                                        Pescados
-                                    </a>
-                                </li> -->
-                            <!-- <li>
-                                    <a href="../productos/congelado.php">
-                                        Congelados
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../productos/exportacion.php">
-                                        Seleccion de Exportacion
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../productos/sopa.php">
-                                        Sopas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../productos/saludable.php">
-                                        Lo mas Saludable
-                                    </a>
-                                </li> -->
-                            <!-- <li>
-                                    <a href="../productos/pack.php">
-                                        Pack
-                                    </a>
-                                </li> -->
-                            <!-- <li>
-                                    <a href="../productos/regalo.php">
-                                        Regalos
-                                    </a>
-                                </li> -->
-                            <!-- <li>
-                                    <a href="../php/productoautomotive.php">
-                                        Para Mayoristas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../productos/paracompartir.php">
-                                        Para Compartir
-                                    </a>
-                                </li> -->
-                            <!-- </ul> -->
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- Final Productos -->
-
-                <!-- Somos geomar -->
-                <div class="primary-navigation3">
-                    <ul>
-
-                        <li id="menulen2"><a href="../html/beneficios_enlatados.php" id="a"> Beneficios de los enlatados</a>
-                            <!-- <ul class="dropdown">
-
-                                <li>
-                                    <a href="../html/nuestra_historia.php">
-                                        Nosotros
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../html/faqs.php">
-                                        Faqs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../html/beneficios_enlatados.php">
-                                        Beneficios de los enlatados
-                                    </a>
-                                </li>
-
-                            </ul> -->
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- Final Somos geomar -->
-
-                <!-- Sustentabilidad -->
-                <div class="solo">
-                    <ul>
-
-                        <li id="menulen2"><a href="../html/sustentabilidad.php" id="a">Sustentabilidad</a>
-                            <ul class="dropdown2">
-
-                                <li>
-                                    <a href="../html/miembros_exclusivos.php">
-                                        Revisa los precios de suscripcion
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-                <!-- Final Sustentabilidad -->
-
-                <!-- Recetas -->
-                <div class="solo">
-
-                    <ul>
-
-                        <li id="menulen2"><a href="../html/recetas.php" id="a">Recetas</a>
-                            <ul class="dropdown2">
-
-                                <li>
-                                    <a href="../html/miembros_exclusivos.php">
-                                        Revisa los precios de suscripcion
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-                <!-- Final Recetas -->
-
-                <!-- Miembros Exclusivos -->
-                <!-- <div class="primary-navigation3">
-                    <ul>
-
-                        <li id="menulen2"><a href="#" id="a">Miembros Exclusivos</a>
-                            <ul class="dropdown">
-
-                                <li>
-                                    <a href="../html/miembros_exclusivos.php">
-                                        Revisa los precios de suscripcion
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div> -->
-                <!--Final Miembros Exclusivos -->
-
-                <!-- Fletes-->
-                <div class="solo">
-
-                    <ul>
-
-                        <li id="menulen2"><a href="../html/fletes.php" id="a">Fletes</a>
-                            <ul class="dropdown2">
-
-                                <li>
-                                    <a href="../html/miembros_exclusivos.php">
-                                        Revisa los precios de suscripcion
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-                <!-- Final Fletes-->
-
-                <!-- Contactos -->
-                <div class="solo">
-
-                    <ul>
-
-                        <li id="menulen2"><a href="../html/contact.php" id="a">Contactos</a>
-                            <ul class="dropdown2">
-
-                                <li>
-                                    <a href="../html/miembros_exclusivos.php">
-                                        Revisa los precios de suscripcion
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-                <!-- Final Contactos -->
-
-
-        </div>
-
-        <!-- fin navegador links desktop -->
-
-
-
-    </header>
     <!--FIN Cabecera de la pagina-->
 
 
@@ -683,9 +104,86 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "../images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.jpg";
                         if (!file_exists($img))
-                            $img = "../images/no-img.png"
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <!-- <div class="quantity">
+                        <input class="minus" type="button" value="-">
+                        <input type="number" id="quantity_64db94d8976a0" class="input-text qty text" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="Centolla quantity">
+                        <input class="plus" type="button" value="+">
+                    </div> -->
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detalleproducto.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Pescados</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+        <!-- <article class="containerProductos_Select">
+            <select class="containerProductos_Select_input" name="select">
+                <option value="value1">Orden predeterminado</option>
+                <option value="value2">Ordenar por popularidad</option>
+                <option value="value2">Ordenar por las ultimas</option>
+                <option value="value3">Ordenar por precio: Menor a Mayor</option>
+                <option value="value4">Ordenar por precio: Mayor a Menor</option>
+            </select>
+            <i></i>
+        </article> -->
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultados as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
                         ?>
                         <a href=""><img src="<?php echo $img; ?>"></a>
                     </section>

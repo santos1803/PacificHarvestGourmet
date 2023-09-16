@@ -1,0 +1,478 @@
+@import url(../css_header_footer/css/header.css);
+@import url(../css_header_footer/css/footer.css);
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+:root {
+    /*COLORES PRINCIPALES*/
+    --vinotinto: #9e1515;
+    --blanco: #ffff;
+    --negro: #0000;
+    /*COLORES*/
+    --colorlogo: #a42739;
+    --colortitulos: #323232;
+    --colorletras: #6c757d;
+    --colortitulovinotinto: #1c3a6b;
+}
+
+
+/*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--blanco);
+}
+
+
+/*-----------------------------------*\
+   * #ELEMENTOS COMUNES
+  \*-----------------------------------*/
+
+.container {
+    width: 100%;
+    margin: 20px;
+    margin: 30px 60px;
+}
+
+.boton_comun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 13%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+head .boton_comun--a {
+    width: 100%;
+}
+
+.boton_comun {
+    width: auto;
+}
+
+.boton_comun a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--vinotinto);
+    text-transform: uppercase;
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.boton_comun a:hover {
+    background-color: var(--vinotinto);
+    color: var(--blanco);
+}
+
+.boton_comun:hover {
+    border: 1px solid var(--vinotinto)
+}
+
+hr {
+    margin: 50px 0 50px 0;
+}
+
+
+/*  BANNER PRINCIPAL */
+
+.containerMariscos {
+    width: 100%;
+    height: 35vh;
+    background-image: url(../productos/imagenesproductos/ClubdeAmigos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.containerMariscos--a {
+    background-image: url(../productos/imagenesproductos/bannerPescadosInterior-copia\ \(1\).jpg);
+}
+
+.containerMariscos--s {
+    display: flex;
+    justify-content: center;
+}
+
+.containerMariscos_Enlace_Txt {
+    width: 27%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 2%;
+}
+
+.containerMariscos_Enlace_Txt a {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.containerMariscos_Enlace_Txt a:hover {
+    opacity: 0.7;
+}
+
+.containerMariscos_Enlace_Txt .enlaceVinotinto {
+    color: #9e1515;
+}
+
+#enlaceNegro {
+    color: black;
+}
+
+.containerMariscos_Enlace_Txt {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 2%;
+}
+
+.containerMariscos_Txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.containerMariscos_Txt h1 {
+    color: white;
+    text-shadow: 1px 1px #333;
+    font-size: 5.2vw;
+    letter-spacing: .8px;
+    font-weight: 500;
+}
+
+
+/*  AREA DE PRODUCTOS */
+
+.containerProductos {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 4% 8.8% 0 8.8%;
+    flex-direction: column;
+}
+
+.containerProductos_Txt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.containerProductos_Txt h2 {
+    color: #1c3a6b;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.containerProductos_Txt p {
+    color: #7c7c7c;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.containerProductos_Txt .parrafoProducto {
+    color: #525252;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.containerProductos_Select {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-left: 10%;
+}
+
+.containerProductos_Select_input {
+    appearance: none;
+}
+
+.containerProductos_Select_input {
+    width: 25%;
+    height: 2.5em;
+    appearance: none;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    border: none;
+    padding-left: 1%;
+    font-size: 2vh;
+    letter-spacing: .5px;
+}
+
+.containerProductos_Select i {
+    position: relative;
+    right: 40px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-left: 5px solid #1c3a6b;
+    border-bottom: 5px solid #1c3a6b;
+    transform: rotate(-45deg);
+}
+
+.containerProductos_Cards {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: auto;
+    /*display: flex;
+        flex-wrap: wrap;
+        justify-content: center;*/
+    margin-top: 7%;
+    gap: 5%;
+    row-gap: 45px;
+}
+
+.trajeta {
+    height: min-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 22%;
+    padding: 3%;
+    background: #ffffff;
+    box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
+    border-radius: 10px;
+}
+
+.containerProductos_Cards_Txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.containerProductos_Cards_Txt h2 {
+    font-size: 20px;
+    margin-top: 25PX;
+}
+
+.containerProductos_Cards_Txt p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.containerProductos_Cards_Txt--b h2,
+.containerProductos_Cards_Txt--b p {
+    font-size: 18px;
+}
+
+
+/* .seccion_descuento {
+        display: flex;
+        gap: 5%;
+    }
+    
+    .descuento {
+        text-decoration: line-through;
+        color: #7c7c7caf;
+    }*/
+
+.containerProductos_Cards_Img--a {
+    width: 100%;
+}
+
+.containerProductos_Cards_Img--a a img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.oferta {
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+    top: -235px;
+    width: 40%;
+    rotate: 270deg;
+}
+
+.containerProductos_Cards_Img--b {
+    width: 100%;
+    height: 15em;
+}
+
+
+/*.packSeleccion {
+        object-fit: contain;
+        width: 100%;
+    }
+    
+    .quantity {
+        display: flex;
+        gap: 4%;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    
+    .input-text-webkit-inner-spin-button {
+        appearance: none;
+    }
+    
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    
+    .input-text {
+        overflow: hidden;
+        width: 12%;
+        padding: 0 2.1%;
+        border: 1px solid black;
+        font-size: 1.3vw;
+        font-weight: 600;
+    }
+    
+    select option:hover {
+        background-color: #1c3a6b;
+        line-height: 2em;
+    }
+    
+    .minus,
+    .plus {
+        font-size: 1.8vw;
+    }*/
+
+.boton_videos--b {
+    display: flex;
+    gap: 3%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hidden-btn--a {
+    width: 50%;
+    background-color: white;
+    border: .5px solid rgb(195, 195, 195);
+    border-radius: 26px;
+    box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb;
+    transition: 0.5s ease;
+    padding: 3% 0;
+}
+
+.hidden-btn--a a {
+    border: none;
+    color: rgb(35, 35, 35);
+    font-size: 0.9vw;
+    transition: 0.5s ease;
+}
+
+.hidden-btn--a:hover {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.hidden-btn--a:hover a {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.boton_comun--b {
+    width: 50%;
+    background-color: #274a81;
+    border: none;
+    border-radius: 26px;
+    box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb;
+    transition: 0.5s ease;
+    color: white;
+    font-size: 0.9vw;
+}
+
+.boton_comun--b a {
+    border: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.boton_comun--b:hover {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.boton_comun--b:hover a {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
