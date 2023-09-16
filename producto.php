@@ -16,6 +16,22 @@ $sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE
 $sqls->execute();
 $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
+$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'condimentos'  ");
+$sqlss->execute();
+$resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlsss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'dulces'  ");
+$sqlsss->execute();
+$resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'dulcess'  ");
+$sqlssss->execute();
+$resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlsssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'regalos'  ");
+$sqlsssss->execute();
+$resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
+
 
 // session_destroy();
 // print_r($_SESSION);
@@ -62,9 +78,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
     <div class="containerMariscos containerMariscos--s">
 
 
-        <article class="containerMariscos_Txt">
-            <h1>LISTO PARA SERVIR</h1>
-        </article>
+        
     </div>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
@@ -75,7 +89,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Productos</h2>
+            <h2>Ofertas</h2>
             <p>Se muestran todos los productos</p>
         </article>
 
@@ -144,7 +158,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-
+        <button class="botonPagina">VER MAS</button>
 
         <!--FIN Seccion Productos-->
 
@@ -152,7 +166,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Pescados</h2>
+            <h2>Alimentos</h2>
             <p>Se muestran todos los productos</p>
         </article>
 
@@ -221,7 +235,307 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
+        <button class="botonPagina">VER MAS</button>
 
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Mariscos</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+        <!-- <article class="containerProductos_Select">
+            <select class="containerProductos_Select_input" name="select">
+                <option value="value1">Orden predeterminado</option>
+                <option value="value2">Ordenar por popularidad</option>
+                <option value="value2">Ordenar por las ultimas</option>
+                <option value="value3">Ordenar por precio: Menor a Mayor</option>
+                <option value="value4">Ordenar por precio: Mayor a Menor</option>
+            </select>
+            <i></i>
+        </article> -->
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadoss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <!-- <div class="quantity">
+                        <input class="minus" type="button" value="-">
+                        <input type="number" id="quantity_64db94d8976a0" class="input-text qty text" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="Centolla quantity">
+                        <input class="plus" type="button" value="+">
+                    </div> -->
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detalleproducto.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <button class="botonPagina">VER MAS</button>
+
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Condimentos</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+        <!-- <article class="containerProductos_Select">
+            <select class="containerProductos_Select_input" name="select">
+                <option value="value1">Orden predeterminado</option>
+                <option value="value2">Ordenar por popularidad</option>
+                <option value="value2">Ordenar por las ultimas</option>
+                <option value="value3">Ordenar por precio: Menor a Mayor</option>
+                <option value="value4">Ordenar por precio: Mayor a Menor</option>
+            </select>
+            <i></i>
+        </article> -->
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadosss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <!-- <div class="quantity">
+                        <input class="minus" type="button" value="-">
+                        <input type="number" id="quantity_64db94d8976a0" class="input-text qty text" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="Centolla quantity">
+                        <input class="plus" type="button" value="+">
+                    </div> -->
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detalleproducto.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <button class="botonPagina">VER MAS</button>
+
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Dulces</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+        <!-- <article class="containerProductos_Select">
+            <select class="containerProductos_Select_input" name="select">
+                <option value="value1">Orden predeterminado</option>
+                <option value="value2">Ordenar por popularidad</option>
+                <option value="value2">Ordenar por las ultimas</option>
+                <option value="value3">Ordenar por precio: Menor a Mayor</option>
+                <option value="value4">Ordenar por precio: Mayor a Menor</option>
+            </select>
+            <i></i>
+        </article> -->
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadossss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <!-- <div class="quantity">
+                        <input class="minus" type="button" value="-">
+                        <input type="number" id="quantity_64db94d8976a0" class="input-text qty text" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="Centolla quantity">
+                        <input class="plus" type="button" value="+">
+                    </div> -->
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detalleproducto.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <button class="botonPagina">VER MAS</button>       
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Regalos</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadosssss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <!-- <div class="quantity">
+                        <input class="minus" type="button" value="-">
+                        <input type="number" id="quantity_64db94d8976a0" class="input-text qty text" step="1" min="0" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="Centolla quantity">
+                        <input class="plus" type="button" value="+">
+                    </div> -->
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detalleproducto.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <button class="botonPagina">VER MAS</button>       
 
         <!--FIN Seccion Productos-->
 

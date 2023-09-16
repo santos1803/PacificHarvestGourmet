@@ -148,12 +148,13 @@ hr {
 
 .containerMariscos {
     width: 100%;
-    height: 35vh;
-    background-image: url(../productos/imagenesproductos/ClubdeAmigos.jpg);
-    background-position: center;
+    height: 32em;
+    background-image: url(../recursos/bannerprincipal.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     display: flex;
+   
 }
 
 .containerMariscos--a {
@@ -221,7 +222,7 @@ hr {
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    padding: 4% 8.8% 0 8.8%;
+    padding: 4% 6.8% 0 6.8%;
     flex-direction: column;
 }
 
@@ -295,9 +296,15 @@ hr {
     /*display: flex;
         flex-wrap: wrap;
         justify-content: center;*/
-    margin-top: 7%;
+    margin-top: 2%;
     gap: 5%;
     row-gap: 45px;
+    background: rgba(254, 251, 246, 0.25);
+box-shadow: 0 1px 22px 0 rgba(154, 160, 255, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 15px;
+    padding: 3%;
 }
 
 .trajeta {
@@ -306,11 +313,11 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 22%;
+    flex-basis: 20%;
     padding: 3%;
     background: #ffffff;
-    box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
-    border-radius: 10px;
+    box-shadow: 2px 2px 16px #c7c7c7, -2px -2px 16px #ffffff;
+    border-radius: 25px;
 }
 
 .containerProductos_Cards_Txt {
@@ -428,7 +435,7 @@ hr {
     background-color: white;
     border: .5px solid rgb(195, 195, 195);
     border-radius: 26px;
-    box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb;
+    /* box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb; */
     transition: 0.5s ease;
     padding: 3% 0;
 }
@@ -455,7 +462,7 @@ hr {
     background-color: #274a81;
     border: none;
     border-radius: 26px;
-    box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb;
+    /* box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb; */
     transition: 0.5s ease;
     color: white;
     font-size: 0.9vw;
@@ -475,4 +482,24 @@ hr {
 .boton_comun--b:hover a {
     transform: scale(0.97);
     transition: 0.5s;
+}
+
+
+.botonPagina {
+    width: 10%;
+    font-size: 1vw;
+    background-color: #1c3a6b;
+    color: white;
+    border: 1px solid #1c3a6b;
+    padding: 1% 2%;
+    border-radius: 10% / 40%;
+    margin-top: 30px;
+}
+
+.botonPagina:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    padding: 1% 2%;
+    border-radius: 10% / 40%;
 }
