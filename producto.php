@@ -2,8 +2,8 @@
 
 //Configuracion para mostrar en la pagina solo los productos de la base de datos de la tabla producto cuyo valor de su fila activo sea igual a uno, sin importar la categoria
 
-require '../php/config.php';
-require '../php/dtbbase.php';
+require './php/config.php';
+require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 

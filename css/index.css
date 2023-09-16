@@ -59,7 +59,7 @@
         height: 65vh;
         display: flex;
         align-items: center;
-        background-image: url(./recursos/bannerprincipal.png);
+        background-image: url(../recursos/bannerprincipal.png);
         background-repeat: no-repeat;
         background-size: cover;
         padding-left: 1%;
@@ -261,7 +261,7 @@
     }
     
     .containerCinco {
-        background-image: url(./recursos/Logistics-Index-1.jpg);
+        background-image: url(../recursos/Logistics-Index-1.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
