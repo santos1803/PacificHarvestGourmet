@@ -1,0 +1,56 @@
+:root {
+    /*COLORES PRINCIPALES*/
+    --color_logo: #1c3a6b;
+    --blanco: #ffff;
+    --negro: #0000;
+    /*variantes COLORES logo*/
+    --var1: #20509e;
+    --var2: #3773d3;
+    --var3: #14294b;
+    --var4: #0f336d;
+    /* colores carrusel */
+    --scrollcolor: #fff;
+    --scrollbackground: #141e27;
+
+}
+
+.nav {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 4%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.911);
+    box-shadow: 0 1px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 2px;
+    border: .7px solid rgba( 255, 255, 255, 0.18);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.sectionTitle {
+    flex-basis: 20%;
+}
+
+.sectionTitle img {
+    width: 100%;
+}
+
+.sectionEnlace {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sectionEnlace a {
+    color: #1c3a6b;
+    letter-spacing: 1px;
+}
+
+.sectionEnlace a:hover {
+    border-bottom: .5px solid black;
+}
