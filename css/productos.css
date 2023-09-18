@@ -153,18 +153,11 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
+
    
 }
 
-.containerMariscos--a {
-    background-image: url(../productos/imagenesproductos/bannerPescadosInterior-copia\ \(1\).jpg);
-}
 
-.containerMariscos--s {
-    display: flex;
-    justify-content: center;
-}
 
 .containerMariscos_Enlace_Txt {
     width: 27%;
@@ -496,10 +489,19 @@ border-radius: 15px;
     margin-top: 30px;
 }
 
+.enlaceBoton {
+    color: white;
+}
+
 .botonPagina:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: 1px solid black;
     padding: 1% 2%;
     border-radius: 10% / 40%;
+}
+
+.botonPagina:hover .enlaceBoton{
+    color: rgb(0, 0, 0);
+    
 }
