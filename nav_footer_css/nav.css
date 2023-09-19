@@ -25,7 +25,7 @@ Estilos nav responsive
 */
 
 .nav_responsive{
-    background-color: #e9e8e8;
+    background-color: #ffff;
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -63,7 +63,7 @@ li {
     height: 70px;
     display: grid;
     grid-template-columns: max-content max-content;
-    grid-template-areas: "title img";
+    grid-template-areas: "title img cart";
     justify-content: space-between;
     align-items: center;
 
@@ -82,6 +82,10 @@ li {
     z-index: 10;
     transform: var(--img1);
     transition: .5s;
+}
+
+.nav__cart {
+    grid-area: cart;
 }
 
 .nav__menu--second{
