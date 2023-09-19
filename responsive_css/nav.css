@@ -1,0 +1,9 @@
+@media (max-width: 850px) {
+    .nav_responsive {
+        display: block;
+    }
+
+    .nav_desktop {
+        display: none;
+    }
+}

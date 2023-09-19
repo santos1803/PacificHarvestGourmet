@@ -12,10 +12,15 @@
     --var2: #3773d3;
     --var3: #14294b;
     --var4: #0f336d;
-    /* colores carrusel */
-    --scrollcolor: #fff;
-    --scrollbackground: #141e27;
 
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
     
@@ -23,10 +28,8 @@
         text-decoration: none !important;
     }
     
-
-    
     .vacio {
-        height: 130px;
+        height: 70px;
     }
     
     .containerPrincipal {
