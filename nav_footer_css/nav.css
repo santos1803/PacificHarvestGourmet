@@ -47,13 +47,14 @@ li {
 
 
 
+
+
 .nav_responsive:has( .dropdown:target ){
     --img1: scale(0);
     --img2: scale(1);
-
     --clip:inset(0 0 0 0);
-   
     transition: .5s;
+
 
 }
 
@@ -115,7 +116,7 @@ li {
     gap: 7px;
     overflow-y: auto;
     clip-path: var(--clip, inset(0 0 100% 100% ));
-    
+    -webkit-clip-path: var(--clip, inset(0 0 100% 100% ));
     transition: clip-path .5s;
     z-index: 9;
 }
@@ -297,3 +298,5 @@ Estilos nav desktop
     width: 170px;
     
  }
+
+
