@@ -206,7 +206,7 @@ function login_english($usuario, $password, $proceso, $con) {
                 if($proceso == 'pago') {
                     header("Location: agregarcarrito_english.php");
                 } else {
-                  header("Location: products_english.php");
+                  header("Location: producto_english.php");
                 }
                 exit;
            }

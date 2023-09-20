@@ -19,11 +19,11 @@ if (!empty($_POST)) {
 
 
     if (esNulo([$email])) {
-        $errors[] = "Debe llenar todos los campos";
+        $errors[] = "You must fill in all fields";
     }
 
     if (!esEmail($email)) {
-        $errors[] = "La direccion de correo no es valida";
+        $errors[] = "The email address is not valid";
     }
 
     if (count($errors) == 0) {
@@ -42,21 +42,21 @@ if (!empty($_POST)) {
             if ($token !== null) {
                 require './clases/mailer.php';
                 $mailer = new Mailer();
-                $url = SITE_URL . '/reset_password.php?id=' . $user_id . '&token=' . $token;
-                $asunto = "Recuperar Clave - Pacific Harvest Gourmet";
-                $cuerpo = "Estimado $nombres: <br> Si haz solicitado el cambio de tu clave, da click en el siguiente enlace <a href='$url'>Cambiar clave</a>";
-                $cuerpo .= "<br> Si no hiciste esta solicitud, ignora este correo";
+                $url = SITE_URL . '/reset_password_english.php?id=' . $user_id . '&token=' . $token;
+                $asunto = "Recover Password - Pacific Harvest Gourmet";
+                $cuerpo = "Dear $nombres: <br> If you have requested to change your password, please click on the following link <a href='$url'>Change password</a>";
+                $cuerpo .= "<br> If you did not make this request, ignore this email";
 
 
                 if ($mailer->enviarEmail($email, $asunto, $cuerpo)) {
-                    $exito[] = "Hemos enviado el correo para recuperar su clave a la siguiente direccion: " . $email;
+                    $exito[] = "We have sent the mail to recover your password to the following address: " . $email;
                     // echo "<p><b>Correo Enviado</b></p>";
                     // echo "<p>Hemos enviado el correo de recuperacion a este correo electronico $email para restablecer la clave</p>";
                     // exit; 
                 }
             }
         } else {
-            $errors[] = "No existe una cuenta asociada a esta direccion de correo";
+            $errors[] = "There is no account associated with this email address.";
         }
     }
 }
@@ -109,31 +109,31 @@ if (!empty($_POST)) {
 
 
     <!--Formulario para la recuperacion de contraseña-->
-
     <section class=" form-login form-login--c m-auto pt-4 login_form">
         <div class="container">
-            <h3>Contraseña perdida</h3>
-            <p>¿Perdiste tu contraseña? Por favor, introduce tu nombre de usuario o correo electrónico. Recibirás un enlace para crear una contraseña nueva por correo electrónico.</p>
+            <h3 style="margin-bottom: 30px;">Password lost</h3>
+            <p>Lost your password? Please enter your username or email address. You will receive a link to create a new password by email.</p>
             <?php mostrarMensajes($errors); ?>
             <?php mostrarExito($exito); ?>
-            <form class="row g-3" action="recupera.php" method="post" autocomplete="off">
+            <form class="row g-3" action="recupera_english.php" method="post" autocomplete="off">
                 <div class="col-md-6">
-                    <label for="email"><span class="text-danger">*</span> Correo electronico</label>
+                    <label for="email"><span class="text-danger">*</span> Email</label>
                     <input type="email" name="email" id="email" class="form-control" requireda>
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" id="colorboton" class="btn btn-primary">Restablecer Contraseña</button>
+                    <button type="submit" id="colorboton" class="btn btn-primary">Reset Password</button>
                 </div>
             </form>
 
             <div class="password_lost">
-                <span>¿No tienes cuenta? <a href="registro.php">Registrate</a></span>
+                <span>Don't have an account? <a href="registro_english.php">Sign up</a></span>
             </div>
 
         </div>
 
     </section>
+
 
 
 

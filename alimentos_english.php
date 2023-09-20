@@ -9,9 +9,10 @@ $con = $db->conectar();
 
 
 
-$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'mariscos'  ");
-$sqlss->execute();
-$resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'alimentos'  ");
+$sqls->execute();
+$resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -105,21 +106,20 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--SECCION DE MUESTRA DE PRODUCTOS-->
 
-  
-
+ 
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Mariscos</h2>
-            <p>Se muestran todos los productos</p>
+            <h2>Food</h2>
+            <p>All products in this category are shown.</p>
         </article>
 
-     
+    
 
         <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
 
         <section class="containerProductos_Cards">
-            <?php foreach ($resultadoss as $row) { ?>
+            <?php foreach ($resultados as $row) { ?>
 
                 <section class="trajeta">
 
@@ -150,11 +150,11 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                         
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <button class="hidden-btn hidden-btn--a"><a href="detallemariscos.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
-                                    Mas</a></button>
+                            <button class="hidden-btn hidden-btn--a"><a href="detallealimentos.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View
+                                    More</a></button>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
-                                al Carrito</button>
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Add
+                                To Cart</button>
 
 
                         </article>
@@ -166,14 +166,13 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-¡
+      
 
 
         <!--FIN Seccion Productos-->
 
     </div>
 
- 
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 

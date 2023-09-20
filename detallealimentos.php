@@ -64,6 +64,7 @@ if ($id == "" || $token == "") {
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Pacific Harvest Gourmet</title>
     <link rel="stylesheet" href="./css/detallesproductos.css">
+    <link rel="stylesheet" href="./responsive_css/detalles.css">
 </head>
 
 <body>

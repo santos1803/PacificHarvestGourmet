@@ -14,15 +14,15 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'condimentos'  ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'mariscos'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'condimentos'  ");
+            $sql = $con->prepare("SELECT nombre, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'seafood'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["nombre"];
-            $descripcion = $row["descripcion"];
-            $categoria = $row["categoria"];
+            $descripcion = $row["description"];
+            $categoria = $row["categorie"];
             $precio = $row["precio"];
             $descuento = $row["descuento"];
             $enlace = $row["enlace"];
@@ -74,7 +74,7 @@ if ($id == "" || $token == "") {
             <section id="carrito">
 
 
-                <a href="agregarcarrito.php" id="log2"><img
+                <a href="agregarcarrito_english.php" id="log2"><img
                         src="https://img.icons8.com/ios/50/000000/shopping-bag--v1.png" alt="shopping-bag--v1" /></a>
                 <?php if ($num_cart > 0) { ?>
                     <span id="num_cart" class="badge bg-secondary carritosss">
@@ -93,13 +93,13 @@ if ($id == "" || $token == "") {
                                 <?php echo $_SESSION['user_name']; ?>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="btn_session">
-                                <li><a class="dropdown-item" href="compras.php">Mis compras</a></li>
-                                <li><a class="dropdown-item" href="logout.php">Cerrar sesion</a></li>
+                                <li><a class="dropdown-item" href="compras_english.php">Mis compras</a></li>
+                                <li><a class="dropdown-item" href="logout_english.php">Cerrar sesion</a></li>
                             </ul>
                         </div>
 
                     <?php } else { ?>
-                        <a href="login.php" class="btn ms-2" style="margin: 0 15px 5px 0"><img src="./recursos/icons8-account-64.png" alt="" width="35px"></a>
+                        <a href="login_english.php" class="btn ms-2" style="margin: 0 15px 5px 0"><img src="./recursos/icons8-account-64.png" alt="" width="35px"></a>
                     <?php } ?>
 
                 </section>
@@ -188,19 +188,18 @@ if ($id == "" || $token == "") {
                 </p>
                 <div class="button-hide oculto2">
                     <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Agregar al
-                        Carrito</button>
+                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Add To Cart</button>
                     <!-- Este boton redirecciona al carrito de compras-->
-                    <button class="boton_comun--b"><a href="agregarcarrito.php" id="enlaceBoton">Comprar</a></button>
+                    <button class="boton_comun--b"><a href="agregarcarrito_english.php" id="enlaceBoton">Buy</a></button>
                 </div>
                 <div class="stripe_button">
-                    <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">PAGAR CON STRIPE</a></button>
+                    <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">Pay With Stripe</a></button>
 
 
                 </div>
                 <article class=" categoria">
-                    <p>Categoria:</p>
-                    <p><a href="./condimentos.php">
+                    <p>Categorie:</p>
+                    <p><a href="./ofertas_english.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>
@@ -220,7 +219,7 @@ if ($id == "" || $token == "") {
 
         <div class="container">
 
-       
+           
             <div class="footer3">
                 <div>
                     <a href="../html/index_english.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
@@ -238,7 +237,7 @@ if ($id == "" || $token == "") {
 
 
 
-
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <script src="../JS/scripts.js" type="module"></script>

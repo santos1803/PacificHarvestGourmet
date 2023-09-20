@@ -17,12 +17,12 @@ if ($id == "" || $token == "") {
         $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'condimentos'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'condimentos'  ");
+            $sql = $con->prepare("SELECT nombre, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'condiments'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["nombre"];
-            $descripcion = $row["descripcion"];
-            $categoria = $row["categoria"];
+            $descripcion = $row["description"];
+            $categoria = $row["categorie"];
             $precio = $row["precio"];
             $descuento = $row["descuento"];
             $enlace = $row["enlace"];
@@ -188,19 +188,18 @@ if ($id == "" || $token == "") {
                 </p>
                 <div class="button-hide oculto2">
                     <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Agregar al
-                        Carrito</button>
+                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Add To Cart</button>
                     <!-- Este boton redirecciona al carrito de compras-->
-                    <button class="boton_comun--b"><a href="agregarcarrito.php" id="enlaceBoton">Comprar</a></button>
+                    <button class="boton_comun--b"><a href="agregarcarrito_english.php" id="enlaceBoton">Buy</a></button>
                 </div>
                 <div class="stripe_button">
-                    <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">PAGAR CON STRIPE</a></button>
+                    <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">Pay With Stripe</a></button>
 
 
                 </div>
                 <article class=" categoria">
-                    <p>Categoria:</p>
-                    <p><a href="./condimentos.php">
+                    <p>Categorie:</p>
+                    <p><a href="./ofertas_english.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>
@@ -220,7 +219,7 @@ if ($id == "" || $token == "") {
 
         <div class="container">
 
-       
+           
             <div class="footer3">
                 <div>
                     <a href="../html/index_english.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
@@ -238,7 +237,7 @@ if ($id == "" || $token == "") {
 
 
 
-
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <script src="../JS/scripts.js" type="module"></script>

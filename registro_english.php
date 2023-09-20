@@ -25,23 +25,23 @@ if (!empty($_POST)) {
     $repassword = trim($_POST["repassword"]);
 
     if (esNulo([$nombres, $direccion, $email, $telefono, $dni, $usuario, $password, $repassword])) {
-        $errors[] = "Debe llenar todos los campos";
+        $errors[] = "You must fill in all fields";
     }
 
     if (!esEmail($email)) {
-        $errors[] = "La direccion de correo no es valida";
+        $errors[] = "The email address is not valid";
     }
 
     if (!validaPassword($password, $repassword)) {
-        $errors[] = "Las contraseñas no coinciden";
+        $errors[] = "Passwords do not match";
     }
 
     if (usuarioExiste($usuario, $con)) {
-        $errors[] = "El nombre de usuario $usuario ya existe, usa otro nombre de usuario";
+        $errors[] = "The user name $usuario already exists, use another user name";
     }
 
     if (emailExiste($email, $con)) {
-        $errors[] = "El correo electronico $email ya existe, usa otra direccion de correo";
+        $errors[] = "The email $email already exists, use another email address";
     }
 
     //Validacion donde se define el mensaje que recibira por correo el usuario para que active su cuenta
@@ -59,20 +59,20 @@ if (!empty($_POST)) {
 
             if ($idUsuario > 0) {
 
-                $url = SITE_URL . '/activa_cliente.php?id=' . $idUsuario . '&token=' . $token;
-                $asunto = "Activar cuenta - Tienda online";
-                $cuerpo = "Estimado $nombres: <br> para continuar con el proceso de registro es indespensable  que de click en el siguiente enlace <a href='$url'>Activar cuenta</a>";
+                $url = SITE_URL . '/activa_cliente_english.php?id=' . $idUsuario . '&token=' . $token;
+                $asunto = "Activate account - Online store";
+                $cuerpo = "Dear $nombres: <br> to continue with the registration process it is essential that you click on the following link <a href='$url'>Activate account</a>";
 
                 if ($mailer->enviarEmail($email, $asunto, $cuerpo)) {
-                    $exito[] = "Hemos enviado el correo para activar su cuenta a la siguiente direccion: " . $email;
+                    $exito[] = "We have sent the email to activate your account to the following address: " . $email;
                     // echo "Para terminar el proceso de registro siga las instrucciones que le hemos enviado a la direccion de correo electronico $email";
                     // exit;
                 }
             } else {
-                $errors[] = "Error al registar usuario";
+                $errors[] = "Error when registering user";
             }
         } else {
-            $errors[] = "Error al registar cliente";
+            $errors[] = "Error when registering customer";
         }
     }
 }
@@ -163,25 +163,25 @@ if (!empty($_POST)) {
 
     <section class="login_registro">
         <div class="container">
-            <h2 style="margin-bottom:70px;">Datos del cliente</h2>
+            <h2 style="margin-bottom:70px;">Customer data</h2>
             <?php mostrarMensajes($errors); ?>
             <?php mostrarExito($exito); ?>
-            <form id="formulario" class="row g-3" action="registro.php" method="post" autocomplete="off">
+            <form id="formulario" class="row g-3" action="registro_english.php" method="post" autocomplete="off">
                 <div class="col-md-6">
-                    <label for="nombres"><span class="text-danger">*</span> Nombre completo (Personal, Empresa)</label>
+                    <label for="nombres"><span class="text-danger">*</span> Full Name (Personal, Company)</label>
                     <input type="text" name="nombres" id="nombres" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">
-                    <label for="direccion"><span class="text-danger">*</span> Dirección</label>
+                    <label for="direccion"><span class="text-danger">*</span> Address</label>
                     <input type="text" name="direccion" id="direccion" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">
-                    <label for="email"><span class="text-danger">*</span> Correo Electronico</label>
+                    <label for="email"><span class="text-danger">*</span> Email</label>
                     <input type="email" name="email" id="email" class="form-control" requireda>
                     <span id="validaEmail" class="text-danger"></span>
                 </div>
                 <div class="col-md-6">
-                    <label for="telefono"><span class="text-danger">*</span> Telefono</label>
+                    <label for="telefono"><span class="text-danger">*</span> Number Phone</label>
                     <input type="tel" name="telefono" id="telefono" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">
@@ -190,26 +190,26 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class="col-md-6">
-                    <label for="usuario"><span class="text-danger">*</span> Usuario</label>
+                    <label for="usuario"><span class="text-danger">*</span> Username</label>
                     <input type="text" name="usuario" id="usuario" class="form-control" requireda>
                     <span id="validaUsuario" class="text-danger"></span>
                 </div>
                 <div class="col-md-6">
-                    <label for="password"><span class="text-danger">*</span> Contraseña</label>
+                    <label for="password"><span class="text-danger">*</span> Password</label>
                     <input type="password" name="password" id="password" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">
-                    <label for="repassword"><span class="text-danger">*</span>Repetir Contraseña</label>
+                    <label for="repassword"><span class="text-danger">*</span>Repeat Password</label>
                     <input type="password" name="repassword" id="repassword" class="form-control" requireda>
                 </div>
 
                 <div class="col-12" id="boton_registro">
-                    <button type="submit" id="colorboton" class="btn btn-primary">Registrar</button>
+                    <button type="submit" id="colorboton" class="btn btn-primary">Sign Up</button>
                 </div>
-                <i><b>Nota:</b>Los campos con * son obligatorios</i>
+                <i><b>Note:</b>Fields marked with * are required</i>
             </form>
             <div class="login_plus">
-                <span>¿Ya posees cuenta? <a href="login.php">Accede</a></span>
+                <span>Do you already have an account? <a href="login_english.php">Sign in</a></span>
 
             </div>
         </div>
@@ -274,7 +274,7 @@ if (!empty($_POST)) {
                 .then(data => {
                     if (data.ok) {
                         document.getElementById('usuario').value = ''
-                        document.getElementById('validaUsuario').innerHTML = 'Usuario no disponible'
+                        document.getElementById('validaUsuario').innerHTML = 'User not available'
                     } else {
                         document.getElementById('validaUsuario').innerHTML = ''
                     }
@@ -294,7 +294,7 @@ if (!empty($_POST)) {
                 .then(data => {
                     if (data.ok) {
                         document.getElementById('email').value = ''
-                        document.getElementById('validaEmail').innerHTML = 'Email no disponible'
+                        document.getElementById('validaEmail').innerHTML = 'Email not available'
                     } else {
                         document.getElementById('validaEmail').innerHTML = ''
                     }

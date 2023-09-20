@@ -95,13 +95,13 @@ $sqlDetalle->execute([$idCompra]);
                 <div class="col-12 col-md-4">
                     <div class="card mb-3">
                         <div class="card-header">
-                            <strong>Detalle de la compra</strong>
+                            <strong>Purchase detail</strong>
                         </div>
                         <div class="card-body">
-                            <p><strong>Fecha: </strong>
+                            <p><strong>Date: </strong>
                                 <?php echo $fecha; ?>
                             </p>
-                            <p><strong>Orden: </strong>
+                            <p><strong>Order: </strong>
                                 <?php echo $rowCompra['id_transaccion']; ?>
                             </p>
                             <p><strong>Total: </strong>
@@ -119,13 +119,13 @@ $sqlDetalle->execute([$idCompra]);
 
                                     </th>
                                     <th>
-                                        Producto
+                                    Product
                                     </th>
                                     <th>
-                                        Precio
+                                    Price
                                     </th>
                                     <th>
-                                        Cantidad
+                                    Quantity
                                     </th>
                                     <th>
                                         Subtotal
@@ -187,7 +187,7 @@ $sqlDetalle->execute([$idCompra]);
 
 
     <hr>
-    <footer>
+    <!-- <footer>
 
         <div class="container">
 
@@ -203,7 +203,7 @@ $sqlDetalle->execute([$idCompra]);
             </div>
 
         </div>
-    </footer>
+    </footer> -->
 
 
 

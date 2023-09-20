@@ -48,62 +48,67 @@ $con = $db->conectar();
     </div> -->
     <main class="containerPrincipal">
         <article class="txt">
-            <h1>Todo un click</h1>
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete en un mundo de sabores marinos enlatados, cuidadosamente seleccionados para ofrecerte la frescura y calidad que mereces. </p>
-            <button class="botonPagina">LEER MAS</button>
+            <h1>One click</h1>
+            <p>Discover the taste of the canned ocean, with authentic culinary treasures from Colombia and Chile. Immerse yourself in a world of canned marine flavors, carefully selected to offer you the freshness and quality you deserve.</p>
+            <button class="botonPagina">View More</button>
         </article>
     </main>
     <div class="containerSecundario">
         <section class="flotante">
             <article class="flotanteTxt">
                 <h1>5</h1>
-                <p>años</p>
-                <p>de experiencia</p>
+                <p>years</p>
+                <p>of experience</p>
             </article>
             <span class="separador"></span>
             <article class="flotanteTxt">
                 <h1>1</h1>
-                <p>lugar </p>
-                <p>en ventas</p>
+                <p>places </p>
+                <p>in sales</p>
             </article>
             <span class="separador"></span>
             <article class="flotanteTxt">
                 <h1>+1</h1>
-                <p> millon personas </p>
-                <p>alcanzadas</p>
+                <p>million people</p>
+                <p>reached</p>
             </article>
             <span class="separador"></span>
             <article class="flotanteTxt">
                 <h1>200</h1>
-                <p> productos </p>
-                <p>disponibles</p>
+                <p>products</p>
+                <p>available</p>
             </article>
         </section>
 
     </div>
     <div class="containerTres">
         <article>
-            <h2>Categorias Populares</h2>
+            <h2>Popular Categories</h2>
         </article>
         <section class="cardCategoria">
             <article class="cardProducto">
-                <img src="./recursos/principal.jpg" alt="">
-                <h5>Mariscos</h5>
+                <a href="./mariscos_english.php"><img src="./recursos/principal.jpg" alt="">
+                <h5>Seafood</h5></a>
+                
 
             </article>
             <article class="cardProducto">
-                <img src="./recursos/principal1.jpg" alt="">
-                <h5>Pescados</h5>
+                <a href="./alimentos_english.php"><img src="./recursos/principal1.jpg" alt="">
+                <h5>Food</h5></a>
+                
 
             </article>
             <article class="cardProducto">
-                <img src="./recursos/principal2.jpg" alt="">
-                <h5>Regalos</h5>
+                <a href="./regalos_english.php"><a href="">  <img src="./recursos/principal2.jpg" alt="">
+                <h5>Gifts</h5></a></a>
+                
+              
 
             </article>
             <article class="cardProducto">
-                <img src="./recursos/principal3.jpg" alt="">
-                <h5>Exclusivos</h5>
+                <a href="./dulces_english">  <img src="./recursos/principal3.jpg" alt="">
+                <h5>Candys</h5></a>
+              
 
             </article>
 
@@ -116,10 +121,10 @@ $con = $db->conectar();
         </article>
         <section class="textoExclusivo">
             <article class="articleTitulo">
-                <h2>Somos sinonimo de exclusividad.</h2>
+                <h2>We are synonymous with exclusivity.</h2>
             </article>
             <article class="articleParrafo">
-                <p>La marca se ha ganado una reputación destacada por su compromiso con la sostenibilidad y la pesca responsable. Pacific Harvest trabaja en estrecha colaboración con pescadores locales y utiliza métodos de pesca selectivos.</p>
+                <p>The brand has earned an outstanding reputation for its commitment to sustainability and responsible fishing. Pacific Harvest works closely with local fishermen and uses selective fishing methods.</p>
             </article>
             <section class="listText">
                 <article class="containerSvg">
@@ -128,8 +133,8 @@ $con = $db->conectar();
                     </svg>
                 </article>
                 <article class="containerParrafos">
-                    <h4>Servicio de Valor</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <h4>Value Service</h4>
+                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh seafood, such as shrimp, prawns, crabs, mussels and oysters.</p>
                 </article>
 
             </section>
@@ -140,8 +145,8 @@ $con = $db->conectar();
                     </svg>
                 </article>
                 <article class="containerParrafos">
-                    <h4>Productos de Alta Gamma</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <h4>High Gamma Products</h4>
+                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh seafood, such as shrimp, prawns, crabs, mussels and oysters. </p>
                 </article>
 
             </section>
@@ -153,8 +158,8 @@ $con = $db->conectar();
                     </svg>
                 </article>
                 <article class="containerParrafos">
-                    <h4>Para ti solo lo mejor</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <h4>For you only the best</h4>
+                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh seafood, such as shrimp, prawns, crabs, mussels and oysters.</p>
                 </article>
 
             </section>
@@ -164,9 +169,9 @@ $con = $db->conectar();
     </div>
     <div class="containerPrincipal containerCinco">
         <article class="txt txt2">
-            <h1>Llegamos a ti</h1>
-            <p>El shipping puede ser realizado por diferentes medios de transporte, como barcos, aviones, camiones o trenes, dependiendo de la distancia y la urgencia del envío</p>
-            <button class="botonPagina">LEER MAS</button>
+            <h1>We come to you</h1>
+            <p>Shipping can be carried out by different means of transport, such as ships, planes, trucks or trains, depending on the distance and urgency of the shipment.</p>
+            <button class="botonPagina">View More</button>
         </article>
     </div>
     <!-- 

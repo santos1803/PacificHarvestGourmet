@@ -25,11 +25,11 @@ if (!empty($_POST)) {
 
 
     if (esNulo([$usuario, $password])) {
-        $errors[] = "Debe llenar todos los campos";
+        $errors[] = "You must fill in all fields";
     }
 
     if (count($errors) == 0) {
-        $errors[] = login($usuario, $password, $proceso, $con);
+        $errors[] = login_english($usuario, $password, $proceso, $con);
     }
 }
 
@@ -49,7 +49,6 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Pacific Harvest Gourmet</title>
     <link rel="stylesheet" href="./css/login.css">
- 
     <link rel="stylesheet" href="./responsive_css/login.css">
 
 </head>
@@ -120,34 +119,32 @@ if (!empty($_POST)) {
 
     <main class="form-login form-login--b  m-auto pt-4 login_form">
         <div class="container">
-            <h3>Mi cuenta</h3>
+            <h3>My account</h3>
             <!--Llamado de Variable que de ser el caso mostrara mensajes que le digan al usuario que esta cometiendo un error al tratar de ingresar.-->
             <?php mostrarMensajes($errors); ?>
-            <form class="row g-3" action="login.php" method="post" autocomplete="off">
+            <form class="row g-3" action="login_english.php" method="post" autocomplete="off">
                 <input type="hidden" name="proceso" value="<?php echo $proceso; ?>">
                 <div class="col-md-6">
-                    <label for="usuario"><span class="text-danger">*</span> Usuario</label>
+                    <label for="usuario"><span class="text-danger">*</span> User </label>
                     <input type="text" name="usuario" id="usuario" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">
-                    <label for="password"><span class="text-danger">*</span> Contraseña</label>
+                    <label for="password"><span class="text-danger">*</span> Password</label>
                     <input type="password" name="password" id="password" class="form-control" requireda>
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" id="colorboton" class="btn btn-primary">Acceder</button>
+                    <button type="submit" id="colorboton" class="btn btn-primary">Sign in</button>
                 </div>
             </form>
 
             <div class="password_lost">
-                <span>¿No tienes cuenta? <a href="registro.php">Registrate</a></span>
-                <a href="recupera.php">¿Olvidaste la contraseña?</a>
+                <span>You do not have an account? <a href="registro_english.php">Sign up</a></span>
+                <a href="recupera_english.php">Forgot password?</a>
             </div>
 
 
         </div>
-
-    </main>
 
 
 

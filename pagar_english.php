@@ -116,20 +116,20 @@ if ($productos != null) {
     <!---Seccion para mostrar productos  y pagar-->
 
     <div class="carritoCompras">
-        <h1>Finalizar Compra</h1>
+        <h1>Finalize Purchase</h1>
         <section class="carritoCompras_tablas ">
             <article class="membrete1">
                 <img src="./recursos/SVGLogo.svg" alt="">
             </article>
             <article class="membrete2">
-                <h2>Detalles De Compra</h2>
+                <h2>Purchase Details</h2>
             </article>
 
             <table>
                 <thead>
                     <tr class="trHead">
                         <th></th>
-                        <th id="productoss">Producto</th>
+                        <th id="productoss">Product</th>
 
                         <th>Subtotal</th>
                         <th></th>
@@ -283,7 +283,7 @@ if ($productos != null) {
                             detalles: detalles
                         })
                     }).then(function (response) {
-                        window.location.href = "completado.php?key=" + detalles['id'];
+                        window.location.href = "completado_english.php?key=" + detalles['id'];
                     })
                 });
             },

@@ -115,8 +115,8 @@ if ($productos != null) {
 
     <!---Seccion para mostrar productos en el carrito-->
 
-    <div class="carritoCompras">
-        <h1>Carrito de Compra</h1>
+    <div class="carritoCompras" style="border: 1px solid red">
+        <h1>Shopping Cart</h1>
         <section class="carritoCompras_tablas">
             <table>
                 <thead>
@@ -125,9 +125,9 @@ if ($productos != null) {
                     <?php } else { ?>
                         <tr class="trHead">
                             <th></th>
-                            <th id="productoss">Producto</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
+                            <th id="productoss">Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
                             <th>Subtotal</th>
                             <th></th>
                         </tr>
@@ -212,10 +212,10 @@ if ($productos != null) {
             <article class="forBuy">
                 <?php if (isset($_SESSION['user_cliente'])) { ?>
                     <!-- <a href="#">COMPRAR</a> -->
-                    <a href="./pagar.php">COMPRAR</a>
+                    <a href="./pagar_english.php">BUY NOW</a>
                 <?php } else { ?>
                     <!-- <a href="#">COMPRAR</a> -->
-                    <a href="./login.php?pago">COMPRAR</a>
+                    <a href="./login_english.php?pago">BUY NOW</a>
                 <?php } ?>
             </article>
         <?php } ?>
@@ -255,15 +255,15 @@ if ($productos != null) {
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="eliminaModalLabel">Aviso</h5>
+                    <h5 class="modal-title" id="eliminaModalLabel">Alert</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ¿Quieres eliminar este producto de la lista?
+                Do you want to remove this product from the list?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button id="btn-elimina" type="button" class="btn btn-danger" onclick="eliminar()">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btn-elimina" type="button" class="btn btn-danger" onclick="eliminar()">Delete</button>
                 </div>
             </div>
         </div>

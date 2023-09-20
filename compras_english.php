@@ -36,7 +36,6 @@ $sql->execute([$idCliente])
     <title>Pacific Harvest Gourmet</title>
     <link rel="stylesheet" href="./css/registro.css">
     <link rel="stylesheet" href="./responsive_css/compra.css">
-    
 
 </head>
 
@@ -73,8 +72,8 @@ $sql->execute([$idCliente])
 
     <main class="comprasContainer">
         <div class=" container" style="width: 90vw;">
-            <h4>Mis Compras</h4>
-            <hr> 
+            <h4>My Shopping</h4>
+            <hr>
 
             <!--Utilizando Boostram creamos unas cards con boton que le den una vista previ al usuario de cuales han sido sus compras, usando la consulta de arriba, le ingresamos a estas cartas cada una de los datos de la compra-->
 
@@ -88,7 +87,7 @@ $sql->execute([$idCliente])
                     <div class="card-body">
                         <h5 class="card-title">Folio: <?php echo $row['id_transaccion']; ?></h5>
                         <p class="card-text">Total: <?php echo $row['total']; ?> </p>
-                        <a href="compra_detalle.php?orden=<?php echo $row['id_transaccion']; ?>&token=<?php echo $token; ?>" class="btn btn-primary">Ver Compra</a>
+                        <a href="compra_detalle_english.php?orden=<?php echo $row['id_transaccion']; ?>&token=<?php echo $token; ?>" class="btn btn-primary">View Buy</a>
                     </div>
                 </div>
             <?php } ?>

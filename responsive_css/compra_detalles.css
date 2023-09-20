@@ -1,0 +1,10 @@
+@media (max-width: 900px) {
+    .detallesContainer {
+       display: flex;
+       justify-content: center;
+        
+    }
+
+  
+    
+}

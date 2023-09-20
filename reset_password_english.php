@@ -34,22 +34,22 @@ if (!empty($_POST)) {
     $repassword = trim($_POST["repassword"]);
 
     if (esNulo([$user_id, $token, $password, $repassword])) {
-        $errors[] = "Debe llenar todos los campos";
+        $errors[] = "You must fill in all fields";
     }
 
 
     if (!validaPassword($password, $repassword)) {
-        $errors[] = "Las contraseñas no coinciden";
+        $errors[] = "Passwords do not match";
     }
 
     if (count($errors) == 0) {
         $pass_hash = password_hash($password, PASSWORD_DEFAULT);
         if (actualizaPassword($user_id, $pass_hash, $con)) {
-            $exito[] = "Su clave ha sido modificada, por favor Inicie Sesion";
+            $exito[] = "Your password has been changed, please login.";
             // echo "Contraseña modificada.<br><a href='login.php'>Iniciar sesion</a>'";
             // exit;
         } else {
-            $errors[] = "Error al modificar contraseña. Intentalo nuvamente.";
+            $errors[] = "Error modifying password. Try again.";
         }
     }
 }
@@ -103,31 +103,31 @@ if (!empty($_POST)) {
 
     <!--Formulario para que el usuario ingrese la nueva contraseña, tambien se usan funciones ya definida antes para que muesten los posibles mensajes al usuario-->
 
-    <section class="form-login form-login--a m-auto pt-4 login_form">
+    <section class="conatinerRecupera form-login form-login--a m-auto pt-4 login_form">
         <div class="container">
-            <h3>Cambiar Contraseña</h3>
+            <h3 style="margin-bottom: 30px;">Change Password</h3>
 
             <?php mostrarMensajes($errors); ?>
             <?php mostrarExito($exito); ?>
-            <form class="row g-3" action="reset_password.php" method="post" autocomplete="off">
+            <form class="row g-3" action="reset_password_english.php" method="post" autocomplete="off">
                 <input type="hidden" name="user_id" id="user_id" value="<?= $user_id; ?>" />
                 <input type="hidden" name="token" id="token" value="<?= $token; ?>" />
                 <div class="col-md-6">
-                    <label for="password"><span class="text-danger">*</span>Nueva Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control" requireda>
+                    <label for="password"><span class="text-danger">*</span>New Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="repassword"><span class="text-danger">*</span>Confirmar Contraseña</label>
-                    <input type="password" name="repassword" id="repassword" class="form-control" requireda>
+                    <label for="repassword"><span class="text-danger">*</span>Confirm Password</label>
+                    <input type="password" name="repassword" id="repassword" class="form-control" required>
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" id="colorboton" class="btn btn-primary">Confirmar Cambio</button>
+                    <button type="submit" id="colorboton" class="btn btn-primary">Confirm Change</button>
                 </div>
             </form>
 
-            <div class="password_lost">
-                <a href="login.php">Iniciar Sesion</a></span>
+            <div class="password_lost" style="margin-top:30px;">
+                <a href="login_english.php">Sign in</a></span>
             </div>
 
         </div>
@@ -144,7 +144,7 @@ if (!empty($_POST)) {
 
 
     <hr>
-    <footer>
+    <!-- <footer>
 
         <div class="container">
 
@@ -159,7 +159,7 @@ if (!empty($_POST)) {
             </div>
 
         </div>
-    </footer>
+    </footer> -->
 
 
 
