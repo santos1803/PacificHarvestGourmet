@@ -251,7 +251,7 @@ $con = $db->conectar();
                     <!--=============== carro de compras desktop ===============-->
 
                     <li>
-                        <a href="./agregarcarrito.php" class="nav__link nav__link_cart">
+                        <a href="./agregarcarrito_english.php" class="nav__link nav__link_cart">
                             <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.5em"
                                 viewBox="0 0 576 512">
                                 <path

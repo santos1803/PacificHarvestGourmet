@@ -1,34 +1,7 @@
-@import url(../css_header_footer/css/header.css);
-@import url(../medias_css/navmedia.css);
-@import url(../css_header_footer/css/footer.css);
-
-/*-----------------------------------*\
- * #PROPIEDADES PERSONALIZADAS
-\*-----------------------------------*/
-
-:root {
-    /*COLORES PRINCIPALES*/
-    --vinotinto: #1c3a6b;
-    --blanco: #ffff;
-    --negro: #0000;
-    /*COLORES*/
-    --colorlogo: #a42739;
-    --colortitulos: #323232;
-    --colorletras: #6c757d;
-    --colortitulovinotinto: #1c3a6b;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    width: 100%;
-    margin: 30px 60px;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../nav_footer_css/nav_principal.css);
+@import url(../nav_footer_css/footer.css);
+@import url(../responsive_css/index.css);
 
 /*-----------------------------------*\
    * #INICION DE BANNER PRINCIPAL
@@ -39,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    padding-top: 170px;
     width: 100%;
 }
 
@@ -79,7 +52,7 @@
 }
 
 .Formulario {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +61,7 @@
     background: #e9e9e9;
     box-shadow: 10px 10px 20px #d4d4d4, -10px -10px 20px #ffffff;
     padding: 2% 0;
+    margin-top: 30px;
 }
 
 .separador {
