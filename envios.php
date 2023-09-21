@@ -31,7 +31,7 @@ $con = $db->conectar();
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/envios.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
@@ -286,6 +286,32 @@ $con = $db->conectar();
 
     <div class="vacio">
 
+    </div>
+
+    <div class="banner">
+
+    </div>
+
+    <div class="title">
+        <section class="grid_title">
+            <article class="title_principal">
+                <h1>Envios</h1>
+            </article>
+            <article class="shipping_send">
+                <h3>NUESTROS SERVICIOS DE ENVÍO:</h3>
+                <p>Pacific Harvest Gourmet Products realiza envíos a todo el mundo. Utilizamos DHL International GmbH (DHL), United Parcel Service (UPS) y United States Postal Service (USPS) para entregar nuestros productos. Puedes obtener más información sobre DHL, UPS y USPS visitando sus sitios web en dhl.com, ups.com y usps.com.</p>
+
+            </article>
+            <article class="zone_shipping">
+                <h3>ZONAS DE ENVÍO DE PRODUCTOS DE PACIFIC HARVEST GOURMET:</h3>
+                <article>
+                <p>Todos los servicios de entrega que utilizamos tienen zonas designadas para determinar sus tarifas. Pacific Harvest Gourmet Products NO determina el precio del envío. Todas las tarifas de envío se calculan al finalizar la compra utilizando el peso total de tu pedido y el código postal de tu dirección de envío.</p>
+                <p>Si bien las zonas y tarifas de envío cambian constantemente, hemos creado la siguiente lista para darte una idea general de las tarifas de envío para un pedido de tamaño promedio (3.3 libras) a través de UPS Ground o USPS Priority Mail</p>
+                </article>
+                
+
+            </article>
+        </section>
     </div>
 
     
