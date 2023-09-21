@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--black-color);
+    background-color: #fff;
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
     z-index: var(--z-fixed);
  }
@@ -40,8 +40,8 @@
     }
     &__toggle{
        position: relative;
-       width: 32px;
-       height: 32px;
+       width: 1.5em;
+       height: 1.5em;
     }
     &__burger,
     &__close{
@@ -59,13 +59,13 @@
     }
  
     // Navigation for mobile devices
-    @media screen and (max-width: 1118px){
+    @media screen and (max-width: 1117px){
        &__menu{
           position: absolute;
           left: 0;
           top: 2.5rem;
           width: 100%;
-          height: calc(100vh - 3.5rem);
+          height: calc(100vh - 3.6rem);
           overflow: auto;
           pointer-events: none;
           opacity: 0;
@@ -76,13 +76,13 @@
           }
        }
        &__list{
-          background-color: var(--black-color);
+          background-color: #fff;
           padding-top: 1rem;
        }
     }
     &__link{
        color: var(--white-color);
-       background-color: var(--black-color);
+       background-color: #fff;
        font-weight: var(--font-semi-bold);
        padding: 1.25rem 1.5rem;
        display: flex;
@@ -140,7 +140,7 @@
           font-weight: initial;
        }
        &:hover{
-          background-color: var(--black-color);
+          background-color: #fff;
        }
     }
     &__menu,
