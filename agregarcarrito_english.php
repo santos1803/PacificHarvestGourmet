@@ -115,7 +115,7 @@ if ($productos != null) {
 
     <!---Seccion para mostrar productos en el carrito-->
 
-    <div class="carritoCompras" style="border: 1px solid red">
+    <div class="carritoCompras" >
         <h1>Shopping Cart</h1>
         <section class="carritoCompras_tablas">
             <table>
