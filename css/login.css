@@ -1,0 +1,250 @@
+
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--blanco);
+}
+
+
+/*-----------------------------------*\
+   * #ELEMENTOS COMUNES
+  \*-----------------------------------*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+.boton_comun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 13%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+HEAD .boton_comun--a {
+    width: 100%;
+}
+
+
+
+.boton_comun {
+    width: auto;
+}
+
+.boton_comun a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--vinotinto);
+    text-transform: uppercase;
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.boton_comun a:hover {
+    background-color: var(--vinotinto);
+    color: var(--blanco);
+}
+
+.boton_comun:hover {
+    border: 1px solid var(--vinotinto)
+}
+
+hr {
+    margin: 50px 0 50px 0;
+}
+
+
+/*-----------------------------------*\
+   * #INICION DE BANNER PRINCIPAL
+  \*-----------------------------------*/
+
+
+  .containerMariscos {
+    width: 100%;
+    height: 32em;
+    background-image: url(../recursos/bannerprincipal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+}
+
+
+/*-----------------------------------*\
+   * #AREA formulario
+  \*-----------------------------------*/
+
+  .login_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: cente;
+    
+  }
+
+  .login_form .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+    width: 100%;
+  }
+
+  .login_form .container h3 {
+    color: var(--colortitulovinotinto);
+    font-size: 29px;
+  }
+
+  .login_form .container form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+  }
+
+  .login_form .container form .col-md-6 {
+    margin-top: 40px;
+  }
+
+  .login_form .container form .col-md-5{
+    display: flex;
+    align-items: center;
+   width: 55%;
+   margin-top: 30px;
+   
+  }
+
+  .checkbox {
+    width: 10%;
+  }
+
+  .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 20px 0;
+  }
+
+  #colorboton {
+    background: #1c3a6b !important;
+    border: #1c3a6b;
+  }
+
+  .password_lost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .password_lost a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1c3a6b;
+    
+  }
+
+  .password_lost span a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1c3a6b;
+    text-decoration: underline;
+  }
+
+
+  .form-login {
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .container {
+    margin-top: 50px;
+  }

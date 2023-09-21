@@ -115,6 +115,18 @@
     width: 1.5em;
     height: 1.5em;
   }
+
+  .nav__toggless a svg {
+    width: 3.5em;
+
+  }
+
+  .nav__toggless a {
+    display: flex;
+    width: 200%;
+
+  }
+
   
   .nav__burger, 
   .nav__close {

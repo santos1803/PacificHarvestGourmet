@@ -1,0 +1,277 @@
+@import url(../css_header_footer/css/header.css);
+@import url(../css_header_footer/css/footer.css);
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+input,
+button {
+    background: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--blanco);
+}
+
+
+/*-----------------------------------*\
+   * #ELEMENTOS COMUNES
+  \*-----------------------------------*/
+
+.container {
+    width: 100%;
+    margin: 20px;
+    margin: 30px 60px;
+}
+
+.boton_comun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 13%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+HEAD .boton_comun--a {
+    width: 100%;
+}
+
+.boton_comun {
+    width: auto;
+}
+
+.boton_comun a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--vinotinto);
+    text-transform: uppercase;
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.boton_comun a:hover {
+    background-color: var(--vinotinto);
+    color: var(--blanco);
+}
+
+.boton_comun:hover {
+    border: 1px solid var(--vinotinto)
+}
+
+hr {
+    margin: 50px 0 50px 0;
+}
+
+
+/*  BANNER PRINCIPAL */
+
+.containerMariscos {
+    width: 100%;
+    height: 32em;
+    background-image: url(../recursos/bannerprincipal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+}
+
+/*  AREA DE PRODUCTOS */
+
+.carritoCompras {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3% 0 1% 0;
+    align-items: center;
+}
+
+.carritoCompras h1 {
+    font-size: 1.8vw;
+    padding: 2.5% 0 2.5% 13%;
+    margin-bottom: 35px;
+    align-self: start;
+}
+
+.carritoCompras_tablas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1% 2% 2%;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: .5px dashed #1c3a6b;
+}
+
+.membrete1 {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.membrete1 img {
+    object-fit: contain;
+    width: 20%;
+}
+
+.carritoCompras_tablas h2 {
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.carritoCompras_tablas table {
+    width: 100%;
+}
+
+.carritoCompras_tablas .trHead {
+    border-radius: 22px;
+    background: #e4e4e4;
+    box-shadow: 5px -5px 34px #e6e6e6, -5px 5px 34px #ffffff;
+}
+
+.carritoCompras_tablas .trHead th {
+    text-transform: uppercase;
+}
+
+.carritoCompras_tablas th {
+    padding: 1% 0;
+    text-align: center;
+}
+
+#productoss {
+    text-align: left;
+    padding-left: 1%;
+}
+
+.trBody td {
+    text-align: center;
+    padding: 2% 0;
+    border-bottom: .5px solid rgba(93, 92, 92, 0.356);
+}
+
+#tproductoss {
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 1%;
+}
+
+.increment {
+    width: 50%;
+    border: 1px solid black;
+}
+
+.increment::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.total_carritoCompra {
+    text-align: center;
+    padding: 3% 0 .5% 0;
+}
+
+.total_carritoCompra h3 {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.forBuy {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forBuy a {
+    background-color: #1c3a6b;
+    color: white !important;
+    width: 15%;
+    padding: 1% 0;
+    border-radius: 30px;
+    font-size: 2.2vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.forBuy a:hover {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
