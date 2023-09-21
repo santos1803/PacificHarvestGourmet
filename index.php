@@ -103,7 +103,7 @@ $con = $db->conectar();
                                 <?php echo $_SESSION['user_name']; ?><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                             </div>
 
-                            <ul class="dropdown__menu">
+                            <ul class="dropdown__menu dropdown_login">
                                 <li>
                                     <a href="./compras.php" class="dropdown__link">
                                         Mis Compras
