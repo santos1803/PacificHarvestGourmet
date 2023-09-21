@@ -1,3 +1,10 @@
+@media (max-width: 1200px) {
+    .containerMariscos {
+        width: 100%;
+        height: 32vh;
+    }
+}
+
 @media (max-width: 900px) {
     .containerMariscos {
         width: 100%;
@@ -29,7 +36,6 @@
     .containerProductos_Cards_Txt p {
         font-size: 15.5px;
     }
-   
 }
 
 @media (max-width: 816px) {
@@ -39,6 +45,10 @@
 }
 
 @media (max-width: 650px) {
+    .containerMariscos {
+        width: 100%;
+        height: 20vh;
+    }
     .containerProductos_Cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -76,7 +86,7 @@
 @media (max-width: 500px) {
     .containerMariscos {
         width: 100%;
-        height: 20vh;
+        height: 15vh;
     }
 }
 
@@ -110,11 +120,14 @@
 }
 
 @media (max-width: 400px) {
-    
-    
     .boton_comun--b {
         font-size: 15px;
-       
     }
-    
+}
+
+@media (max-width: 380px) {
+    .containerMariscos {
+        width: 100%;
+        height: 12vh;
+    }
 }

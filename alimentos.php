@@ -42,7 +42,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
     <!--Cabecera de la pagina-->
-    <header>
+    <!-- <header>
         <nav>
             <section id="carrito">
 
@@ -77,7 +77,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
                 </section>
         </nav>
-    </header>
+    </header> -->
 
     <!--FIN Cabecera de la pagina-->
 
@@ -93,12 +93,15 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
-
-    <div class="containerMariscos containerMariscos--s">
-
-
-        
-    </div>
+    <main class="containerMariscos containerMariscos--a">
+        <article class="txt">
+        <img src="./recursos/SVGLogo.svg" alt="">
+            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
+                en un mundo de sabores marinos enlatados, cuidadosamente seleccionados para ofrecerte la frescura y
+                calidad que mereces. </p>
+           
+        </article>
+    </main>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 

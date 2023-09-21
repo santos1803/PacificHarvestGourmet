@@ -146,18 +146,77 @@ hr {
 
 /*  BANNER PRINCIPAL */
 
-.containerMariscos {
+
+/* .containerMariscos {
     width: 100%;
     height: 32em;
     background-image: url(../recursos/bannerprincipal.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-   
 }
 
+.containerMariscos--a {
+    box-sizing: border-box;
+    background-image: url(../recursos/BANNERRR_ALIMENTOOOOOS.jpeg);
+    background-size: cover;
+    height: 30em;
+} */
 
+.containerMariscos {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/bannerprincipal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 1%;
+}
+
+.containerMariscos--a {
+    background-image: url(../recursos/BANNERRR_ALIMENTOOOOOS.jpeg);
+}
+
+.txt {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 55%;
+    height: 25vw;
+    padding: 2% 0;
+    background: rgba(219, 219, 219, 0.452);
+    box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 0% 100% 71% 29% / 39% 47% 53% 61%;
+    /* border: 1px solid rgba( 255, 255, 255, 0.18); */
+}
+
+.txt img {
+    object-fit: contain;
+    width: 40%;
+    padding-right: 40px;
+}
+
+.containerMariscos h1 {
+    font-size: 2vw;
+    text-transform: capitalize;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.767);
+    letter-spacing: 3px;
+    line-height: 1.6em;
+    word-spacing: 4px;
+}
+
+.containerMariscos p {
+    color: rgba(0, 0, 0, 0.89);
+    width: 85%;
+    font-size: 1.3vw;
+}
 
 .containerMariscos_Enlace_Txt {
     width: 27%;
@@ -293,10 +352,10 @@ hr {
     gap: 5%;
     row-gap: 45px;
     background: rgba(254, 251, 246, 0.25);
-box-shadow: 0 1px 22px 0 rgba(154, 160, 255, 0.37);
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 15px;
+    box-shadow: 0 1px 22px 0 rgba(154, 160, 255, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 15px;
     padding: 3%;
 }
 
@@ -477,7 +536,6 @@ border-radius: 15px;
     transition: 0.5s;
 }
 
-
 .botonPagina {
     width: 10%;
     font-size: 1vw;
@@ -501,7 +559,6 @@ border-radius: 15px;
     border-radius: 10% / 40%;
 }
 
-.botonPagina:hover .enlaceBoton{
+.botonPagina:hover .enlaceBoton {
     color: rgb(0, 0, 0);
-    
 }
