@@ -192,7 +192,7 @@ hr {
     box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
-    border-radius: 0% 100% 71% 29% / 39% 47% 53% 61%;
+    border-radius: 0% 100% 81% 29% / 39% 47% 53% 61%;
     /* border: 1px solid rgba( 255, 255, 255, 0.18); */
 }
 
@@ -202,18 +202,8 @@ hr {
     padding-right: 40px;
 }
 
-.containerMariscos h1 {
-    font-size: 2vw;
-    text-transform: capitalize;
-    width: 80%;
-    color: rgba(0, 0, 0, 0.767);
-    letter-spacing: 3px;
-    line-height: 1.6em;
-    word-spacing: 4px;
-}
-
 .containerMariscos p {
-    color: rgba(0, 0, 0, 0.89);
+    color: rgba(25, 82, 136, 0.973);
     width: 85%;
     font-size: 1.3vw;
 }
