@@ -80,7 +80,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <input type="tel" name="" id="" placeholder="   Teléfono">
 
                 <textarea name="" id="" cols="30" rows="10" placeholder="Dejanos tu mensaje"></textarea>
-                <button>Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
 
 
