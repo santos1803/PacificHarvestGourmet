@@ -87,6 +87,16 @@
     width: 180px;
     
   }
+
+  .nav__logo_cart {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+   .nav__logo_cart a {
+    display: inline-block;
+   }
   
   .nav__data {
     height: 100%;
@@ -150,6 +160,7 @@
     .header {
       height: 80px;
     }
+
     .nav__menu {
       position: absolute;
       left: 0;
@@ -168,13 +179,14 @@
       background-color: #fff;
       padding-top: 1rem;
     }
-    .nav__link_cart {
+/*     .nav__link_cart {
       display: none !important;
-    }
+    } */
     .nav__data {
       height: 79px;
       width: 100%;
     }
+
 
   }
 
@@ -365,8 +377,12 @@
       pointer-events: initial;
       transition: top .3s;
     }
+
   }
 
   .flag_language {
     width: 20px;
   }
+
+
+ 
