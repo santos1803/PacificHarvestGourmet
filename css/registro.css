@@ -1,5 +1,7 @@
-@import url(../css_header_footer/css/header.css);
-@import url(../css_header_footer/css/footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../nav_footer_css/nav_principal.css);
+@import url(../nav_footer_css/footer.css);
+@import url(../responsive_css/index.css);
 
 /*-----------------------------------*\
  * #PROPIEDADES PERSONALIZADAS
@@ -22,131 +24,12 @@
    * #RESET
   \*-----------------------------------*/
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Merriweather', serif;
-    font-family: 'Roboto', sans-serif;
-}
 
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    display: block;
-}
-
-a,
-img,
-span,
-input,
-label,
-button,
-input,
-button {
-    background: none;
-    border: none;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    display: block;
-}
-
-a,
-img,
-span,
-input,
-label,
-button,
-input,
-button {
-    background: none;
-    border: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-input {
-    width: 100%;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--blanco);
-}
 
 
 /*-----------------------------------*\
    * #ELEMENTOS COMUNES
   \*-----------------------------------*/
-
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
-.container {
-    width: 100%;
-    margin: 20px;
-    margin: 30px 60px;
-}
-
-.boton_comun {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    width: 13%;
-    border-radius: 10px;
-    transition: .4s;
-}
-
-HEAD .boton_comun--a {
-    width: 100%;
-}
-
-.boton_comun {
-    width: auto;
-}
-
-.boton_comun a {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    text-align: center;
-    color: var(--vinotinto);
-    text-transform: uppercase;
-    transition: .4s;
-    border-radius: 10px;
-}
-
-.boton_comun a:hover {
-    background-color: var(--vinotinto);
-    color: var(--blanco);
-}
-
-.boton_comun:hover {
-    border: 1px solid var(--vinotinto)
-}
-
-hr {
-    margin: 50px 0 50px 0;
-}
 
 
 /*-----------------------------------*\
