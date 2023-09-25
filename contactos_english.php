@@ -28,9 +28,12 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./scss/style.scss">
-    <!-- <link rel="stylesheet" href="./responsive_css/contactos.css"> -->
+    <link rel="stylesheet" href="./responsive_css/contactos.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
+
+
 
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
@@ -267,18 +270,25 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <section class="Formulario">
 
             <p class="correo">PacificHarvestGourmet@gmail.com</p>
-            <form class="formulario_Contacto separador">
-                <input type="text" name="" id="" placeholder="      Name">
-                <input type="email" name="" id="" placeholder="     Email">
-                <input type="tel" name="" id="" placeholder="   Number Phone">
+            <form class="formulario_Contacto">
+                <input class="inputsContacto"  type="text" name="" id="" placeholder="      Name">
+                <input class="inputsContacto" type="email" name="" id="" placeholder="     Email">
+                <input class="inputsContacto" type="tel" name="" id="" placeholder="   Number Phone">
 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Leave us your message"></textarea>
+                <textarea class="textareaContacto" name="" id="" cols="30" rows="10" placeholder="Leave us your message"></textarea>
                 <button type="submit">Send</button>
             </form>
 
 
         </section>
     </div>
+
+    <footer class="footer" style="margin-top: 40px;">
+        <hr class="hrFooter">
+        <img src="./recursos/SVGLogo.svg" alt="">
+
+
+    </footer>
 
 
 
@@ -288,9 +298,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
 
+    <script src="./js/main.js"></script>
     <script src="https://kit.fontawesome.com/5d15e4e334.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

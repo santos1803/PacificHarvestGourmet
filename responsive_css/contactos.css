@@ -1,29 +1,30 @@
-@media (max-width: 900px) {
-    .img_banner_bg {
-        height: 20vh;
-    }
-    .container h2 {
-        font-size: 22px;
+@media (max-width: 600px) {
+    .Formulario {
+        
+        padding: 5% 0;
+    
     }
 }
 
-@media (max-width: 865px) {
-    footer .container .footer {
-        flex-direction: column-reverse;
-        gap: 20px;
+
+@media (max-width: 420px) {
+    .contenidoTitulo_Contacto {
+        font-size: 1.4em;
+        
     }
 
-    footer .container .footer .Copyright {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
+    .textos_Contacto .container article .contenidoParrafo_Contacto {
+        font-size: 1.3em;
     }
 
-    footer .container .footer .terms_conditios {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
+    .Formulario {
+        
+        padding: 5% 2%;
+    
+    }
+
+    .correo {
+        font-size: .8em;
+        font-weight: 500;
     }
 }

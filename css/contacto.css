@@ -60,12 +60,8 @@
     border-radius: 22px;
     background: #e9e9e9;
     box-shadow: 10px 10px 20px #d4d4d4, -10px -10px 20px #ffffff;
-    padding: 2% 0;
+    padding: 3% 0;
     margin-top: 30px;
-}
-
-.separador {
-    margin-top: 55px;
 }
 
 .formulario_Contacto {
@@ -75,15 +71,16 @@
     justify-content: center;
     align-items: center;
     gap: 45px;
+    padding: 2% 0;
 }
 
-.formulario_Contacto input {
+.formulario_Contacto .inputsContacto {
     border: 1px solid rgb(188, 188, 188);
     width: 60vw;
     height: 5vh;
 }
 
-.formulario_Contacto textarea {
+.formulario_Contacto .textareaContacto{
     border: 1px solid rgb(188, 188, 188);
     width: 60vw;
     height: 25vh;
@@ -92,7 +89,7 @@
 .formulario_Contacto button {
     width: 7em;
     height: 2.2em;
-    background-color: var(--vinotinto);
+    background-color:#1c3a6b;
     color: white;
     border-radius: 25px;
 }

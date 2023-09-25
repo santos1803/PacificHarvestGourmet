@@ -50,6 +50,7 @@ if ($id_transaccion == '') {
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/registro.css">
     <title>Pacific Harvest Gourmet</title>
@@ -337,22 +338,12 @@ if ($id_transaccion == '') {
 
     <!--Inicio footer-->
 
-<!-- 
-    <footer>
+    <footer class="footer" style="margin-top: 40px;">
+        <hr class="hrFooter">
+        <img src="./recursos/SVGLogo.svg" alt="">
 
-        <div class="container">
 
-            <div class="footer3">
-                <div>
-                    <a href="../html/index_english.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-            </div>
-
-        </div>
-    </footer> -->
+    </footer>
 
 
 

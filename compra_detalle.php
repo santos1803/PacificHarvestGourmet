@@ -48,6 +48,7 @@ $sqlDetalle->execute([$idCompra]);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/compra_detalles.css">
     <title>Pacific Harvest Gourmet</title>
@@ -379,23 +380,11 @@ $sqlDetalle->execute([$idCompra]);
     <!--Inicio footer-->
 
 
-    <hr>
-    <footer>
-
-        <div class="container">
-
+    <footer class="footer" style="margin-top: 40px;">
+        <hr class="hrFooter">
+        <img src="./recursos/SVGLogo.svg" alt="">
 
 
-            <div class="footer3">
-                <div>
-                    <a href="../index.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-            </div>
-
-        </div>
     </footer>
 
 

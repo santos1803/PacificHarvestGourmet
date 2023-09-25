@@ -1,0 +1,43 @@
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+   object-fit: cover;
+   width: 25%;
+}
+
+.hrFooter {
+   
+    width: 70%;
+}
+
+
+@media (max-width: 800px) {
+    .footer img {
+        object-fit: cover;
+        width: 35%;
+     }
+
+}
+
+@media (max-width: 600px) {
+    .footer img {
+        object-fit: cover;
+        width: 45%;
+     }
+
+}
+
+@media (max-width: 450px) {
+    .footer img {
+        object-fit: cover;
+        width: 55%;
+     }
+
+}

@@ -36,6 +36,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/productos.css">
     <title>Pacific Harvest Gourmet</title>
@@ -347,24 +348,13 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-    <!-- fin del formulario de contacto -->
-    <!-- <footer>
 
-        <div class="container">
-
-            <div class="footer3">
-                <div>
-                    <a href="../index.php"><img src="../recursos/SVGLogo.svg" alt=""></a>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-            </div>
-
-        </div>
-    </footer> -->
+    <footer class="footer" style="margin-top: 40px;">
+        <hr class="hrFooter">
+        <img src="./recursos/SVGLogo.svg" alt="">
 
 
+    </footer>
     <!--FIN Inicio footer-->
 
 

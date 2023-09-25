@@ -33,6 +33,7 @@ $con = $db->conectar();
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/index.css">
     <title>Pacific Harvest Gourmet</title>
@@ -467,14 +468,12 @@ $con = $db->conectar();
 
         </article>
     </div>
-    <!-- 
     <footer class="footer">
+        <hr class="hrFooter">
         <img src="./recursos/SVGLogo.svg" alt="">
-        <form action="">
-            <h1>Contactanos</h1>
-        </form>
 
-    </footer> -->
+
+    </footer>
 
 
 

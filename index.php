@@ -32,6 +32,7 @@ $con = $db->conectar();
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <title>Pacific Harvest Gourmet</title>
@@ -442,21 +443,16 @@ $con = $db->conectar();
                 trenes, dependiendo de la distancia y la urgencia del envío</p>
             <!-- <button class="botonPagina">LEER MAS</button> -->
         </article>
-        <!-- <article class="prueba">
-            <h1>Todo en un click</h1>
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
-                en un mundo de sabores marinos enlatados. </p>
-            <button class="botonPagina">LEER MAS</button>        
-        </article> -->
+     
     </div>
-    <!-- 
-    <footer class="footer">
-        <img src="./recursos/SVGLogo.svg" alt="">
-        <form action="">
-            <h1>Contactanos</h1>
-        </form>
 
-    </footer> -->
+
+    <footer class="footer">
+    <hr class="hrFooter">
+    <img src="./recursos/SVGLogo.svg" alt="">
+        
+
+    </footer> 
 
 
 
