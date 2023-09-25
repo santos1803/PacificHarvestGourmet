@@ -252,11 +252,14 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
     <main class="containerMariscos containerMariscos--a">
-        <article class="txt">
+        <!-- <article class="txt">
             <img src="./recursos/SVGLogo.svg" alt="">
             <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
                 en un mundo de sabores marinos enlatados, cuidadosamente seleccionados para ofrecerte la frescura y
                 calidad que mereces. </p>
+
+        </article> -->
+        <article class="">
 
         </article>
     </main>

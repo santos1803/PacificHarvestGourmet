@@ -34,12 +34,29 @@ a {
     width: 100%;
     height: 65vh;
     display: flex;
+   
     align-items: center;
     background-image: url(../recursos/bannerprincipal.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-left: 1%;
 }
+
+.containerPrincipal--a {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../recursos/BANNERRR_ALIMENTOOOOOS.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 1%;
+    display: none;
+
+}
+
 
 .txt {
     box-sizing: border-box;
@@ -48,8 +65,8 @@ a {
     align-items: center;
     gap: 25px;
     width: 45%;
-    padding: 2% 0;
-    background: rgba( 219, 219, 219, 0.25);
+    padding: 5% 0;
+    background: rgba(255, 255, 255, 0.459);
     box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
@@ -89,11 +106,29 @@ a {
     border-radius: 10% / 40%;
 }
 
+.prueba {
+    width: 40%;
+    background: rgba(252, 252, 252, 0.898);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+.prueba h1 {
+  
+    text-align: center;
+}
+
 .containerSecundario {
     width: 100%;
     height: 8.5em;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .flotante {
@@ -106,7 +141,7 @@ a {
     border-radius: 20px;
     padding: 1%;
     position: absolute;
-    bottom: 73px;
+    bottom: 23px;
 }
 
 .flotanteTxt {
@@ -114,6 +149,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 2%;
 }
 
 .flotanteTxt h1,
@@ -152,6 +188,7 @@ p {
     box-sizing: border-box;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 2%;
 }
@@ -161,30 +198,28 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1% 0;
+    padding: 2% 0;
     gap: 15px;
     cursor: pointer;
-}
-
-.cardProducto {
-    flex-basis: 20%;
     border-radius: 25px;
     background: #ffffff;
     box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
 }
+
+
 
 .cardProducto a {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1% 0;
-    gap: 15px;
+    gap: 35px;
     color: #171717;
     cursor: pointer;
 }
 
 .cardProducto img {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
 }
 
@@ -193,6 +228,7 @@ p {
     width: 100%;
     padding: 4% 10%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 55px;
 }
@@ -246,22 +282,39 @@ p {
     line-height: 1.5em;
 }
 
+.articleImg--a {
+    display: none;
+    border-radius: 20px;
+    
+}
+
+.articleImg--a img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 60%;
+    
+}
+
+
 .containerCinco {
     background-image: url(../recursos/Logistics-Index-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
     height: 32em;
 }
 
 .containerCinco {
+    display: flex;
     justify-content: end;
     padding-right: 20px;
 }
 
 .txt2 {
     margin-top: 100px;
-    background: rgba(219, 219, 219, 0.616);
+    
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
@@ -270,10 +323,14 @@ p {
 
 .txt2 h1 {
     color: #5c5c5c;
+   
+    width: 60%;
 }
 
 .txt2 p {
     color: #5c5c5c;
+   
+    width: 70%;
 }
 
 .footer {
