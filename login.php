@@ -279,9 +279,14 @@ if (!empty($_POST)) {
 
     <main class="containerPrincipal--l">
         <article class="txt">
+<<<<<<< HEAD
             <h1>Todo un click</h1>
             <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
                 en un mundo de sabores marinos enlatados. </p>
+=======
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
+>>>>>>> eef6f05efc91397d922a6b5180f4ff597a3ec445
            
         </article>
        
@@ -290,9 +295,14 @@ if (!empty($_POST)) {
     <main class="containerPrincipal containerPrincipal--a">
        
         <article class="prueba">
+<<<<<<< HEAD
             <h1>Todo en un click</h1>
             <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
                 en un mundo de sabores marinos enlatados. </p>
+=======
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti </p>
+>>>>>>> eef6f05efc91397d922a6b5180f4ff597a3ec445
            
         </article>
     </main>

@@ -243,7 +243,23 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
     <!--inicio banner principal-->
 
+    <main class="containerPrincipal--cont">
+        <article class="txt">
+            <h1>Contact us</h1>
+            <p>Do not hesitate to contact our team of experts who are ready to help you at any time.</p>
+           
+        </article>
+       
+    </main>
 
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Contact us</h1>
+            <p>Do not hesitate to contact our team of experts who are ready to help you at any time.</p>
+           
+        </article>
+    </main>
 
     <!--final banner principal-->
 
