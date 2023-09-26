@@ -252,16 +252,21 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
-    <main class="containerMariscos containerMariscos--a">
-        <!-- <article class="txt">
-            <img src="./recursos/SVGLogo.svg" alt="">
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
-                en un mundo de sabores marinos enlatados, cuidadosamente seleccionados para ofrecerte la frescura y
-                calidad que mereces. </p>
+    <main class="containerPrincipal--ali">
+        <article class="txt">
+            <h1>Delicias Gastronómicas</h1>
+            <p>Nuestra selección está diseñada para complacer a los amantes de la cocina y a aquellos que buscan ingredientes de primera categoría.</p>
+           
+        </article>
+       
+    </main>
 
-        </article> -->
-        <article class="">
-
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Delicias Gastronómicas</h1>
+            <p>Nuestra selección está diseñada para complacer a los amantes de la cocina y a aquellos que buscan ingredientes de primera categoría. </p>
+           
         </article>
     </main>
 

@@ -251,11 +251,23 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <div class="containerMariscos containerMariscos--s">
+    <main class="containerPrincipal--reg">
+        <article class="txt">
+            <h1>Encuentra el regalo perfecto</h1>
+            <p> ¿Listo para hacer sonreír a alguien especial? ¡Descubre nuestras ideas de regalos excepcionales!</p>
+           
+        </article>
+       
+    </main>
 
-
-        
-    </div>
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Encuentra el regalo perfecto</h1>
+            <p>¿Listo para hacer sonreír a alguien especial? ¡Descubre nuestras ideas de regalos excepcionales!</p>
+           
+        </article>
+    </main>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 

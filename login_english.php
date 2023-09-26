@@ -272,9 +272,23 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
-      
-    </div>
+    <main class="containerPrincipal--l">
+        <article class="txt">
+            <h1>Log in</h1>
+            <p>Please enter your user credentials to enjoy all the advantages and personalized experiences we have prepared for you</p>
+           
+        </article>
+       
+    </main>
+
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Log in</h1>
+            <p>Please enter your user credentials to enjoy all the advantages and personalized experiences we have prepared for you </p>
+           
+        </article>
+    </main>
 
     <!--final banner principal-->
 

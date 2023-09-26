@@ -277,9 +277,24 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
-      
-    </div>
+    <main class="containerPrincipal--l">
+        <article class="txt">
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
+           
+        </article>
+       
+    </main>
+
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti </p>
+           
+        </article>
+    </main>
+
 
     <!--final banner principal-->
 

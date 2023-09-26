@@ -3,9 +3,12 @@
 @import url(../nav_footer_css/footer.css);
 @import url(../responsive_css/index.css);
 
-/*-----------------------------------*\
-   * #INICION DE BANNER PRINCIPAL
-  \*-----------------------------------*/
+
+   
+   
+.containerPrincipal--cont {
+    background-image: url(../recursos/contacto.jpg);
+}
 
 .textos_Contacto {
     display: flex;

@@ -251,11 +251,23 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <div class="containerMariscos containerMariscos--s">
+    <main class="containerPrincipal--cond">
+        <article class="txt">
+            <h1>Condimentos</h1>
+            <p>Hemos reunido una selección cuidadosa de condimentos de alta calidad que añadirán un toque mágico a tus platos.</p>
+           
+        </article>
+       
+    </main>
 
-
-        
-    </div>
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Condimentos</h1>
+            <p>Hemos reunido una selección cuidadosa de condimentos de alta calidad que añadirán un toque mágico a tus platos.</p>
+           
+        </article>
+    </main>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
