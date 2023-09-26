@@ -277,9 +277,26 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
-      
-    </div>
+    <main class="containerPrincipal--l">
+        <article class="txt">
+            <h1>Todo un click</h1>
+            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
+                en un mundo de sabores marinos enlatados. </p>
+           
+        </article>
+       
+    </main>
+
+    <main class="containerPrincipal containerPrincipal--a">
+       
+        <article class="prueba">
+            <h1>Todo en un click</h1>
+            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
+                en un mundo de sabores marinos enlatados. </p>
+           
+        </article>
+    </main>
+
 
     <!--final banner principal-->
 
