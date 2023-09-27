@@ -234,9 +234,23 @@ $con = $db->conectar();
 
     </div>
 
-    <div class="banner_principal">
+    <main class="containerPrincipal containerPrincipal--env">
+        <article class="txt">
+            <h1>Your Fast and Secure Shipments.</h1>
+            <p>We guarantee you a worry-free delivery experience. We take pride in offering a fast, secure, and reliable shipping service. </p>
+           
+        </article>
+       
+    </main>
 
-    </div>
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--b">
+       
+        <article class="prueba">
+            <h1>Your Fast and Secure Shipments.</h1>
+            <p>We guarantee you a worry-free delivery experience. We take pride in offering a fast, secure, and reliable shipping service.</p>
+           
+        </article>
+    </main>
 
     <div class="title">
         <section class="container_envios">

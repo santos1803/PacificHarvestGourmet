@@ -27,9 +27,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/contacto.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./responsive_css/contactos.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
 
@@ -237,13 +239,29 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div class="vacio" style="height: 70px;">
 
     </div>
-    <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
+   <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
     <!--inicio banner principal-->
 
+    <main class="containerPrincipal containerPrincipal--cont">
+        <article class="txt">
+            <h1>Contact us</h1>
+            <p>Do not hesitate to contact our team of experts who are ready to help you at any time.</p>
+           
+        </article>
+       
+    </main>
 
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--c">
+       
+        <article class="prueba">
+            <h1>Contact us</h1>
+            <p>Do not hesitate to contact our team of experts who are ready to help you at any time.</p>
+           
+        </article>
+    </main>
 
     <!--final banner principal-->
 

@@ -53,9 +53,10 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/productos.css">
-    <link rel="stylesheet" href="./nav_footer_css/footer.css">
-    <link rel="stylesheet" href="./responsive_css/nav.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./responsive_css/productos.css">
+    <link rel="stylesheet" href="./responsive_css/nav.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
     
@@ -260,7 +261,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -270,11 +271,23 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <div class="containerMariscos containerMariscos--s">
+    <main class="containerPrincipal containerPrincipal--gen">
+        <article class="txt">
+            <h1>Catálogo de Productos</h1>
+            <p>Te invitamos a explorar una amplia gama de artículos cuidadosamente seleccionados para satisfacer tus necesidades y gustos.</p>
+           
+        </article>
+       
+    </main>
 
-
-        
-    </div>
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--f">
+       
+        <article class="prueba">
+            <h1>Catálogo de Productos</h1>
+            <p>Te invitamos a explorar una amplia gama de artículos cuidadosamente seleccionados para satisfacer tus necesidades y gustos.</p>
+           
+        </article>
+    </main>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 

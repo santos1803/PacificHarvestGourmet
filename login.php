@@ -54,10 +54,12 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
+    <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./scss/style.scss">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./responsive_css/nav.css">
+    
     
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
@@ -266,9 +268,9 @@ if (!empty($_POST)) {
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <!-- <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
-    </div> -->
+    </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
 
 
@@ -277,9 +279,26 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
-      
-    </div>
+    <main class="containerPrincipal containerPrincipal--l">
+        <article class="txt">
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
+
+           
+        </article>
+       
+    </main>
+
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--d">
+       
+        <article class="prueba">
+            <h1>Logueate</h1>
+            <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti </p>
+
+           
+        </article>
+    </main>
+
 
     <!--final banner principal-->
 

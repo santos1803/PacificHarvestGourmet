@@ -1,11 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../responsive_css/index.css);
+@import url(../responsive_css/contactos.css);
 @import url(../nav_footer_css/nav_principal.css);
 @import url(../nav_footer_css/footer.css);
-@import url(../responsive_css/index.css);
 
-/*-----------------------------------*\
-   * #INICION DE BANNER PRINCIPAL
-  \*-----------------------------------*/
+
+
+   
+   
+.containerPrincipal--cont {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/contacto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--a {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    display: none;
+}
+
+.containerPrincipal--c {
+    background-image: url(../recursos/contacto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
 
 .textos_Contacto {
     display: flex;

@@ -35,6 +35,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/productos.css">
@@ -241,7 +242,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -251,11 +252,23 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <div class="containerMariscos containerMariscos--s">
+    <main class="containerPrincipal containerPrincipal--cond">
+        <article class="txt">
+            <h1>Spices</h1>
+            <p>We have put together a careful selection of high-quality condiments that will add a magical touch to your dishes.</p>
+           
+        </article>
+       
+    </main>
 
-
-        
-    </div>
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--g">
+       
+        <article class="prueba">
+            <h1>Spices</h1>
+            <p>We have put together a careful selection of high-quality condiments that will add a magical touch to your dishes.</p>
+           
+        </article>
+    </main>
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
