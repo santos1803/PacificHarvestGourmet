@@ -34,10 +34,13 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/productos.css">
-    <link rel="stylesheet" href="./nav_footer_css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
+    <link rel="stylesheet" href="./nav_footer_css/footer.css">
+    
     <link rel="stylesheet" href="./responsive_css/productos.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
@@ -252,7 +255,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
-    <main class="containerPrincipal--ali">
+    <main class="containerPrincipal containerPrincipal--ali">
         <article class="txt">
             <h1>Delicias Gastronómicas</h1>
             <p>Nuestra selección está diseñada para complacer a los amantes de la cocina y a aquellos que buscan ingredientes de primera categoría.</p>
@@ -261,7 +264,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
        
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--e">
        
         <article class="prueba">
             <h1>Delicias Gastronómicas</h1>

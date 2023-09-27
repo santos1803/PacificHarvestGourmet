@@ -54,10 +54,12 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
+    <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./scss/style.scss">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./responsive_css/nav.css">
+    
     
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
@@ -266,9 +268,9 @@ if (!empty($_POST)) {
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <!-- <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
-    </div> -->
+    </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
 
 
@@ -277,32 +279,22 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <main class="containerPrincipal--l">
+    <main class="containerPrincipal containerPrincipal--l">
         <article class="txt">
-<<<<<<< HEAD
-            <h1>Todo un click</h1>
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
-                en un mundo de sabores marinos enlatados. </p>
-=======
             <h1>Logueate</h1>
             <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
->>>>>>> eef6f05efc91397d922a6b5180f4ff597a3ec445
+
            
         </article>
        
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--d">
        
         <article class="prueba">
-<<<<<<< HEAD
-            <h1>Todo en un click</h1>
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
-                en un mundo de sabores marinos enlatados. </p>
-=======
             <h1>Logueate</h1>
             <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti </p>
->>>>>>> eef6f05efc91397d922a6b5180f4ff597a3ec445
+
            
         </article>
     </main>

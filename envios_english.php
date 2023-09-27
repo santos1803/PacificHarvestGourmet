@@ -234,7 +234,7 @@ $con = $db->conectar();
 
     </div>
 
-    <main class="containerPrincipal--env">
+    <main class="containerPrincipal containerPrincipal--env">
         <article class="txt">
             <h1>Your Fast and Secure Shipments.</h1>
             <p>We guarantee you a worry-free delivery experience. We take pride in offering a fast, secure, and reliable shipping service. </p>
@@ -243,7 +243,7 @@ $con = $db->conectar();
        
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--b">
        
         <article class="prueba">
             <h1>Your Fast and Secure Shipments.</h1>
