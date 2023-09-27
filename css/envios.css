@@ -204,6 +204,7 @@ a {
     font-size: 0vw;
     text-transform: capitalize;
     transition: .4s;
+    margin-left: -30px;
 }
 
 .galery__items:hover .text__hover {
