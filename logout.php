@@ -6,6 +6,8 @@ require './php/config.php';
 
 session_destroy();
 
-header("Location: login.php")
+// echo "<script>location.href='login.php';</script>";
+
+header("Location: /login.php")
 
 ?>

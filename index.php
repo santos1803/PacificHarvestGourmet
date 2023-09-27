@@ -280,7 +280,7 @@ $con = $db->conectar();
 
     <main class="containerPrincipal">
         <article class="txt">
-            <h1>Todo un click</h1>
+            <h1>Todo en un click</h1>
             <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
                 en un mundo de sabores marinos enlatados. </p>
             <!-- <button class="botonPagina">LEER MAS</button> -->
@@ -315,7 +315,7 @@ $con = $db->conectar();
             </article>
             <span class="separador"></span>
             <article class="flotanteTxt">
-                <h1>1</h1>
+                <h1>1<sup>er</sup></h1>
                 <p>lugar </p>
                 <p>en ventas</p>
             </article>

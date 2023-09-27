@@ -306,7 +306,7 @@ $con = $db->conectar();
             </article>
             <span class="separador"></span>
             <article class="flotanteTxt">
-                <h1>1</h1>
+                <h1>1<sup>st</sup></h1>
 
                 <p>places </p>
                 <p>in sales</p>

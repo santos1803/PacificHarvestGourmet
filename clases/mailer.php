@@ -25,6 +25,7 @@ class Mailer {
         $mail->Username   = MAIL_USER;                     //SMTP username
         $mail->Password   =  MAIL_PASS;             //'ezuirdvddecogaza';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption 
+        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Para el servidor
         $mail->Port       = MAIL_PORT;                                    //TCP port to connect to; use 587    if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
