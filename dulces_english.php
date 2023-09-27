@@ -36,6 +36,7 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
     <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
     <link rel="stylesheet" href="./responsive_css/productos.css">
@@ -243,7 +244,7 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -253,7 +254,7 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <main class="containerPrincipal--dul">
+    <main class="containerPrincipal containerPrincipal--dul">
         <article class="txt">
             <h1>Sweet Delights"</h1>
             <p>Immerse yourself in a world of irresistible temptations that will delight your senses. </p>
@@ -262,7 +263,7 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
        
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--h">
        
         <article class="prueba">
             <h1>Sweet Delights"</h1>
