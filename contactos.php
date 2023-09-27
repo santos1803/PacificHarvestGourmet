@@ -276,7 +276,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <h1 class="contenidoTitulo_Contacto">
                     Comunícate con nosotros
                 </h1>
-                <p class="contenidoParrafo_Contacto">
+                <p class="contenidoParrafo_Contacto"> 
                     Completa el siguiente formulario y déjanos tus inquietudes, dentro de 24 horas nos comunicaremos contigo.
                 </p>
 
@@ -291,7 +291,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <section class="Formulario">
 
             <p class="correo">PacificHarvestGourmet@gmail.com</p>
-            <form class="formulario_Contacto ">
+            <form class="formulario_Contacto " action="https://formsubmit.co/gnavarro@pacificharvestgourmet.com" method="post">
                 <input class="inputsContacto" type="text" name="" id="" placeholder="      Nombre">
                 <input class="inputsContacto" type="email" name="" id="" placeholder="     Correo Electrónico">
                 <input class="inputsContacto" type="tel" name="" id="" placeholder="   Teléfono">
@@ -299,7 +299,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <textarea class="textareaContacto" name="" id="" cols="30" rows="10" placeholder="Dejanos tu mensaje"></textarea>
                 <button type="submit">Enviar</button>
             </form>
-
+                    
 
         </section>
     </div>

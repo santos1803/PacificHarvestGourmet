@@ -295,16 +295,16 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
+    <!-- <div class="containerMariscos">
 
-    </div>
+    </div> -->
 
     <!--final banner principal-->
 
 
     <!--Formulario para la recuperacion de contraseña-->
-    <section class=" form-login form-login--c m-auto pt-4 login_form">
-        <div class="container">
+    <section class=" form-login form-login--c m-auto pt-4 login_form" style="margin-top: 80px;">
+        <div class="container" style="margin-top: 120px;">
             <h3 style="margin-bottom: 30px;">Password lost</h3>
             <p>Lost your password? Please enter your username or email address. You will receive a link to create a new
                 password by email.</p>

@@ -41,6 +41,7 @@ if ($productos != null) {
     <link rel="stylesheet" href="./css/pagar.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
+    <link rel="stylesheet" href="./responsive_css/pagar.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
 </head>
@@ -244,17 +245,17 @@ if ($productos != null) {
 
     <div id="vacio">
 
-    </div>
+</div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
 
 
 
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
-
+<!-- 
     <div class="containerMariscos">
 
-    </div>
+    </div> -->
 
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
@@ -267,7 +268,7 @@ if ($productos != null) {
 
     <!---Seccion para mostrar productos  y pagar-->
 
-    <div class="carritoCompras">
+    <div class="carritoCompras" style="margin-top: 30px;">
         <h1>Finalize Purchase</h1>
         <section class="carritoCompras_tablas ">
             <article class="membrete1">

@@ -365,7 +365,7 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="./dulces_english"> <img src="./recursos/principal3.jpg" alt="">
+                <a href="./dulces_english.php"> <img src="./recursos/principal3.jpg" alt="">
                     <h5>Candys</h5>
                 </a>
 

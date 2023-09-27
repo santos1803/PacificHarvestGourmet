@@ -44,7 +44,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 170px;
+    padding-top: 80px;
     width: 100%;
 }
 
@@ -66,6 +66,10 @@
     font-size: 1.4em;
 }
 
+.contenidoParrafo_Contacto  {
+    color: black;
+}
+
 .contenidoTitulo_Contacto {
     font-size: 1.8em;
     text-align: justify;
@@ -75,6 +79,7 @@
 .correo {
     font-size: 1em;
     font-weight: 500;
+    color: black;
 }
 
 .contenedorForm {

@@ -8,6 +8,6 @@ session_destroy();
 
 // echo "<script>location.href='login.php';</script>";
 
-header("Location: /login.php")
+header("Location: login.php")
 
 ?>

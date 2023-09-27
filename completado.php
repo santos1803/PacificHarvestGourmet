@@ -262,13 +262,13 @@ if ($id_transaccion == '') {
 
 
 
-    <div class="containerMariscos">
+    <!-- <div class="containerMariscos">
 
-    </div>
+    </div> -->
 
 
     <main>
-        <div class="container" style="margin-top: 50px;">
+        <div class="container" style="margin-top: 40px;">
 
             <!--Creamos la tabla donde tomamos los valores de la consulta que hicimos al inicio y lo mostramos en una tabla para que el cliente pueda ver los detalles de su compra exitosa-->
 

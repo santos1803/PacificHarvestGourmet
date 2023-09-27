@@ -298,9 +298,9 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
+    <!-- <div class="containerMariscos">
       
-      </div>
+      </div> -->
 
     <!--final banner principal-->
 
@@ -308,7 +308,7 @@ if (!empty($_POST)) {
     <!--Formulario para la recuperacion de contraseña-->
 
     <section class=" form-login form-login--c m-auto pt-4 login_form">
-        <div class="container">
+        <div class="container"  style="margin-top: 120px;">
             <h3>Contraseña perdida</h3>
             <p>¿Perdiste tu contraseña? Por favor, introduce tu nombre de usuario o correo electrónico. Recibirás un enlace para crear una contraseña nueva por correo electrónico.</p>
             <?php mostrarMensajes($errors); ?>

@@ -11,6 +11,10 @@
         margin: 0 220px;
         font-size: 18px;
     }
+
+   
+
+   
 }
 
 @media (max-width: 662px) {
@@ -113,5 +117,15 @@
 @media (max-width: 342px) {
     .forBuy a {
         font-size: 7px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1800px) {
+    #vacio {
+        height: 7vh;
     }
 }

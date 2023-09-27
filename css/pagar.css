@@ -42,13 +42,14 @@
 }
 
 .carritoCompras h1 {
-    font-size: 1.8vw;
+    font-size: 20px;
     padding: 2.5% 0 2.5% 13%;
     margin-bottom: 35px;
     align-self: start;
 }
 
 .carritoCompras_tablas {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 20px;

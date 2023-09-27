@@ -340,29 +340,29 @@ $con = $db->conectar();
         </article>
         <section class="cardCategoria">
             <article class="cardProducto">
-                <a href=""><img src="./recursos/principal.jpg" alt="">
+                <a href="mariscos.php"><img src="./recursos/principal.jpg" alt="">
                     <h5>Mariscos</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href=""><img src="./recursos/principal1.jpg" alt="">
-                    <h5>Pescados</h5>
+                <a href="alimentos.php"><img src="./recursos/principal1.jpg" alt="">
+                    <h5>Alimentos</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href=""> <img src="./recursos/principal2.jpg" alt="">
+                <a href="regalos.php"> <img src="./recursos/principal2.jpg" alt="">
                     <h5>Regalos</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href=""><img src="./recursos/principal3.jpg" alt="">
-                    <h5>Exclusivos</h5>
+                <a href="dulces.php"><img src="./recursos/principal3.jpg" alt="">
+                    <h5>Dulces</h5>
                 </a>
 
             </article>

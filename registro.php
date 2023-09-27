@@ -312,16 +312,16 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
+    <!-- <div class="containerMariscos">
       
-    </div>
+    </div> -->
 
     <!--final banner principal-->
 
 
     <!--Formulario de Registro del cliente, cada uno de los praremetros sera guardado en la bade de datos en la tabla de cliente y usuario respectivamente, aqui tambien se hace llamado a unas funciones ya creadas para los posibles mensajes de error o exit, dependiendo del caso-->
 
-    <section class="login_registro">
+    <section class="login_registro" style="margin-top: 80px;">
         <div class="container">
             <h2 style="margin-bottom:70px; margin-top: 30px;">Datos del cliente</h2>
             <?php mostrarMensajes($errors); ?>
