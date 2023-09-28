@@ -42,7 +42,7 @@ a {
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/envio.jpg);
+    background-image: url(../recursos/envioss.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -60,7 +60,7 @@ a {
 }
 
 .containerPrincipal--b {
-    background-image: url(../recursos/envio.jpg);
+    background-image: url(../recursos/envioss.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

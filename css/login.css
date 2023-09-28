@@ -17,7 +17,7 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/login.jpg) !important;
+    background-image: url(../recursos/login.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,7 +35,7 @@
 }
 
 .containerPrincipal--d {
-    background-image: url(../recursos/login.jpg) !important;
+    background-image: url(../recursos/login.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

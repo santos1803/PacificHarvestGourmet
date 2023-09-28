@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url(../css/index.css);
-@import url(../css/productos.css);
+
+@import url(../responsive_css/contactos.css);
 @import url(../nav_footer_css/nav_principal.css);
 @import url(../responsive_css/index.css);
 @import url(../nav_footer_css/footer.css);
@@ -44,7 +45,7 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/alimentoos.jpg) !important;
+    background-image: url(../recursos/alimentos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -62,7 +63,7 @@
 }
 
 .containerPrincipal--e {
-    background-image: url(../recursos/alimentoos.jpg) !important;
+    background-image: url(../recursos/alimentos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -94,14 +95,14 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/condimentos.jpg) !important;
+    background-image: url(../recursos/condimento.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .containerPrincipal--g {
-    background-image: url(../recursos/condimentos.jpg) !important;
+    background-image: url(../recursos/condimento.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -113,14 +114,14 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/dulces.jpg) !important;
+    background-image: url(../recursos/dulces.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .containerPrincipal--h {
-    background-image: url(../recursos/dulces.jpg) !important;
+    background-image: url(../recursos/dulces.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -132,14 +133,14 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/mariscos.jpg) !important;
+    background-image: url(../recursos/mariscos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .containerPrincipal--i {
-    background-image: url(../recursos/mariscos.jpg) !important;
+    background-image: url(../recursos/mariscos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -151,14 +152,14 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/compras.jpg) !important;
+    background-image: url(../recursos/compras.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .containerPrincipal--j {
-    background-image: url(../recursos/compras.jpg) !important;
+    background-image: url(../recursos/compras.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -170,14 +171,14 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/regalos.jpg) !important;
+    background-image: url(../recursos/regalos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .containerPrincipal--k {
-    background-image: url(../recursos/regalos.jpg) !important;
+    background-image: url(../recursos/regalos.jpeg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

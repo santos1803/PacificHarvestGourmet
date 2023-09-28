@@ -14,7 +14,7 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/contacto.jpg);
+    background-image: url(../recursos/contacto.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -32,7 +32,7 @@
 }
 
 .containerPrincipal--c {
-    background-image: url(../recursos/contacto.jpg);
+    background-image: url(../recursos/contacto.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

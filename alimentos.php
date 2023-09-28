@@ -246,7 +246,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
