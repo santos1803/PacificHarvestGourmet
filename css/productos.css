@@ -82,12 +82,12 @@
 }
 
 .txt--gen {
-    background: none !important;
+    background: rgba(255, 255, 255, 0.13) !important;
     width: 45% !important;
     height: 70% !important;
-    backdrop-filter: blur( 0) !important;
-    -webkit-backdrop-filter: blur( 0) !important;
-    box-shadow: none !important;
+    backdrop-filter: blur( 2px) !important;
+    -webkit-backdrop-filter: blur( 2px) !important;
+    
 }
 
 .txt--gen h1 {
