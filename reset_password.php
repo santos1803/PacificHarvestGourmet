@@ -289,9 +289,9 @@ if (!empty($_POST)) {
 
     <!--inicio banner principal-->
 
-    <div class="containerMariscos">
+    <!-- <div class="containerMariscos">
       
-      </div>
+      </div> -->
 
     <!--final banner principal-->
 
@@ -299,7 +299,7 @@ if (!empty($_POST)) {
     <!--Formulario para que el usuario ingrese la nueva contraseña, tambien se usan funciones ya definida antes para que muesten los posibles mensajes al usuario-->
 
     <section class="form-login form-login--a m-auto pt-4 login_form">
-        <div class="container">
+        <div class="container" style="margin-top: 80px;">
             <h3>Cambiar Contraseña</h3>
 
             <?php mostrarMensajes($errors); ?>

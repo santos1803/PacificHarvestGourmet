@@ -268,10 +268,9 @@ if ($id == "" || $token == "") {
 
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
+    <div id="vacio" style="height:7vh;">
 
-    <div id="vacio">
-
-    </div>
+</div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
 
 

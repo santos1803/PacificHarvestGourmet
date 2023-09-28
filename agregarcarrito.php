@@ -257,11 +257,9 @@ if ($productos != null) {
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <div class="containerMariscos ">
-
+    <div id="vacio">
 
     </div>
-
     <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
 

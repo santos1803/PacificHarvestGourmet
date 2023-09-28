@@ -252,19 +252,19 @@ $sql->execute([$idCliente])
 
 
     <!--inicio banner principal-->
-
+<!-- 
     <div class="containerMariscos containerMariscos--s">
 
 
         
-    </div>
+    </div> -->
 
     <!--final banner principal-->
 
 
     <!--LOGIN-->
 
-    <main class="comprasContainer">
+    <main class="comprasContainer" style="margin-top: 80px;">
         <div class=" container" style="width: 90vw; margin-top: 40px;">
             <h4>My Shopping</h4>
             <hr>

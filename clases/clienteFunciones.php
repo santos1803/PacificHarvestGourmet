@@ -181,9 +181,11 @@ function login($usuario, $password, $proceso, $con) {
                 $_SESSION['user_name'] = $row['usuario'];
                 $_SESSION['user_cliente'] = $row['id_cliente'];
                 if($proceso == 'pago') {
-                    header("Location: agregarcarrito.php");
+                    echo "<script>location.href='agregarcarrito.php';</script>";
+                    // header("Location: agregarcarrito.php");
                 } else {
-                  header("Location: producto.php");
+                    echo "<script>location.href='producto.php';</script>";
+                //   header("Location: producto.php");
                 }
                 exit;
            }
@@ -204,9 +206,11 @@ function login_english($usuario, $password, $proceso, $con) {
                 $_SESSION['user_name'] = $row['usuario'];
                 $_SESSION['user_cliente'] = $row['id_cliente'];
                 if($proceso == 'pago') {
-                    header("Location: agregarcarrito_english.php");
+                    echo "<script>location.href='agregarcarrito_english.php';</script>";
+                    // header("Location: agregarcarrito_english.php");
                 } else {
-                  header("Location: producto_english.php");
+                    echo "<script>location.href='producto_english.php';</script>";
+                //   header("Location: producto_english.php");
                 }
                 exit;
            }

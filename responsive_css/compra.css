@@ -8,3 +8,10 @@
   
     
 }
+
+
+@media (max-width: 1800px) {
+    #vacio {
+        height: 7vh;
+    }
+}

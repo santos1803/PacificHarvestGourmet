@@ -281,7 +281,7 @@ if (!empty($_POST)) {
 
     <main class="containerPrincipal containerPrincipal--l">
         <article class="txt txt--l">
-            <h1>Logueate</h1>
+            <h1>Inicia Sesion</h1>
             <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
 
            
@@ -292,7 +292,7 @@ if (!empty($_POST)) {
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--d">
        
         <article class="prueba">
-            <h1>Logueate</h1>
+            <h1>Inicia Sesion</h1>
             <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti </p>
 
            

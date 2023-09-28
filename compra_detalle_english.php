@@ -264,11 +264,11 @@ $sqlDetalle->execute([$idCompra]);
     <!--inicio banner principal-->
 
 
-    <div class="containerMariscos containerMariscos--s">
+    <!-- <div class="containerMariscos containerMariscos--s">
 
 
 
-    </div>
+    </div> -->
 
     <!--final banner principal-->
 
@@ -280,7 +280,7 @@ $sqlDetalle->execute([$idCompra]);
 
     <!--Fin de Cuerpo de la pagina-->
 
-    <main class="detallesContainer">
+    <main class="detallesContainer" style="margin-top: 80px;">
         <!--Creamos una tabla y agregamos cada uno de los datos que solicitamos en la consulta de arriba, para que al final se muestre un detalle de la compra del cliente-->
         <div class="container" style="margin-top: 40px;">
             <div class="row" style="border: 1px dashed black;">

@@ -158,6 +158,10 @@ p {
     color: white;
 }
 
+.flotanteTxt sup {
+    font-size: 1.5vw;
+}
+
 .separador {
     transform: rotate(180deg);
     width: 1px;
