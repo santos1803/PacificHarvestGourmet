@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../css/index.css);
+@import url(../responsive_css/contactos.css);
 @import url(../nav_footer_css/nav_principal.css);
-@import url(../nav_footer_css/footer.css);
 @import url(../responsive_css/index.css);
+@import url(../nav_footer_css/footer.css);
 
 /*-----------------------------------*\
  * #PROPIEDADES PERSONALIZADAS
@@ -25,33 +27,258 @@
   \*-----------------------------------*/
 
 
-
-
 /*-----------------------------------*\
    * #ELEMENTOS COMUNES
   \*-----------------------------------*/
 
 
-
 /*  BANNER PRINCIPAL */
 
-
-
-
-.containerMariscos {
+.containerPrincipal--ali {
     box-sizing: border-box;
     width: 100%;
-    height: 55vh;
+    height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/bannerprincipal.png);
+    background-image: url(../recursos/alimentos.jpeg) !important;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    padding-left: 1%;
 }
 
-.containerMariscos--a {
-    background-image: url(../recursos/BANNERRR_ALIMENTOOOOOS.jpeg);
+.txt--ali p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--a {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    display: none;
+}
+
+.containerPrincipal--e {
+    background-image: url(../recursos/alimentos.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--gen {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/General.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--gen {
+    background: none !important;
+    width: 45% !important;
+    height: 70% !important;
+    backdrop-filter: blur( 0) !important;
+    -webkit-backdrop-filter: blur( 0) !important;
+    box-shadow: none !important;
+}
+
+.txt--gen h1 {
+    color: white;
+    padding-top: 9%;
+}
+
+.txt--gen p {
+    color: white;
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--f {
+    background-image: url(../recursos/General.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--cond {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/condimento.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--cond {
+    width: 45% !important;
+    height: 68% !important;
+    background: rgba(255, 255, 255, 0.336)!important;
+    backdrop-filter: blur( 4px) !important;
+    -webkit-backdrop-filter: blur( 4px) !important;
+}
+
+.txt--cond h1 {
+    padding-top: 9%;
+}
+
+.txt--cond p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--g {
+    background-image: url(../recursos/condimento.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--dul {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/dulces.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--dul {
+    width: 45% !important;
+    height: 68% !important;
+}
+
+.txt--dul {
+    padding-top: 6% !important;
+}
+
+.txt--dul p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--h {
+    background-image: url(../recursos/dulces.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--mar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/mariscos.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--mar {
+    width: 45% !important;
+    height: 70% !important;
+}
+
+.txt--mar h1 {
+    padding-top: 7%;
+}
+
+.txt--mar p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--i {
+    background-image: url(../recursos/mariscos.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--of {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/compras.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--of h1 {
+    padding-top: 7% !important;
+}
+
+.txt--of p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
+}
+
+.txt--of {
+    width: 45% !important;
+    height: 70% !important;
+}
+
+.containerPrincipal--j {
+    background-image: url(../recursos/compras.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--reg {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/regalos.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt--reg {
+    background: transparent !important;
+    width: 45% !important;
+    height: 70% !important;
+    backdrop-filter: blur( 0) !important;
+    -webkit-backdrop-filter: blur( 0) !important;
+}
+
+.txt--reg h1 {
+    color: white;
+    padding-top: 9%;
+}
+
+.txt--reg p {
+    color: white;
+    font-size: 2.6vh;
+    letter-spacing: 1.6px;
+}
+
+.containerPrincipal--k {
+    background-image: url(../recursos/regalos.jpeg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .txt {
@@ -210,7 +437,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row: auto;
-  
     margin-top: 2%;
     gap: 5%;
     row-gap: 45px;
@@ -257,7 +483,6 @@
     font-size: 18px;
 }
 
-
 .containerProductos_Cards_Img--a {
     width: 100%;
 }
@@ -280,9 +505,6 @@
     width: 100%;
     height: 15em;
 }
-
-
-
 
 .boton_videos--b {
     display: flex;
