@@ -235,7 +235,7 @@ $con = $db->conectar();
     </div>
 
     <main class="containerPrincipal containerPrincipal--env">
-        <article class="txt">
+        <article class="txt txt--env">
             <h1>Tus Envíos Rápidos y Seguros</h1>
             <p>Te garantizamos una experiencia de entrega sin preocupaciones. Nos enorgullece ofrecer un servicio de envío rápido, seguro y confiable. </p>
            

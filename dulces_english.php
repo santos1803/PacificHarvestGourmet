@@ -255,8 +255,8 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--dul">
-        <article class="txt">
-            <h1>Sweet Delights"</h1>
+        <article class="txt txt--dul">
+            <h1>Sweet Delights</h1>
             <p>Immerse yourself in a world of irresistible temptations that will delight your senses. </p>
            
         </article>
@@ -266,7 +266,7 @@ $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--h">
        
         <article class="prueba">
-            <h1>Sweet Delights"</h1>
+            <h1>Sweet Delights</h1>
             <p>Immerse yourself in a world of irresistible temptations that will delight your senses.</p>
            
         </article>

@@ -4,14 +4,11 @@
 @import url(../responsive_css/index.css);
 @import url(../nav_footer_css/footer.css);
 
-
-
-
 /*-----------------------------------*\
    * #INICION DE BANNER PRINCIPAL
   \*-----------------------------------*/
 
-  .containerPrincipal--l {
+.containerPrincipal--l {
     box-sizing: border-box;
     width: 100%;
     height: 65vh;
@@ -21,6 +18,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.txt--l p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
 }
 
 .containerPrincipal--a {
@@ -40,6 +42,7 @@
     background-position: center;
     background-size: cover;
 }
+
 
 /*-----------------------------------*\
    * #AREA formulario

@@ -256,7 +256,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
     <main class="containerPrincipal containerPrincipal--ali">
-        <article class="txt">
+        <article class="txt txt--ali">
             <h1>Delicias Gastronómicas</h1>
             <p>Nuestra selección está diseñada para complacer a los amantes de la cocina y a aquellos que buscan ingredientes de primera categoría.</p>
            

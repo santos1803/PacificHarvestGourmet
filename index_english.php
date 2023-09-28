@@ -267,7 +267,7 @@ $con = $db->conectar();
 
     </div>
     <main class="containerPrincipal">
-        <article class="txt">
+        <article class="txt txt--prin">
             <h1>One click</h1>
             <p>Discover the taste of the canned ocean, with authentic culinary treasures from Colombia and Chile.
                 Immerse yourself in a world of canned marine flavors, carefully selected to offer you the freshness and

@@ -255,7 +255,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--mar">
-        <article class="txt">
+        <article class="txt txt--mar">
             <h1>Sea Delights</h1>
             <p>We have gathered a wide variety of fresh and delicious ocean products for you to enjoy in the comfort of your home.  </p>
            

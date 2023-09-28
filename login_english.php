@@ -274,7 +274,7 @@ if (!empty($_POST)) {
     <!--inicio banner principal-->
 
     <main class="containerPrincipal containerPrincipal--l">
-        <article class="txt">
+        <article class="txt txt--l">
             <h1>Log in</h1>
             <p>Please enter your user credentials to enjoy all the advantages and personalized experiences we have prepared for you</p>
            

@@ -253,7 +253,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--reg">
-        <article class="txt">
+        <article class="txt txt--reg">
             <h1>Find the perfect gift</h1>
             <p>Ready to make someone special smile? Discover our exceptional gift ideas!</p>
            
