@@ -630,7 +630,7 @@ $con = $db->conectar();
 
 
             </section>
-            <article class="galery__items">
+            <article class="galery__items cuadro__x">
                 <p>*No todos los servicios están disponibles en cada pedido.</p>
 
             </article>

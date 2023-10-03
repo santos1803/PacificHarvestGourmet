@@ -48,8 +48,6 @@ a {
     background-size: cover;
 }
 
-<<<<<<< HEAD
-=======
 .txt--env p {
     font-size: 2.4vh;
     letter-spacing: 1.6px;
@@ -73,7 +71,6 @@ a {
     background-size: cover;
 }
 
->>>>>>> bf776ab0939454eb2af6ef0abbfdfbe6a885c899
 
 /* 
 ------Inicio seccion de envios------
@@ -335,6 +332,16 @@ a {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.cuadro__x {
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: none;
+}
+
+.cuadro__x p {
+    color: black;
 }
 
 
