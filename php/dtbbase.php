@@ -4,8 +4,8 @@
 
  class Database {
     private $hostname = "localhost";
-    private $database = "geomar";
-    // private $database = "pacifig2_pacificharvest.session";
+    // private $database = "geomar";
+    private $database = "pacifig2_pacificharvest.session";
     private $username = "root";
     // private $username = "pacifig2_santos";
     private $password = "";

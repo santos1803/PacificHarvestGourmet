@@ -28,7 +28,7 @@ if ($id == "" || $token == "") {
             $enlace = $row["enlace"];
             $precio_decuento = $precio - (($precio * $descuento) / 100);
             $dir_images = './images/productos/' . $id . '/';
-            $rutaImg = $dir_images . 'principal.jpg';
+            $rutaImg = $dir_images . 'principal.png';
 
             if (!file_exists($rutaImg)) {
                 $rutaImg = './images/no-img.png';

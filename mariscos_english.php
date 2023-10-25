@@ -9,7 +9,7 @@ $con = $db->conectar();
 
 
 
-$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'mariscos'  ");
+$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categorie = 'seafood'  ");
 $sqlss->execute();
 $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
@@ -303,7 +303,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>

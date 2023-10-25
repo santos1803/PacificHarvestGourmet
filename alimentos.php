@@ -303,7 +303,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                                 ?>
