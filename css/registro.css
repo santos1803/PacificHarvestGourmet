@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../nav_footer_css/nav_principal.css);
+@import url(../nav_footer_css/footer.css);
+@import url(../responsive_css/index.css);
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+:root {
+    /*COLORES PRINCIPALES*/
+    --vinotinto: #1c3a6b;
+    --blanco: #ffff;
+    --negro: #0000;
+    /*COLORES*/
+    --colorlogo: #1c3a6b;
+    --colortitulos: #323232;
+    --colorletras: #6c757d;
+    --colortitulovinotinto: #1c3a6b;
+}
+
+
+/*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+   * #ELEMENTOS COMUNES
+  \*-----------------------------------*/
+
+
+/*-----------------------------------*\
+   * #INICION DE BANNER PRINCIPAL
+  \*-----------------------------------*/
+
+  .containerMariscos {
+    width: 100%;
+    height: 32em;
+    background-image: url(../recursos/bannerprincipal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+}
+
+
+/*-----------------------------------*\
+   * #AREA registro
+  \*-----------------------------------*/
+
+.login_registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#boton_registro {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_plus {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.login_plus a {
+    display: inline-block;
+    color: #1c3a6b;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.col-md-6 {
+    width: 100%;
+}
+
+.form-login--a {
+    max-width: 350px;
+}
+
+.form-login--b {
+    max-width: 600px;
+}
+
+.form-login--c {
+    max-width: 800px;
+}
+
+#colorboton {
+    background: #1c3a6b !important;
+    border: #1c3a6b;
+  }
+
+/*-----------------------------------*\
+   * #AREA FOOTER
+  \*-----------------------------------*/
+
+
+/* The above code is defining the CSS styles for a footer element. */
+

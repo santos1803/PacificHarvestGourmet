@@ -1,0 +1,128 @@
+@media (max-width: 900px) {
+    .containerMariscos {
+        height: 20vh;
+        
+    }
+
+    .containerMariscos_Txt h1{
+        font-size: 45px;
+    
+    }
+
+    .categoria p {
+        font-size: 1.4vw;
+        gap: 2px;
+        
+    }
+}
+
+@media (max-width: 700px) {
+
+    .row_txt h1 {
+        font-size: 5.6vw;
+        text-align: center;
+    }
+
+    .row_txt h2 {
+        font-size: 4.4vw;
+        text-align: center;
+    }
+
+    .row_txt p {
+        font-size: 3vw;
+        text-align: none;
+    }
+
+    .categoria {
+        flex-direction: column;
+        
+    }
+
+    .categoria p {
+        font-size: 2.1vw;
+        
+    }
+
+    .oculto2 {
+        flex-direction: column;
+        gap: 8px;
+        
+    }
+
+    .stripe_button {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .hidden-btn--a  {
+        font-size: 12px;
+        width: 38vw;
+    }
+
+    .boton_comun--b a {
+        font-size: 11px;
+        
+    }
+
+    .boton_comun--b  {
+        
+        width: 38vw;
+    }
+
+    .boton_comun--c a {
+        font-size: 11px;
+        
+     } 
+
+   .boton_comun--c  {
+       font-size: 11px;
+       width: 38vw;
+    } 
+
+    .button-hide {
+        /* margin: 0% 10%; */
+        width: 38vw;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .containerMariscos_Txt h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 535px) {
+
+    .hidden-btn--a  {
+        font-size: 1.9vw;
+    }
+    
+    .boton_comun--b a {
+        font-size: 1.9vw;
+    }
+   .boton_comun--c a {
+       font-size: 1.9vw;
+    } 
+}
+
+@media (max-width: 500px) {
+
+    .containerMariscos_Txt h1{
+        font-size: 25px;
+    }
+
+    .row_txt {
+        text-align: center;
+    }
+
+    
+}
+
+@media (max-width: 400px) {
+
+    .containerMariscos_Txt h1{
+        font-size: 20px;
+    }
+}

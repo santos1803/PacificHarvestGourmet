@@ -4,11 +4,11 @@
 
 
 //ClIENT_ID toma el parametro del token de paypal
-    define("CLIENT_ID", "Ajdsdjfsjdnjsdnsjdnjs");
+    // define("CLIENT_ID", "Ajdsdjfsjdnjsdnsjdnjs");
 
     
 // //ClIENT_ID toma el parametro del token de paypal
-// define("CLIENT_ID", "Acmruvy51w90R7yfdzmn3j2oZSYIpFpzKztFOU0twdW6XWPBXFpcWv3459JxB0IYGG2MnyPkQyY38USf");
+define("CLIENT_ID", "Acmruvy51w90R7yfdzmn3j2oZSYIpFpzKztFOU0twdW6XWPBXFpcWv3459JxB0IYGG2MnyPkQyY38USf");
 
 //CURRENCY define el tipo de moneda que va a usar paypal
     define("CURRENCY", "USD");
@@ -25,7 +25,13 @@
     define("MAIL_USER", "santosmartinez3@hotmail.com");
     define("MAIL_PASS", "s-a-n-t-o-s");
     define("MAIL_PORT", "587");
-    define("SITE_URL", "http://localhost/Proyecto_Somos2");
+    define("SITE_URL", "http://localhost/PacificHarvestGourmet");
+
+    // define("MAIL_HOST", "mail.pacificharvestgourmet.com");
+    // define("MAIL_USER", "gnavarro@pacificharvestgourmet.com");
+    // define("MAIL_PASS", "Arciniegas19");
+    // define("MAIL_PORT", "465");
+    // define("SITE_URL", "https://pacificharvestgourmet.com");
 
 
 //Inicio de Sesion

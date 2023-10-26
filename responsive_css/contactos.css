@@ -1,0 +1,32 @@
+
+
+@media (max-width: 600px) {
+    .Formulario {
+        
+        padding: 5% 0;
+    
+    }
+}
+
+
+@media (max-width: 420px) {
+    .contenidoTitulo_Contacto {
+        font-size: 1.4em;
+        
+    }
+
+    .textos_Contacto .container article .contenidoParrafo_Contacto {
+        font-size: 1.3em;
+    }
+
+    .Formulario {
+        
+        padding: 5% 2%;
+    
+    }
+
+    .correo {
+        font-size: .8em;
+        font-weight: 500;
+    }
+}

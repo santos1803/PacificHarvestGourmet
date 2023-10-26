@@ -1,0 +1,131 @@
+@media (max-width: 900px) {
+    .containerMariscos {
+        width: 100%;
+        height: 25vh;
+    }
+    .containerMariscos_Txt h1 {
+        font-size: 40px;
+    }
+    .carritoCompras_tablas {
+        width: auto;
+        margin: 0 220px;
+        font-size: 18px;
+    }
+
+   
+
+   
+}
+
+@media (max-width: 662px) {
+    .forBuy a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 650px) {
+    .forBuy a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 628px) {
+    .containerMariscos_Txt h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerMariscos_Txt h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 530px) {
+    .containerMariscos {
+        width: 100%;
+    }
+    .forBuy a {
+        font-size: 12px;
+    }
+    .carritoCompras_tablas {
+        width: 60%;
+        margin: 0 80px;
+    }
+    .carritoCompras_tablas tbody {
+        width: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carritoCompras_tablas {
+        width: 5%;
+        margin: 0 210px;
+    }
+    .forBuy a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 467px) {
+    .carritoCompras_tablas {
+        width: 2%;
+        margin: 0 205px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 430px) {
+    .containerMariscos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 421px) {
+    .carritoCompras_tablas {
+        width: 2%;
+        margin: 0 180px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 402px) {
+    .forBuy a {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 378px) {
+    .carritoCompras_tablas {
+        width: 2%;
+        margin: 0 185px;
+        font-size: 10px;
+    }
+    .containerMariscos_Txt h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 361px) {
+    .carritoCompras_tablas {
+        width: 2%;
+        margin: 0 170px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 342px) {
+    .forBuy a {
+        font-size: 7px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1800px) {
+    #vacio {
+        height: 7vh;
+    }
+}

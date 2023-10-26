@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../css/index.css);
+@import url(../css/productos.css);
+@import url(../nav_footer_css/nav_principal.css);
+@import url(../responsive_css/index.css);
+@import url(../nav_footer_css/footer.css);
+
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+:root {
+    /*COLORES PRINCIPALES*/
+    --vinotinto: #9e1515;
+    --blanco: #ffff;
+    --negro: #0000;
+    /*COLORES*/
+    --colorlogo: #a42739;
+    --colortitulos: #323232;
+    --colorletras: #6c757d;
+    --colortitulovinotinto: #1c3a6b;
+}
+
+
+/*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+   * #ELEMENTOS COMUNES
+  \*-----------------------------------*/
+
+
+
+/*  BANNER PRINCIPAL */
+
+.containerPrincipal--ali {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/alimentoos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--a {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    display: none;
+}
+
+.containerPrincipal--e {
+    background-image: url(../recursos/alimentoos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--gen {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/General.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.containerPrincipal--f {
+    background-image: url(../recursos/General.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--cond {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/condimentos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--g {
+    background-image: url(../recursos/condimentos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--dul {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/dulces.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--h {
+    background-image: url(../recursos/dulces.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--mar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/mariscos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--i {
+    background-image: url(../recursos/mariscos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--of {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/compras.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--j {
+    background-image: url(../recursos/compras.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--reg {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../recursos/regalos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.containerPrincipal--k {
+    background-image: url(../recursos/regalos.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.txt {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 55%;
+    height: 25vw;
+    padding: 2% 0;
+    background: rgba(219, 219, 219, 0.822);
+    box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 0% 100% 81% 29% / 39% 47% 53% 61%;
+    /* border: 1px solid rgba( 255, 255, 255, 0.18); */
+}
+
+.txt img {
+    object-fit: contain;
+    width: 40%;
+    padding-right: 40px;
+}
+
+.containerMariscos p {
+    color: rgba(25, 82, 136, 0.973);
+    width: 85%;
+    font-size: 1.4vw;
+}
+
+.containerMariscos_Enlace_Txt {
+    width: 27%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 2%;
+}
+
+.containerMariscos_Enlace_Txt a {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.containerMariscos_Enlace_Txt a:hover {
+    opacity: 0.7;
+}
+
+.containerMariscos_Enlace_Txt .enlaceVinotinto {
+    color: #9e1515;
+}
+
+#enlaceNegro {
+    color: black;
+}
+
+.containerMariscos_Enlace_Txt {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 2%;
+}
+
+.containerMariscos_Txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.containerMariscos_Txt h1 {
+    color: white;
+    text-shadow: 1px 1px #333;
+    font-size: 5.2vw;
+    letter-spacing: .8px;
+    font-weight: 500;
+}
+
+
+/*  AREA DE PRODUCTOS */
+
+.containerProductos {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 4% 6.8% 0 6.8%;
+    flex-direction: column;
+}
+
+.containerProductos_Txt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.containerProductos_Txt h2 {
+    color: #1c3a6b;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.containerProductos_Txt p {
+    color: #7c7c7c;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.containerProductos_Txt .parrafoProducto {
+    color: #525252;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.containerProductos_Select {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-left: 10%;
+}
+
+.containerProductos_Select_input {
+    appearance: none;
+}
+
+.containerProductos_Select_input {
+    width: 25%;
+    height: 2.5em;
+    appearance: none;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    border: none;
+    padding-left: 1%;
+    font-size: 2vh;
+    letter-spacing: .5px;
+}
+
+.containerProductos_Select i {
+    position: relative;
+    right: 40px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-left: 5px solid #1c3a6b;
+    border-bottom: 5px solid #1c3a6b;
+    transform: rotate(-45deg);
+}
+
+.containerProductos_Cards {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: auto;
+  
+    margin-top: 2%;
+    gap: 5%;
+    row-gap: 45px;
+    background: rgba(254, 251, 246, 0.25);
+    box-shadow: 0 1px 22px 0 rgba(154, 160, 255, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.trajeta {
+    height: min-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 20%;
+    padding: 3%;
+    background: #ffffff;
+    box-shadow: 2px 2px 16px #c7c7c7, -2px -2px 16px #ffffff;
+    border-radius: 25px;
+}
+
+.containerProductos_Cards_Txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.containerProductos_Cards_Txt h2 {
+    font-size: 20px;
+    margin-top: 25PX;
+}
+
+.containerProductos_Cards_Txt p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.containerProductos_Cards_Txt--b h2,
+.containerProductos_Cards_Txt--b p {
+    font-size: 18px;
+}
+
+
+.containerProductos_Cards_Img--a {
+    width: 100%;
+}
+
+.containerProductos_Cards_Img--a a img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.oferta {
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+    top: -235px;
+    width: 40%;
+    rotate: 270deg;
+}
+
+.containerProductos_Cards_Img--b {
+    width: 100%;
+    height: 15em;
+}
+
+
+
+
+.boton_videos--b {
+    display: flex;
+    gap: 3%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hidden-btn--a {
+    width: 50%;
+    background-color: white;
+    border: .5px solid rgb(195, 195, 195);
+    border-radius: 26px;
+    /* box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb; */
+    transition: 0.5s ease;
+    padding: 3% 0;
+}
+
+.hidden-btn--a a {
+    border: none;
+    color: rgb(35, 35, 35);
+    font-size: 0.9vw;
+    transition: 0.5s ease;
+}
+
+.hidden-btn--a:hover {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.hidden-btn--a:hover a {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.boton_comun--b {
+    width: 50%;
+    background-color: #274a81;
+    border: none;
+    border-radius: 26px;
+    /* box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb; */
+    transition: 0.5s ease;
+    color: white;
+    font-size: 0.9vw;
+}
+
+.boton_comun--b a {
+    border: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.boton_comun--b:hover {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.boton_comun--b:hover a {
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+
+.botonPagina {
+    width: 10%;
+    font-size: 1vw;
+    background-color: #1c3a6b;
+    color: white;
+    border: 1px solid #1c3a6b;
+    padding: 1% 2%;
+    border-radius: 10% / 40%;
+    margin-top: 30px;
+}
+
+.enlaceBoton {
+    color: white;
+}
+
+.botonPagina:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    padding: 1% 2%;
+    border-radius: 10% / 40%;
+}
+
+.botonPagina:hover .enlaceBoton {
+    color: rgb(0, 0, 0);
+}
+
+#vacio {
+    height: 5.5em;
+}

@@ -1,0 +1,36 @@
+@media (max-width: 865px) {
+    footer .container .footer {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    footer .container .footer .Copyright {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .container .footer .terms_conditios {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    .img_banner_bg .container h2 {
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 1800px) {
+    #vacio {
+        height: 7vh;
+    }
+}
