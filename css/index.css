@@ -34,7 +34,6 @@ a {
     width: 100%;
     height: 65vh;
     display: flex;
-   
     align-items: center;
     background-image: url(../recursos/bannerprincipal.png);
     background-repeat: no-repeat;
@@ -54,9 +53,7 @@ a {
     background-size: cover;
     padding-left: 1%;
     display: none;
-
 }
-
 
 .txt {
     box-sizing: border-box;
@@ -72,6 +69,11 @@ a {
     -webkit-backdrop-filter: blur( 4px);
     border-radius: 0% 100% 71% 29% / 39% 47% 53% 61%;
     /* border: 1px solid rgba( 255, 255, 255, 0.18); */
+}
+
+.txt--prin p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
 }
 
 .containerPrincipal h1 {
@@ -119,7 +121,6 @@ a {
 }
 
 .prueba h1 {
-  
     text-align: center;
 }
 
@@ -210,8 +211,6 @@ p {
     box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
 }
 
-
-
 .cardProducto a {
     display: flex;
     flex-direction: column;
@@ -289,23 +288,19 @@ p {
 .articleImg--a {
     display: none;
     border-radius: 20px;
-    
 }
 
 .articleImg--a img {
     object-fit: cover;
     border-radius: 20px;
     width: 60%;
-    
 }
-
 
 .containerCinco {
     background-image: url(../recursos/Logistics-Index-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     height: 32em;
 }
 
@@ -317,7 +312,6 @@ p {
 
 .txt2 {
     margin-top: 100px;
-    
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 1px 32px 0 rgba(31, 38, 135, 0.158);
     backdrop-filter: blur( 4px);
@@ -327,13 +321,11 @@ p {
 
 .txt2 h1 {
     color: #5c5c5c;
-   
     width: 60%;
 }
 
 .txt2 p {
     color: #5c5c5c;
-   
     width: 70%;
 }
 

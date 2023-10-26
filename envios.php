@@ -234,7 +234,7 @@ $con = $db->conectar();
     </div>
 
     <main class="containerPrincipal containerPrincipal--env">
-        <article class="txt">
+        <article class="txt txt--env">
             <h1>Tus Envíos Rápidos y Seguros</h1>
             <p>Te garantizamos una experiencia de entrega sin preocupaciones. Nos enorgullece ofrecer un servicio de envío rápido, seguro y confiable. </p>
            
@@ -630,7 +630,7 @@ $con = $db->conectar();
 
 
             </section>
-            <article class="galery__items">
+            <article class="galery__items cuadro__x">
                 <p>*No todos los servicios están disponibles en cada pedido.</p>
 
             </article>

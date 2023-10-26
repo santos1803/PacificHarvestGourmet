@@ -252,7 +252,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--of">
-        <article class="txt">
+        <article class="txt txt--of">
             <h1>Ofertas Imperdibles</h1>
             <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
            

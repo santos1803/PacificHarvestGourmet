@@ -246,7 +246,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -256,7 +256,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
     <main class="containerPrincipal containerPrincipal--ali">
-        <article class="txt">
+        <article class="txt txt--ali">
             <h1>Delicias Gastronómicas</h1>
             <p>Nuestra selección está diseñada para complacer a los amantes de la cocina y a aquellos que buscan ingredientes de primera categoría.</p>
            
@@ -303,7 +303,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                                 ?>

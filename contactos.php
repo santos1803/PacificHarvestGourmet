@@ -248,8 +248,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <!--inicio banner principal-->
 
     <main class="containerPrincipal containerPrincipal--cont">
-        <article class="txt">
-            <h1>Contactáctanos</h1>
+        <article class="txt txt--cont">
+            <h1>Contáctanos</h1>
             <p>No dudes en ponerte en contacto con nuestro equipo de expertos que está listo para ayudarte en cualquier momento.</p>
            
         </article>
@@ -259,7 +259,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--c">
        
         <article class="prueba">
-            <h1>Contactáctanos</h1>
+            <h1>Contáctanos</h1>
             <p>No dudes en ponerte en contacto con nuestro equipo de expertos que está listo para ayudarte en cualquier momento.</p>
            
         </article>

@@ -279,7 +279,7 @@ $con = $db->conectar();
     </div>
 
     <main class="containerPrincipal">
-        <article class="txt">
+        <article class="txt  txt--prin">
             <h1>Todo en un click</h1>
             <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
                 en un mundo de sabores marinos enlatados. </p>

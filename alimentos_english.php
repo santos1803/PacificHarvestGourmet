@@ -10,7 +10,7 @@ $con = $db->conectar();
 
 
 
-$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'alimentos'  ");
+$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categorie = 'food'  ");
 $sqls->execute();
 $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
@@ -244,7 +244,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -255,7 +255,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--ali">
-        <article class="txt">
+        <article class="txt txt--ali">
             <h1>Gastronomic Delights</h1>
             <p>Our selection is designed to please food lovers and those looking for top-quality ingredients</p>
            
@@ -302,7 +302,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>

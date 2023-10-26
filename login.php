@@ -280,7 +280,7 @@ if (!empty($_POST)) {
     <!--inicio banner principal-->
 
     <main class="containerPrincipal containerPrincipal--l">
-        <article class="txt">
+        <article class="txt txt--l">
             <h1>Inicia Sesion</h1>
             <p>Ingresa tus credenciales de usuario para disfrutar de todas las ventajas y experiencias personalizadas que tenemos preparadas para ti</p>
 

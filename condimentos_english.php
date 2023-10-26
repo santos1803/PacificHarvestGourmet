@@ -253,7 +253,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--cond">
-        <article class="txt">
+        <article class="txt txt--cond">
             <h1>Spices</h1>
             <p>We have put together a careful selection of high-quality condiments that will add a magical touch to your dishes.</p>
            
@@ -304,7 +304,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>

@@ -42,10 +42,15 @@ a {
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/envio.jpg);
+    background-image: url(../recursos/envioss.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.txt--env p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
 }
 
 .containerPrincipal--a {
@@ -60,12 +65,13 @@ a {
 }
 
 .containerPrincipal--b {
-    background-image: url(../recursos/envio.jpg);
+    background-image: url(../recursos/envioss.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
+
+
 /* 
 ------Inicio seccion de envios------
 */
@@ -140,6 +146,9 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 10px 10px 20px #727272, -10px -10px 20px #ffffff;
 }
 
 .galery__items:nth-child(1) {
@@ -323,6 +332,16 @@ a {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.cuadro__x {
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: none;
+}
+
+.cuadro__x p {
+    color: black;
 }
 
 

@@ -3,21 +3,25 @@
 @import url(../responsive_css/contactos.css);
 @import url(../nav_footer_css/nav_principal.css);
 @import url(../nav_footer_css/footer.css);
-
-
-
-   
-   
 .containerPrincipal--cont {
     box-sizing: border-box;
     width: 100%;
     height: 65vh;
     display: flex;
     align-items: center;
-    background-image: url(../recursos/contacto.jpg);
+    background-image: url(../recursos/contacto.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.txt--cont {
+    height: 70% !important;
+}
+
+.txt--cont p {
+    font-size: 2.4vh;
+    letter-spacing: 1.6px;
 }
 
 .containerPrincipal--a {
@@ -32,11 +36,10 @@
 }
 
 .containerPrincipal--c {
-    background-image: url(../recursos/contacto.jpg);
+    background-image: url(../recursos/contacto.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 .textos_Contacto {
@@ -117,7 +120,7 @@
     height: 5vh;
 }
 
-.formulario_Contacto .textareaContacto{
+.formulario_Contacto .textareaContacto {
     border: 1px solid rgb(188, 188, 188);
     width: 60vw;
     height: 25vh;
@@ -126,7 +129,7 @@
 .formulario_Contacto button {
     width: 7em;
     height: 2.2em;
-    background-color:#1c3a6b;
+    background-color: #1c3a6b;
     color: white;
     border-radius: 25px;
 }

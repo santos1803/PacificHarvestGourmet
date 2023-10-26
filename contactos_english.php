@@ -246,7 +246,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <!--inicio banner principal-->
 
     <main class="containerPrincipal containerPrincipal--cont">
-        <article class="txt">
+        <article class="txt txt--cont">
             <h1>Contact us</h1>
             <p>Do not hesitate to contact our team of experts who are ready to help you at any time.</p>
            

@@ -256,7 +256,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
     <main class="containerPrincipal containerPrincipal--mar">
-        <article class="txt">
+        <article class="txt txt--mar">
             <h1>Delicias del Mar</h1>
             <p>Hemos reunido una amplia variedad de productos frescos y deliciosos del océano para que disfrutes en la comodidad de tu hogar.  </p>
            
@@ -304,7 +304,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
