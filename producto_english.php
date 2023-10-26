@@ -7,16 +7,16 @@ require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'ofertas'  ");
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categorie = 'ofert'  ");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
-$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'alimentos'  ");
+$sqls = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categorie = 'food'  ");
 $sqls->execute();
 $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'mariscos'  ");
+$sqlss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categorie = 'seafood' LIMIT 4 ");
 $sqlss->execute();
 $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
@@ -24,13 +24,17 @@ $sqlsss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHE
 $sqlsss->execute();
 $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'dulces'  ");
+$sqlssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'dulces' LIMIT 4  ");
 $sqlssss->execute();
 $resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlsssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'regalos'  ");
+$sqlsssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'snacks'  ");
 $sqlsssss->execute();
 $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlssssss = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'bebidas'  ");
+$sqlssssss->execute();
+$resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -317,7 +321,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -380,7 +384,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -445,7 +449,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -510,7 +514,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -573,7 +577,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -612,9 +616,11 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
     </div>
 
+
+
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Gifts</h2>
+            <h2>Snacks</h2>
             <p>Top selling products are shown</p>
         </article>
 
@@ -632,7 +638,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -652,7 +658,7 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
                      
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <button class="hidden-btn hidden-btn--a"><a href="detalleregalos_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View More</a></button>
+                            <button class="hidden-btn hidden-btn--a"><a href="detallesnacks_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View More</a></button>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                             <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Add To Cart</button>
 
@@ -666,7 +672,67 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-        <button class="botonPagina"><a href="regalos_english.php" class="enlaceBoton">VIEW ALL</a></button>  
+        <button class="botonPagina"><a href="snacks_english.php" class="enlaceBoton">VIEW ALL</a></button>  
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Drinks</h2>
+            <p>Top selling products are shown</p>
+        </article>
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadossssss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                     
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <button class="hidden-btn hidden-btn--a"><a href="detallesbebidas_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View More</a></button>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Add To Cart</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <button class="botonPagina"><a href="bebidas_english.php" class="enlaceBoton">VIEW ALL</a></button>  
 
         <!--FIN Seccion Productos-->
 
