@@ -350,22 +350,22 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="./alimentos_english.php"><img src="./recursos/principal1.jpg" alt="">
+                <a href="./alimentos_english.php"><img src="./images/productos/1/principal.png" alt="">
                     <h5>Food</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href="./regalos_english.php"><a href=""> <img src="./recursos/principal2.jpg" alt="">
-                        <h5>Gifts</h5>
+                <a href="./regalos_english.php"><a href=""> <img src="./images/productos/13/principal.png" alt="">
+                        <h5>Condiments</h5>
                     </a>
 
 
 
             </article>
             <article class="cardProducto">
-                <a href="./dulces_english.php"> <img src="./recursos/principal3.jpg" alt="">
+                <a href="./dulces_english.php"> <img src="./images/productos/25/principal.png" alt="">
                     <h5>Candys</h5>
                 </a>
 

@@ -145,3 +145,53 @@
         height: 12vh;
     }
 }
+
+@media (max-width: 1100px) {
+    .btn {
+        width: 13%;
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 820px) {
+    .btn {
+        width: 15%;
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .btn {
+        width: 17%;
+        font-size: 1.7vw;
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 630px) {
+    .btn {
+        width: 19%;
+        font-size: 1.9vw;
+    }
+}
+
+@media (max-width: 560px) {
+    .btn {
+        width: 21%;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 495px) {
+    .btn {
+        width: 28%;
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn {
+        width: 33%;
+        font-size: 2.9vw;
+    }
+}

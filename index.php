@@ -347,21 +347,21 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="alimentos.php"><img src="./recursos/principal1.jpg" alt="">
+                <a href="alimentos.php"><img src="./images/productos/1/principal.png" alt="">
                     <h5>Alimentos</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href="regalos.php"> <img src="./recursos/principal2.jpg" alt="">
-                    <h5>Regalos</h5>
+                <a href="regalos.php"> <img src="./images/productos/13/principal.png" alt="">
+                    <h5>Condimentos</h5>
                 </a>
 
 
             </article>
             <article class="cardProducto">
-                <a href="dulces.php"><img src="./recursos/principal3.jpg" alt="">
+                <a href="dulces.php"><img src="./images/productos/25/principal.png" alt="">
                     <h5>Dulces</h5>
                 </a>
 

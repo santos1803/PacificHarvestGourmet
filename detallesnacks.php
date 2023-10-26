@@ -359,7 +359,7 @@ if ($id == "" || $token == "") {
                 </div>
                 <article class=" categoria">
                     <p>Categoria:</p>
-                    <p><a href="./regalos.php">
+                    <p><a href="./snacks.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>

@@ -567,7 +567,8 @@
     transition: 0.5s;
 }
 
-.botonPagina {
+
+/* .botonPagina {
     width: 10%;
     font-size: 1vw;
     background-color: #1c3a6b;
@@ -592,6 +593,47 @@
 
 .botonPagina:hover .enlaceBoton {
     color: rgb(0, 0, 0);
+} */
+
+.btn {
+    width: 10%;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #1c3a6b;
+    border-radius: 10% / 40%;
+    padding: 10px 20px;
+    font-size: 1vw;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #1c3a6b;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.btn:hover::before {
+    width: 160%;
+}
+
+.enlaceBoton {
+    color: black;
 }
 
 #vacio {
