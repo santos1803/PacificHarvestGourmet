@@ -304,13 +304,13 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
         <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
 
-        <section class="containerProductos_Cards">
+        <!-- <section class="containerProductos_Cards">
             <?php foreach ($resultado as $row) { ?>
 
                 <section class="trajeta">
 
 
-                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a"> -->
 
                         <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
                         <?php
