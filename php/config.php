@@ -21,17 +21,17 @@ define("CLIENT_ID", "Acmruvy51w90R7yfdzmn3j2oZSYIpFpzKztFOU0twdW6XWPBXFpcWv3459J
 
 
 // Aqui definimos parametros para enviar email
-    define("MAIL_HOST", "smtp-mail.outlook.com");
-    define("MAIL_USER", "santosmartinez3@hotmail.com");
-    define("MAIL_PASS", "s-a-n-t-o-s");
-    define("MAIL_PORT", "587");
-    define("SITE_URL", "http://localhost/PacificHarvestGourmet");
+    // define("MAIL_HOST", "smtp-mail.outlook.com");
+    // define("MAIL_USER", "santosmartinez3@hotmail.com");
+    // define("MAIL_PASS", "s-a-n-t-o-s");
+    // define("MAIL_PORT", "587");
+    // define("SITE_URL", "http://localhost/PacificHarvestGourmet");
 
-    // define("MAIL_HOST", "mail.pacificharvestgourmet.com");
-    // define("MAIL_USER", "gnavarro@pacificharvestgourmet.com");
-    // define("MAIL_PASS", "Arciniegas19");
-    // define("MAIL_PORT", "465");
-    // define("SITE_URL", "https://pacificharvestgourmet.com");
+    define("MAIL_HOST", "mail.pacificharvestgourmet.com");
+    define("MAIL_USER", "gnavarro@pacificharvestgourmet.com");
+    define("MAIL_PASS", "Arciniegas19");
+    define("MAIL_PORT", "465");
+    define("SITE_URL", "https://pacificharvestgourmet.com");
 
 
 //Inicio de Sesion
