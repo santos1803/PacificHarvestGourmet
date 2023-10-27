@@ -22,7 +22,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="./responsive_css/productos.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
-    
+
 
 
 </head>
@@ -161,6 +161,24 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
+                            <a href="./snacks.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
+                                    <path d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                </svg>
+                                Bocadillos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./bebidas.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 320 512">
+                                    <path d="M120 0h80c13.3 0 24 10.7 24 24V64H96V24c0-13.3 10.7-24 24-24zM32 151.7c0-15.6 9-29.8 23.2-36.5l24.4-11.4c11-5.1 23-7.8 35.1-7.8h90.6c12.1 0 24.1 2.7 35.1 7.8l24.4 11.4c14.1 6.6 23.2 20.8 23.2 36.5c0 14.4-7.5 27-18.9 34.1c11.5 8.8 18.9 22.6 18.9 38.2c0 16.7-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48c0-16.7 8.5-31.4 21.5-40C40.5 415.4 32 400.7 32 384s8.5-31.4 21.5-40C40.5 335.4 32 320.7 32 304s8.5-31.4 21.5-40C40.5 255.4 32 240.7 32 224c0-15.6 7.4-29.4 18.9-38.2C39.5 178.7 32 166.1 32 151.7zM96 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm16 112c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112z" />
+                                </svg>
+                                Bebidas
+                            </a>
+                        </li>
+
+                        <li>
                             <a href="./dulces.php" class="dropdown__link">
                                 <i class="ri-cake-3-fill"></i> Dulces
                             </a>
@@ -182,13 +200,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                             </a>
                         </li>
 
-                        <li>
-                            <a href="./regalos.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
-                                    <path d="M190.5 68.8L225.3 128H224 152c-22.1 0-40-17.9-40-40s17.9-40 40-40h2.2c14.9 0 28.8 7.9 36.3 20.8zM64 88c0 14.4 3.5 28 9.6 40H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H438.4c6.1-12 9.6-25.6 9.6-40c0-48.6-39.4-88-88-88h-2.2c-31.9 0-61.5 16.9-77.7 44.4L256 85.5l-24.1-41C215.7 16.9 186.1 0 154.2 0H152C103.4 0 64 39.4 64 88zm336 0c0 22.1-17.9 40-40 40H288h-1.3l34.8-59.2C329.1 55.9 342.9 48 357.8 48H360c22.1 0 40 17.9 40 40zM32 288V464c0 26.5 21.5 48 48 48H224V288H32zM288 512H432c26.5 0 48-21.5 48-48V288H288V512z" />
-                                </svg> Regalos
-                            </a>
-                        </li>
+
 
 
                     </ul>
@@ -255,17 +267,17 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <article class="txt txt--of">
             <h1>Ofertas Imperdibles</h1>
             <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
-           
+
         </article>
-       
+
     </main>
 
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
-       
+
         <article class="prueba">
             <h1>Ofertas Imperdibles</h1>
             <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
-           
+
         </article>
     </main>
 
@@ -331,13 +343,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-        
+
 
         <!--FIN Seccion Productos-->
 
     </div>
 
- 
+
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 

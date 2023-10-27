@@ -26,7 +26,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 <html lang="es">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,13 +105,13 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
                         <ul class="dropdown__menu dropdown_login">
                             <li>
                                 <a href="./compras_english.php" class="dropdown__link">
-                                My Purshase
+                                    My Purshase
                                 </a>
                             </li>
 
                             <li>
                                 <a href="./logout_english.php" class="dropdown__link">
-                                Logout
+                                    Logout
                                 </a>
                             </li>
 
@@ -163,6 +163,24 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
+                            <a href="./snacks_english.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
+                                    <path d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                </svg>
+                                Snacks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./bebidas_english.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 320 512">
+                                    <path d="M120 0h80c13.3 0 24 10.7 24 24V64H96V24c0-13.3 10.7-24 24-24zM32 151.7c0-15.6 9-29.8 23.2-36.5l24.4-11.4c11-5.1 23-7.8 35.1-7.8h90.6c12.1 0 24.1 2.7 35.1 7.8l24.4 11.4c14.1 6.6 23.2 20.8 23.2 36.5c0 14.4-7.5 27-18.9 34.1c11.5 8.8 18.9 22.6 18.9 38.2c0 16.7-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48c0-16.7 8.5-31.4 21.5-40C40.5 415.4 32 400.7 32 384s8.5-31.4 21.5-40C40.5 335.4 32 320.7 32 304s8.5-31.4 21.5-40C40.5 255.4 32 240.7 32 224c0-15.6 7.4-29.4 18.9-38.2C39.5 178.7 32 166.1 32 151.7zM96 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm16 112c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112z" />
+                                </svg>
+                                Drinks
+                            </a>
+                        </li>
+
+                        <li>
                             <a href="./dulces_english.php" class="dropdown__link">
                                 <i class="ri-cake-3-fill"></i> Sweets
                             </a>
@@ -184,13 +202,6 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
                             </a>
                         </li>
 
-                        <li>
-                            <a href="./regalos_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
-                                    <path d="M190.5 68.8L225.3 128H224 152c-22.1 0-40-17.9-40-40s17.9-40 40-40h2.2c14.9 0 28.8 7.9 36.3 20.8zM64 88c0 14.4 3.5 28 9.6 40H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H438.4c6.1-12 9.6-25.6 9.6-40c0-48.6-39.4-88-88-88h-2.2c-31.9 0-61.5 16.9-77.7 44.4L256 85.5l-24.1-41C215.7 16.9 186.1 0 154.2 0H152C103.4 0 64 39.4 64 88zm336 0c0 22.1-17.9 40-40 40H288h-1.3l34.8-59.2C329.1 55.9 342.9 48 357.8 48H360c22.1 0 40 17.9 40 40zM32 288V464c0 26.5 21.5 48 48 48H224V288H32zM288 512H432c26.5 0 48-21.5 48-48V288H288V512z" />
-                                </svg> Gifts
-                            </a>
-                        </li>
 
 
                     </ul>
@@ -217,7 +228,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
                         <li>
                             <a href="./condimentos_english.php" class="dropdown__link">
-                                <img class="flag_language" src="./recursos/estados-unidos.png" alt="">  English
+                                <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
 
@@ -256,17 +267,17 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
         <article class="txt txt--cond">
             <h1>Spices</h1>
             <p>We have put together a careful selection of high-quality condiments that will add a magical touch to your dishes.</p>
-           
+
         </article>
-       
+
     </main>
 
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--g">
-       
+
         <article class="prueba">
             <h1>Spices</h1>
             <p>We have put together a careful selection of high-quality condiments that will add a magical touch to your dishes.</p>
-           
+
         </article>
     </main>
 
@@ -276,9 +287,9 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--SECCION DE MUESTRA DE PRODUCTOS-->
 
-  
 
- 
+
+
 
 
 
@@ -288,7 +299,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
             <p>All products in this category are shown.</p>
         </article>
 
-        
+
 
         <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
 
@@ -321,14 +332,14 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
                             </p>
                         </article>
 
-                     
+
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
                             <button class="hidden-btn hidden-btn--a"><a href="detallecondimentos_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View More</a></button>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                             <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')"><svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
-                            <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
-                            </svg></button>
+                                    <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                                </svg></button>
 
 
                         </article>
@@ -340,12 +351,12 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-        
+
 
         <!--FIN Seccion Productos-->
 
     </div>
- 
+
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 
@@ -367,7 +378,7 @@ $resultadosss = $sqlsss->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-    
+
 
 
     <script src="./js/main.js"></script>
