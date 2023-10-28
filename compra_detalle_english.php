@@ -349,7 +349,7 @@ $sqlDetalle->execute([$idCompra]);
                                             <?php
 
                                             $_id = $row["id"];
-                                            $img = "./images/productos/" . $_id . "/principal.jpg";
+                                            $img = "./images/productos/" . $_id . "/principal.png";
 
                                             if (!file_exists($img))
                                                 $img = "./images/no-img.png"
