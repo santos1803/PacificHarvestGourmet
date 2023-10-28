@@ -265,8 +265,8 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
 
     <main class="containerPrincipal containerPrincipal--reg">
         <article class="txt txt--reg">
-            <h1>Find the perfect gift</h1>
-            <p>Ready to make someone special smile? Discover our exceptional gift ideas!</p>
+            <h1>Explore Our Tasty Snacks</h1>
+            <p>We invite you to explore a world of flavors and textures that will satisfy your cravings at any time of the day.</p>
 
         </article>
 
@@ -275,8 +275,8 @@ $resultadosssss = $sqlsssss->fetchAll(PDO::FETCH_ASSOC);
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--k">
 
         <article class="prueba">
-            <h1>Encuentra el regalo perfecto</h1>
-            <p>Ready to make someone special smile? Discover our exceptional gift ideas!</p>
+            <h1>Explore Our Tasty Snacks</h1>
+            <p>We invite you to explore a world of flavors and textures that will satisfy your cravings at any time of the day.</p>
 
         </article>
     </main>
