@@ -249,13 +249,13 @@ if ($id == "" || $token == "") {
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./regalos.php" class="dropdown__link">
+                            <a href="./snacks.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./regalos_english.php" class="dropdown__link">
+                            <a href="./snacks_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
