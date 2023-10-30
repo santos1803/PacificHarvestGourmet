@@ -302,11 +302,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <div class="contenedorForm">
         <section class="Formulario">
 
-            <p class="correo">PacificHarvestGourmet@gmail.com</p>
+            <p class="correo">PacificHarvestGourmet@gmail.com</p> 
             <form class="formulario_Contacto " action="https://formsubmit.co/gnavarro@pacificharvestgourmet.com" method="post">
-                <input class="inputsContacto" type="text" name="" id="" placeholder="      Nombre">
-                <input class="inputsContacto" type="email" name="" id="" placeholder="     Correo Electrónico">
-                <input class="inputsContacto" type="tel" name="" id="" placeholder="   Teléfono">
+                <input class="inputsContacto" type="text" name="" id="" placeholder="Nombre">
+                <input class="inputsContacto" type="email" name="" id="" placeholder="Correo Electrónico">
+                <input class="inputsContacto" type="tel" name="" id="" placeholder="Teléfono">
 
                 <textarea class="textareaContacto" name="" id="" cols="30" rows="10" placeholder="Dejanos tu mensaje"></textarea>
                 <button type="submit">Enviar</button>

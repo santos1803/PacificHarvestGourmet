@@ -361,7 +361,7 @@ if ($id == "" || $token == "") {
                 <p class="lead">
                     <?php echo $descripcion; ?>
                 </p>
-                <div class="button-hide oculto2">
+                <div class="button-hide oculto2"> 
                     <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                     <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Agregar al
                         Carrito</button>

@@ -680,6 +680,13 @@ $con = $db->conectar();
 
     </div>
 
+    
+    <footer class="footer">
+        <hr class="hrFooter">
+        <img src="./recursos/SVGLogo.svg" alt="">
+
+
+    </footer>
 
 
 

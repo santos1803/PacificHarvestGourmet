@@ -340,9 +340,9 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="./regalos_english.php"><a href=""> <img src="./images/productos/13/principal.png" alt="">
-                        <h5>Condiments</h5>
-                    </a>
+                <a href="./condimentos_english.php"> <img src="./images/productos/13/principal.png" alt="">
+                    <h5>Condiments</h5>
+                </a>
 
 
 
@@ -405,8 +405,7 @@ $con = $db->conectar();
                 <article class="containerParrafos">
 
                     <h4>High Gamma Products</h4>
-                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh
-                        seafood, such as shrimp, prawns, crabs, mussels and oysters. </p>
+                    <p>Our high-end products are carefully selected by our team of experts, who ensure that they meet the highest standards of quality and safety. We work with local and international suppliers who share our vision of offering nutritious and delicious food, respecting the environment and good agricultural and livestock practices. </p>
 
 
 
@@ -424,8 +423,7 @@ $con = $db->conectar();
                 <article class="containerParrafos">
 
                     <h4>For you only the best</h4>
-                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh
-                        seafood, such as shrimp, prawns, crabs, mussels and oysters.</p>
+                    <p>We want our customers to enjoy the best food, without having to leave home or spend more than necessary. We are more than an ecommerce, we are your ally for healthy and sustainable food.</p>
 
 
 

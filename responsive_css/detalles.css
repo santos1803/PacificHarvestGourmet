@@ -18,18 +18,40 @@
 
 @media (max-width: 700px) {
 
+   .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .row_img{
+    width: 60%;
+   }
+
+   .row_txt {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 6% 0 0 2%;
+}
+
+
+
+
     .row_txt h1 {
-        font-size: 5.6vw;
+        font-size: 4.6vw;
         text-align: center;
     }
 
     .row_txt h2 {
-        font-size: 4.4vw;
+        font-size: 3.4vw;
         text-align: center;
     }
 
     .row_txt p {
-        font-size: 3vw;
+        font-size: 2.5vw;
         text-align: none;
     }
 
@@ -81,8 +103,10 @@
     } 
 
     .button-hide {
-        /* margin: 0% 10%; */
+
         width: 38vw;
+        align-self: center;
+        
     }
 }
 
@@ -91,6 +115,22 @@
     .containerMariscos_Txt h1{
         font-size: 30px;
     }
+
+    .row_txt h1 {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .row_txt h2 {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .row_txt p {
+        font-size: 3vw;
+        text-align: none;
+    }
+
 }
 
 @media (max-width: 535px) {
@@ -105,6 +145,21 @@
    .boton_comun--c a {
        font-size: 1.9vw;
     } 
+
+    .row_txt h1 {
+        font-size: 5.4vw;
+        text-align: center;
+    }
+
+    .row_txt h2 {
+        font-size: 4.4vw;
+        text-align: center;
+    }
+
+    .row_txt p {
+        font-size: 3.4vw;
+        text-align: none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -113,9 +168,7 @@
         font-size: 25px;
     }
 
-    .row_txt {
-        text-align: center;
-    }
+   
 
     
 }

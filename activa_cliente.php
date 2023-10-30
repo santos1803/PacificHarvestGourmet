@@ -65,6 +65,8 @@ $con = $db->conectar();
 
             ?></h1>
 
+            <a href="./index.php" style="margin-top: 10px">Volver a la pagina</a>
+
 
 
     </div>

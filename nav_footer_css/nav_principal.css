@@ -21,7 +21,7 @@
   
     /*========== z index ==========*/
     --z-tooltip: 10;
-    --z-fixed: 100;
+    --z-fixed: 1000000000000000000000000000000000000000000000000000;
   }
   
   /*========== Responsive typography ==========*/
@@ -75,6 +75,7 @@
   /*=============== NAV ===============*/
   .nav {
     height: var(--header-height);
+    z-index: var(--z-fixed);
   }
   
   .nav__logo, 

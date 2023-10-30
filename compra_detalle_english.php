@@ -23,7 +23,7 @@ $idCompra = $rowCompra['id'];
 $fecha = new DateTime($rowCompra['fecha']);
 $fecha = $fecha->format('d-m-Y H:i');
 
-$sqlDetalle = $con->prepare("SELECT id, nombre, precio, cantidad FROM detalle_compra WHERE id_compra = ?");
+$sqlDetalle = $con->prepare("SELECT id, name, precio, cantidad FROM detalle_compra WHERE id_compra = ?");
 $sqlDetalle->execute([$idCompra]);
 
 
@@ -357,7 +357,7 @@ $sqlDetalle->execute([$idCompra]);
                                             <a href=""><img src="<?php echo $img; ?>" width="52px"></a>
                                         </td>
                                         <td>
-                                            <?php echo $row['nombre']; ?>
+                                            <?php echo $row['name']; ?>
 
                                         </td>
                                         <td>
