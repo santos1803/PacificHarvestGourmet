@@ -15,7 +15,7 @@ $lista_carrito = array();
 
 if ($productos != null) {
     foreach ($productos as $clave => $cantidad) {
-        $sql = $con->prepare("SELECT id, nombre, precio, descuento, $cantidad AS cantidad FROM productos WHERE id=? AND activo=1  ");
+        $sql = $con->prepare("SELECT id, name, precio, descuento, $cantidad AS cantidad FROM productos WHERE id=? AND activo=1  ");
         $sql->execute([$clave]);
         $lista_carrito[] = $sql->fetch(PDO::FETCH_ASSOC);
     }
@@ -309,7 +309,7 @@ if ($productos != null) {
                         foreach ($lista_carrito as $producto) {
 
                             $_id = $producto["id"];
-                            $nombre = $producto["nombre"];
+                            $nombre = $producto["name"];
                             $precio = $producto["precio"];
                             $descuento = $producto["descuento"];
                             $cantidad = $producto["cantidad"];
@@ -325,7 +325,7 @@ if ($productos != null) {
                                     <?php
 
                                     $_id = $producto["id"];
-                                    $img = "./images/productos/" . $_id . "/principal.jpg";
+                                    $img = "./images/productos/" . $_id . "/principal.png";
 
                                     if (!file_exists($img))
                                         $img = "./images/no-img.png"

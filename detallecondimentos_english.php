@@ -17,10 +17,10 @@ if ($id == "" || $token == "") {
         $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'condimentos'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'condiments'  ");
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'condiments'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
-            $nombre = $row["nombre"];
+            $nombre = $row["name"];
             $descripcion = $row["description"];
             $categoria = $row["categorie"];
             $precio = $row["precio"];
@@ -370,7 +370,7 @@ if ($id == "" || $token == "") {
                 </div>
                 <article class=" categoria">
                     <p>Categorie:</p>
-                    <p><a href="./ofertas_english.php">
+                    <p><a href="./condimentos_english.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>

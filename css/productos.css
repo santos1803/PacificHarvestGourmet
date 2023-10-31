@@ -552,24 +552,19 @@
     /* box-shadow: -5px -5px 16px #c5c5c5, 5px 5px 16px #fbfbfb; */
     transition: 0.5s ease;
     padding: 3% 0;
+    color: rgb(35, 35, 35);
+    font-size: 1.1vw;
+    transition: 0.5s ease;
+    text-align: center;
 }
 
-.hidden-btn--a a {
-    border: none;
-    color: rgb(35, 35, 35);
-    font-size: 0.9vw;
-    transition: 0.5s ease;
-}
+
 
 .hidden-btn--a:hover {
     transform: scale(0.97);
     transition: 0.5s;
 }
 
-.hidden-btn--a:hover a {
-    transform: scale(0.97);
-    transition: 0.5s;
-}
 
 .boton_comun--b {
     width: 50%;

@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
     .containerMariscos {
         width: 100%;
-        height: 32vh;
+        height: 32vh; 
     }
 }
 
@@ -22,9 +22,10 @@
         flex-direction: column;
         gap: 8px;
     }
-    .hidden-btn--a a {
-        font-size: 14px;
-        padding: 5px;
+    .hidden-btn--a  {
+        font-size: 12px;
+        padding: 7px;
+        
     }
     .boton_comun--b {
         font-size: 12px;
@@ -61,7 +62,7 @@
         flex-direction: column;
         gap: 8px;
     }
-    .hidden-btn--a a {
+    .hidden-btn--a  {
         font-size: 16px;
         padding: 7px;
     }
@@ -90,10 +91,16 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
     .containerMariscos {
         width: 100%;
         height: 15vh;
+    }
+
+    .hidden-btn--a {
+        font-size: 12px;
+        padding: 7px;
+        
     }
 }
 
@@ -110,7 +117,7 @@
         flex-direction: column;
         gap: 8px;
     }
-    .hidden-btn--a a {
+    .hidden-btn--a  {
         font-size: 18px;
         padding: 9px;
     }

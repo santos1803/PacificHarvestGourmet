@@ -118,12 +118,16 @@
     border: 1px solid rgb(188, 188, 188);
     width: 60vw;
     height: 5vh;
+    padding-left: 1%;
 }
+
+
 
 .formulario_Contacto .textareaContacto {
     border: 1px solid rgb(188, 188, 188);
     width: 60vw;
     height: 25vh;
+    padding-left: 1%;
 }
 
 .formulario_Contacto button {

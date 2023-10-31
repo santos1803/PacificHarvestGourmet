@@ -24,7 +24,7 @@ if ($id_transaccion == '') {
         $total = $row['total'];
         $fecha = $row['fecha'];
 
-        $sqlDet = $con->prepare("SELECT nombre, precio, cantidad FROM detalle_compra WHERE id_compra =?");
+        $sqlDet = $con->prepare("SELECT name, precio, cantidad FROM detalle_compra WHERE id_compra =?");
         $sqlDet->execute([$idCompra]);
     } else {
         $error = 'Error when checking out';
@@ -316,7 +316,7 @@ if ($id_transaccion == '') {
                                             <?php echo $row_det['cantidad']; ?>
                                         </td>
                                         <td>
-                                            <?php echo $row_det['nombre']; ?>
+                                            <?php echo $row_det['name']; ?>
                                         </td>
                                         <td>
                                             <?php echo $importe; ?>

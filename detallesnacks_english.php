@@ -17,10 +17,10 @@ if ($id == "" || $token == "") {
         $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'snacks'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'snacks'  ");
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'snacks'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
-            $nombre = $row["nombre"];
+            $nombre = $row["name"];
             $descripcion = $row["description"];
             $categoria = $row["categorie"];
             $precio = $row["precio"];
@@ -249,13 +249,13 @@ if ($id == "" || $token == "") {
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./regalos.php" class="dropdown__link">
+                            <a href="./snacks.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./regalos_english.php" class="dropdown__link">
+                            <a href="./snacks_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>

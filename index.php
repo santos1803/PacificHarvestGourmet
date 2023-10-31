@@ -339,7 +339,7 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="regalos.php"> <img src="./images/productos/13/principal.png" alt="">
+                <a href="condimentos.php"> <img src="./images/productos/13/principal.png" alt="">
                     <h5>Condimentos</h5>
                 </a>
 
@@ -394,8 +394,7 @@ $con = $db->conectar();
                 </article>
                 <article class="containerParrafos">
                     <h4>Productos de Alta Gamma</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos
-                        frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <p>Nuestros productos de alta gama son seleccionados cuidadosamente por nuestro equipo de expertos, que se aseguran de cumplir con los más altos estándares de calidad e inocuidad. Trabajamos con proveedores locales e internacionales que comparten nuestra visión de ofrecer alimentos nutritivos y deliciosos, respetando el medio ambiente y las buenas prácticas agrícolas y ganaderas.  </p>
                 </article>
 
             </section>
@@ -409,8 +408,7 @@ $con = $db->conectar();
                 </article>
                 <article class="containerParrafos">
                     <h4>Para ti solo lo mejor</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos
-                        frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <p>Queremos que nuestros clientes disfruten de los mejores alimentos, sin tener que salir de su casa o gastar más de lo necesario. Somos más que una ecommerce, somos tu aliado para una alimentación saludable y sostenible. </p>
                 </article>
 
             </section>
