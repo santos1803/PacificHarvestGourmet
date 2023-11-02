@@ -45,79 +45,7 @@ INSERT INTO `pacifig2_pacificharvest.session`.`productos` (`id`, `nombre`, `name
 
 
 
--- UPDATE `productos` SET `name` = 'Cheese Bread' WHERE `productos`.`id` = 1;
 
--- UPDATE `productos` SET `name` = 'Doughnut' WHERE `productos`.`id` = 2;
-
--- UPDATE `productos` SET `name` = 'Casava Bread Mix' WHERE `productos`.`id` = 3;
-
--- UPDATE `productos` SET `name` = 'Abulón' WHERE `productos`.`id` = 4;
-
--- UPDATE `productos` SET `name` = 'Snails' WHERE `productos`.`id` = 5;
-
--- UPDATE `productos` SET `name` = 'King Crab' WHERE `productos`.`id` = 6;
-
--- UPDATE `productos` SET `name` = 'Sea Urchin' WHERE `productos`.`id` = 7;
-
--- UPDATE `productos` SET `name` = 'Locos' WHERE `productos`.`id` = 8;
-
--- UPDATE `productos` SET `name` = 'Machas' WHERE `productos`.`id` = 9;
-
--- UPDATE `productos` SET `name` = 'Chilean Chili' WHERE `productos`.`id` = 10;
-
--- UPDATE `productos` SET `name` = 'Merken Chili' WHERE `productos`.`id` = 11;
-
--- UPDATE `productos` SET `name` = 'Pebre Jb Chili' WHERE `productos`.`id` = 12;
-
--- UPDATE `productos` SET `name` = 'Ground Merken' WHERE `productos`.`id` = 13;
-
--- UPDATE `productos` SET `name` = 'Figs With Caramel' WHERE `productos`.`id` = 14;
-
--- UPDATE `productos` SET `name` = 'Costa Rama' WHERE `productos`.`id` = 15;
-
--- UPDATE `productos` SET `name` = 'Criollitas' WHERE `productos`.`id` = 16;
-
--- UPDATE `productos` SET `name` = 'Qubit Guava Paste' WHERE `productos`.`id` = 17;
-
--- UPDATE `productos` SET `name` = 'Guava Paste With Caramel' WHERE `productos`.`id` = 18;
-
--- UPDATE `productos` SET `name` = 'El Manjar' WHERE `productos`.`id` = 19;
-
--- UPDATE `productos` SET `name` = 'Costa Frac' WHERE `productos`.`id` = 20;
-
--- UPDATE `productos` SET `name` = 'Wafers With Guava' WHERE `productos`.`id` = 21;
-
--- UPDATE `productos` SET `name` = 'Mantecol Clásico' WHERE `productos`.`id` = 22;
-
--- UPDATE `productos` SET `name` = 'McKay Alteza' WHERE `productos`.`id` = 23;
-
--- UPDATE `productos` SET `name` = 'Mini Brown Sugar Cane' WHERE `productos`.`id` = 24;
-
--- UPDATE `productos` SET `name` = 'Cornstarch Custard Coconut' WHERE `productos`.`id` = 25;
-
--- UPDATE `productos` SET `name` = 'Cornstarch Custard Arequipe' WHERE `productos`.`id` = 26;
-
--- UPDATE `productos` SET `name` = 'Cornstarch Custard Cane Sugar' WHERE `productos`.`id` = 27;
-
--- UPDATE `productos` SET `name` = 'Wafers With Arequipe' WHERE `productos`.`id` = 28;
-
--- UPDATE `productos` SET `name` = 'Powdered Cane Sugar' WHERE `productos`.`id` = 29;
-
--- UPDATE `productos` SET `name` = 'Guava Paste With Caramel' WHERE `productos`.`id` = 30;
-
--- UPDATE `productos` SET `name` = 'Caramel Spread With Guava Jelly' WHERE `productos`.`id` = 31;
-
--- UPDATE `productos` SET `name` = 'Guava Paste' WHERE `productos`.`id` = 32;
-
--- UPDATE `productos` SET `name` = 'Red Guava Paste' WHERE `productos`.`id` = 33;
-
--- UPDATE `productos` SET `name` = 'Watt\'s Jam' WHERE `productos`.`id` = 34;
-
--- UPDATE `productos` SET `name` = 'Cassava Snacks' WHERE `productos`.`id` = 35;
-
--- UPDATE `productos` SET `name` = 'Huesillos' WHERE `productos`.`id` = 36;
-
--- UPDATE `productos` SET `name` = 'Sahne-Nuss Chocolate (Rum With Rainsis)' WHERE `productos`.`id` = 37;
 
 
 
