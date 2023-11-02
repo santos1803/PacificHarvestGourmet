@@ -18,6 +18,8 @@ ALTER TABLE `pacifig2_pacificharvest.session`.`productos` ADD `enlace` VARCHAR(1
 
 ALTER TABLE `pacifig2_pacificharvest.session`.`productos` ADD `name` VARCHAR (200) NOT null AFTER `nombre`; 
 
+ALTER TABLE `pacifig2_pacificharvest.session`.`productos` ADD `subcategoria` VARCHAR(50) NOT NULL AFTER `categorie`; 
+
 
 
 INSERT INTO `pacifig2_pacificharvest.session`.`productos` (`id`, `nombre`, `name`, `descripcion`, `description`, `precio`, `descuento`, `categoria`, `categorie`, `enlace`, `activo`, `created_by`) VALUES (NULL, 'Almojabana', 'Cheese Bread ', '<p>La almojabana es un panecillo de queso de origen colombiano, hecho con queso fresco, almidón de yuca y maíz. Es conocido por su textura suave y su sabor deliciosamente queso.</p>', '<p>Almojabana is a Colombian cheese bread made with fresh cheese, cassava starch, and corn. It is known for its soft texture and delicious cheesy flavor.</p>', '1', '0', 'alimentos', 'food', '#', '1', '');
@@ -42,6 +44,10 @@ INSERT INTO `pacifig2_pacificharvest.session`.`productos` (`id`, `nombre`, `name
 
 
 
+
+
+
+INSERT INTO `productos` (`id`, `nombre`, `name`, `descripcion`, `description`, `precio`, `descuento`, `categoria`, `categorie`, `subcategoria`, `enlace`, `activo`, `created_by`) VALUES (NULL, 'Watt\'s Mermelada Durazno', 'Watt\'s Mermelada Peach', '<p>La Mermelada Watt\'s es una deliciosa y sabrosa conserva de frutas que añadirá una explosión de dulzor a su desayuno o merienda. Esta mermelada de primera calidad se presenta en siete irresistibles sabores y está elaborada con las frutas más frescas y jugosas. Tanto si la unta en una tostada, la mezcla con yogur o la utiliza como cobertura de sus postres favoritos, la mermelada Watt\'s es la forma perfecta de disfrutar del sabor natural de la fruta fresca. Con su textura suave y aterciopelada y su rico sabor afrutado, este producto chileno es un producto imprescindible para todos los amantes de la fruta. ¿Por qué no te haces con los siete sabores y compruebas por ti mismo lo deliciosa que es la Mermelada Watt\'s?</p>\r\n\r\n<p>Watt\'s</p>\r\n\r\n<p>250g</p>', '<p>Watt\'s Jam: Watt\'s Jam is a delicious and tasty fruit preserve that will add an explosion of sweetness to your breakfast or snack. This premium jam comes in seven irresistible flavors and is made with the freshest, juiciest fruits. Whether you spread it on toast, mix it with yogurt or use it as a topping for your favorite desserts, Watt\'s jam is the perfect way to enjoy the natural flavor of fresh fruit. With its soft, velvety texture and rich fruity flavor, this Chilean product is a must-have for all fruit lovers. Why not get all seven flavors and see for yourself how delicious Watt\'s Jam is?</p>\r\n\r\n<p>Watt\'s</p>\r\n\r\n<p>250g</p>', '1', '0', 'dulces', 'candys', 'dulcemermelada', '#', '1', '') 
 
 
 

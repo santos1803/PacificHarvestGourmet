@@ -194,3 +194,8 @@
     transform: scale(0.97);
     transition: 0.5s;
 }
+
+.navegador {
+    border: 1px solid green;
+    width: 50%;
+}
