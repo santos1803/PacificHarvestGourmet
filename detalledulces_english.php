@@ -14,10 +14,10 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces'  ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategory= 'jam' ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'candys'  ");
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'candys' OR subcategory= 'jam'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["name"];
@@ -37,7 +37,7 @@ if ($id == "" || $token == "") {
             $dir = dir($dir_images);
 
             while (($archivo = $dir->read()) != false) {
-                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpge')|| strpos($archivo, 'png'))) {
+                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpge') || strpos($archivo, 'png'))) {
                     $imagenes[] = $dir_images . $archivo;
                 }
             }
@@ -48,6 +48,10 @@ if ($id == "" || $token == "") {
         exit;
     }
 };
+
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND subcategoria = 'mermelada'  ");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -377,6 +381,38 @@ if ($id == "" || $token == "") {
 
             </section>
         </section>
+        <?php if (strpos($nombre, "Watt") !== false) { ?>
+
+            <section class="navegador">
+                <?php foreach ($resultado as $row) { ?>
+
+
+
+
+
+
+                    <section class="subMenu">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a class="enlaceImagen" href="detalledulces_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>"><img class="imagenMuestra" src="<?php echo $img; ?>"></a>
+                    </section>
+
+
+
+
+
+
+
+                <?php } ?>
+            </section>
+        <?php } ?>
     </article>
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->

@@ -14,10 +14,10 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'dulcemermelada' ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'mermelada' ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'dulcemermelada' ");
+            $sql = $con->prepare("SELECT  nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'mermelada' ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["nombre"];
@@ -49,9 +49,11 @@ if ($id == "" || $token == "") {
     }
 };
 
-$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND subcategoria = 'dulcemermelada'  ");
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND subcategoria = 'mermelada'  ");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 
 ?>
@@ -204,7 +206,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                           <!-- <a href="./bebidas.php" class="dropdown__link">
+                            <!-- <a href="./bebidas.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 320 512">
                                     <path d="M120 0h80c13.3 0 24 10.7 24 24V64H96V24c0-13.3 10.7-24 24-24zM32 151.7c0-15.6 9-29.8 23.2-36.5l24.4-11.4c11-5.1 23-7.8 35.1-7.8h90.6c12.1 0 24.1 2.7 35.1 7.8l24.4 11.4c14.1 6.6 23.2 20.8 23.2 36.5c0 14.4-7.5 27-18.9 34.1c11.5 8.8 18.9 22.6 18.9 38.2c0 16.7-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48c0-16.7 8.5-31.4 21.5-40C40.5 415.4 32 400.7 32 384s8.5-31.4 21.5-40C40.5 335.4 32 320.7 32 304s8.5-31.4 21.5-40C40.5 255.4 32 240.7 32 224c0-15.6 7.4-29.4 18.9-38.2C39.5 178.7 32 166.1 32 151.7zM96 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm16 112c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112z" />
                                 </svg>
@@ -334,6 +336,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                     </button>
                 </div>
 
+
             </section>
             <section class="row_txt">
                 <!-- En esta seccion mostramos nombre, precio. descuento (si lo tiene) y descripcion-->
@@ -383,54 +386,45 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             </section>
         </section>
-        <?php if(strpos($nombre, "Watt's Mermelada") !== false) { ?>
-        <section class="navegador">
-        <?php foreach ($resultado as $row) { ?>
 
-<section class="trajeta">
+        <?php if (strpos($nombre, "Watt's Mermelada") !== false) { ?>
 
-
-    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
-
-        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
-        <?php
-
-        $id = $row["id"];
-        $img = "./images/productos/" . $id . "/principal.png";
-        if (!file_exists($img))
-            $img = "./images/no-img.png"
-        ?>
-        <a href=""><img src="<?php echo $img; ?>"></a>
-    </section>
-    <section class="containerProductos_Cards_Txt">
-        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
-        <h2>
-            <?php echo $row["nombre"]; ?>
-        </h2>
-        <article class="seccion_descuento">
-            <p class="pricess">
-                <?php echo number_format($row["precio"]); ?>$
-            </p>
-        </article>
-
-        <article class="boton_videos boton_videos--b">
-            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-            <a class="hidden-btn hidden-btn--a" href="detalledulces.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
-                    Mas</a>
-            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')"><svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
-                    <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
-                </svg></button>
+            <section class="navegador">
+                <?php foreach ($resultado as $row) { ?>
 
 
-        </article>
-    </section>
 
-</section>
-<?php } ?>
-<?php } ?>
-            
-        </section>
+
+
+
+                    <section class="subMenu">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a class="enlaceImagen" href="detalledulces.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>"><img class="imagenMuestra" src="<?php echo $img; ?>"></a>
+                    </section>
+
+
+
+
+
+
+
+                <?php } ?>
+            </section>
+        <?php } ?>
+
+
+
+
+
+
     </article>
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
