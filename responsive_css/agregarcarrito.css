@@ -13,9 +13,25 @@
     }
 
    
-
-   
 }
+
+@media (max-width: 900px) {
+ .trHead th {
+    font-size: 12px;
+ }
+}
+
+@media (max-width: 467px) {
+    .trHead th {
+       font-size: 8px;
+    }
+   }
+
+@media (max-width: 420px) {
+    .trHead th {
+       font-size: 7px;
+    }
+   }
 
 @media (max-width: 662px) {
     .forBuy a {
