@@ -540,7 +540,7 @@
 .boton_videos--b {
     display: flex;
     gap: 3%;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -575,6 +575,7 @@
     transition: 0.5s ease;
     color: white;
     font-size: 0.9vw;
+    display: none;
 }
 
 .boton_comun--b a {

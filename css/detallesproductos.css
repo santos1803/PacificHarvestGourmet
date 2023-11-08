@@ -94,6 +94,7 @@
     color: rgb(35, 35, 35);
     font-size: 1.2vw;
     transition: 0.5s ease;
+    display: none;
 }
 
 .hidden-btn--a:hover {
@@ -111,6 +112,7 @@
     color: rgb(35, 35, 35);
     font-size: 1.2vw;
     transition: 0.5s ease;
+    display: none;
 }
 
 .boton_comun--b a {
@@ -168,10 +170,7 @@
     text-decoration: underline;
 }
 
-.stripe_button {
-    display: flex;
-    justify-content: center;
-}
+
 
 .boton_comun--c {
     width: 39%;
@@ -185,7 +184,7 @@
     background-color: #5469d4;
 }
 
-.stripe_button .boton_comun--c a {
+ .boton_comun--c a {
     color: white;
     padding: 1% 2%;
     border-radius: 26px;

@@ -366,12 +366,12 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                     <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Add To Cart</button>
                     <!-- Este boton redirecciona al carrito de compras-->
                     <button class="boton_comun--b"><a href="agregarcarrito_english.php" id="enlaceBoton">Buy</a></button>
-                </div>
-                <div class="stripe_button">
                     <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">Pay With Stripe</a></button>
-
-
                 </div>
+                
+                    
+
+               
                 <article class=" categoria">
                     <p>Categorie:</p>
                     <p><a href="./dulces_english.php">
