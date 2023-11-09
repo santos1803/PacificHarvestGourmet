@@ -665,7 +665,7 @@ $con = $db->conectar();
         <section class="time__shipping">
             <article class="options__title">
                 <h2>CONTACT US</h2>
-                <p>If you have any questions regarding our shipping policy, you can contact us by email at <a href="mailto:gnavarro@pacificharvestgourmet.com">gnavarro@pacificharvestgourmet.com</a> or by phone at (561) 373-3404.</p>
+                <p>If you have any questions regarding our shipping policy, you can contact us by email at <a href="mailto:gnavarro@pacificharvestgourmet.com">gnavarro@pacificharvestgourmet.com</a></p>
             </article>
         </section>
 

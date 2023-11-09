@@ -387,8 +387,7 @@ $con = $db->conectar();
                 <article class="containerParrafos">
 
                     <h4>Value Service</h4>
-                    <p>Pacific Harvest's product range is wide and varied. They offer a selection of fresh
-                        seafood, such as shrimp, prawns, crabs, mussels and oysters.</p>
+                    <p>Selection of Canned Seafood, such as Locos, Hedgehogs, Crabs, Snails, Machas, Smoked Choritos and Salmon in Water</p>
 
 
 

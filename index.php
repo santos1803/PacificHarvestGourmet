@@ -380,8 +380,7 @@ $con = $db->conectar();
                 </article>
                 <article class="containerParrafos">
                     <h4>Servicio de Valor</h4>
-                    <p>La gama de productos de Pacific Harvest es amplia y variada. Ofrecen una selección de mariscos
-                        frescos, como camarones, langostinos, cangrejos, mejillones y ostras. </p>
+                    <p>Seleccion de Maricos Enlatados, como Locos, Erizos, Centollas, Caracoles, Machas, Choritosahumados y Salmon en Agua</p>
                 </article>
 
             </section>
