@@ -7,7 +7,7 @@ require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'ofertas'  ");
+$sql = $con->prepare("SELECT id, nombre,name,  precio, descuento FROM productos WHERE activo=1  AND categoria = 'ofertas'  ");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -287,7 +287,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Oferts</h2>
+            <h2>Offers</h2>
             <p>All products in this category are shown.</p>
         </article>
 
@@ -306,7 +306,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -315,7 +315,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                     <section class="containerProductos_Cards_Txt">
                         <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
                         <h2>
-                            <?php echo $row["nombre"]; ?>
+                            <?php echo $row["name"]; ?>
                         </h2>
                         <article class="seccion_descuento">
                             <p class="pricess">
@@ -325,8 +325,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <button class="hidden-btn hidden-btn--a btn btn--a"><a href="detalleofertas_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View
-                                    More</a></button>
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleofertas_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View
+                                    More</a>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                             <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Add
                                 To Cart</button>

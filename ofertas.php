@@ -308,7 +308,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <?php
 
                         $id = $row["id"];
-                        $img = "./images/productos/" . $id . "/principal.jpg";
+                        $img = "./images/productos/" . $id . "/principal.png";
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
@@ -327,8 +327,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <button class="hidden-btn hidden-btn--a btn btn--a"><a href="detalleofertas.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
-                                    Mas</a></button>
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleofertas.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                             <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
                                 al Carrito</button>

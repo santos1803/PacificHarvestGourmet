@@ -310,37 +310,38 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
 
     <!--SECCION DE MUESTRA DE PRODUCTOS-->
-    <!-- 
+    
     <div class="containerProductos">
         <article class="containerProductos_Txt">
             <h2>Ofertas</h2>
             <p>Se muestran todos los productos</p>
-        </article> -->
+        </article>
 
 
-    <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
 
-    <!-- <section class="containerProductos_Cards">
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
             <?php foreach ($resultado as $row) { ?>
 
                 <section class="trajeta">
 
 
-                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a"> -->
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
 
-    <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
-    <!-- <?php
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
 
-                $id = $row["id"];
-                $img = "./images/productos/" . $id . "/principal.png";
-                if (!file_exists($img))
-                    $img = "./images/no-img.png"
-            ?>
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
                         <a href=""><img src="<?php echo $img; ?>"></a>
                     </section>
-                    <section class="containerProductos_Cards_Txt"> -->
-    <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
-    <!-- <h2>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
                             <?php echo $row["nombre"]; ?>
                         </h2>
                         <article class="seccion_descuento">
@@ -349,16 +350,20 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
                             </p>
                         </article>
 
-                        <article class="boton_videos boton_videos--b"> -->
-    <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-    <!-- <button class="hidden-btn hidden-btn--a"><a href="detalleofertas.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver -->
-    Mas</a></button>
-    <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-    <!-- <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
-                                al Carrito</button> -->
+
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleofertas.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">
+                                <svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+                                    <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                                </svg>
+                            </button>
 
 
-    <!-- </article>
+                        </article>
                     </section>
 
                 </section>
@@ -367,11 +372,12 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-        <button class="botonPagina"><a href="ofertas.php" class="enlaceBoton">VER MAS</a></button> -->
+        <a href="ofertas.php" class="enlaceBoton btn">VER MAS</a>
 
-    <!--FIN Seccion Productos-->
-    <!-- 
-    </div> -->
+
+        <!--FIN Seccion Productos-->
+
+    </div>
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
