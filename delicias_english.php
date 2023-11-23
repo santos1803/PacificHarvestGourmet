@@ -7,9 +7,13 @@ require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre,name,  precio, descuento FROM productos WHERE activo=1  AND categoria = 'ofertas'  ");
-$sql->execute();
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
+$sqlssss = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categoria = 'delicias'  ");
+$sqlssss->execute();
+$resultadossss = $sqlssss->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 
 
@@ -179,8 +183,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./dulces_english.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> Sweets
+                            <a href="./delicias_english.php" class="dropdown__link">
+                                <i class="ri-cake-3-fill"></i> delights
                             </a>
                         </li>
 
@@ -193,10 +197,10 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./ofertas_english.php" class="dropdown__link">
+                            <a href="./accesorios_english.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
                                     <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Oferts
+                                </svg> accessories
                             </a>
                         </li>
 
@@ -219,13 +223,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./ofertas.php" class="dropdown__link">
+                            <a href="./delicias.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./ofertas_english.php" class="dropdown__link">
+                            <a href="./delicias_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
@@ -261,20 +265,20 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <main class="containerPrincipal containerPrincipal--of">
-        <article class="txt txt--of">
-            <h1>Not-to-be-missed Deals</h1>
-            <p>Don't miss the opportunity to acquire your favorite items at special prices. </p>
+    <main class="containerPrincipal containerPrincipal--dul">
+        <article class="txt txt--dul">
+            <h1>Sweet Delights</h1>
+            <p>Immerse yourself in a world of irresistible temptations that will delight your senses. </p>
 
         </article>
 
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--h">
 
         <article class="prueba">
-            <h1>Not-to-be-missed Deals</h1>
-            <p>Don't miss the opportunity to acquire your favorite items at special prices. </p>
+            <h1>Sweet Delights</h1>
+            <p>Immerse yourself in a world of irresistible temptations that will delight your senses.</p>
 
         </article>
     </main>
@@ -285,17 +289,20 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <!--SECCION DE MUESTRA DE PRODUCTOS-->
 
+
+
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Offers</h2>
+            <h2>delights</h2>
             <p>All products in this category are shown.</p>
         </article>
+
 
 
         <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
 
         <section class="containerProductos_Cards">
-            <?php foreach ($resultado as $row) { ?>
+            <?php foreach ($resultadossss as $row) { ?>
 
                 <section class="trajeta">
 
@@ -325,11 +332,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleofertas_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View
-                                    More</a>
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalledelicias_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View More</a>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
-                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Add
-                                To Cart</button>
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')"><svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+                                    <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                                </svg></button>
 
 
                         </article>
@@ -347,6 +354,9 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     </div>
 
+
+
+
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 
 
@@ -361,9 +371,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     </footer>
 
-
     <!--FIN Inicio footer-->
-
 
 
 

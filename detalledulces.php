@@ -14,10 +14,10 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'mermelada' ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'delicias' OR subcategoria= 'mermelada' ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT  nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'dulces' OR subcategoria= 'mermelada' ");
+            $sql = $con->prepare("SELECT  nombre, descripcion, precio, descuento, categoria, enlace FROM productos WHERE id=? AND activo=1 AND categoria = 'delicias' OR subcategoria= 'mermelada' ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["nombre"];
@@ -215,8 +215,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./dulces.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> Dulces
+                            <a href="./delicias.php" class="dropdown__link">
+                                <i class="ri-cake-3-fill"></i> delicias
                             </a>
                         </li>
 
@@ -229,10 +229,10 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./ofertas.php" class="dropdown__link">
+                            <a href="./accesorios.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
                                     <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Ofertas
+                                </svg> accesorios
                             </a>
                         </li>
 
@@ -256,13 +256,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./dulces.php" class="dropdown__link">
+                            <a href="./delicias.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Español
                             </a>
                         </li>
 
                         <li>
-                            <a href="./dulces_english.php" class="dropdown__link">
+                            <a href="./delicias_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> Ingles
                             </a>
                         </li>
@@ -379,7 +379,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                 <article class=" categoria">
                     <p>Categoria:</p>
-                    <p><a href="./dulces.php">
+                    <p><a href="./delicias.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>
@@ -407,7 +407,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         if (!file_exists($img))
                             $img = "./images/no-img.png"
                         ?>
-                        <a class="enlaceImagen" href="detalledulces.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>"><img class="imagenMuestra" src="<?php echo $img; ?>"></a>
+                        <a class="enlaceImagen" href="detalledelicias.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>"><img class="imagenMuestra" src="<?php echo $img; ?>"></a>
                     </section>
 
 

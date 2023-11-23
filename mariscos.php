@@ -183,8 +183,8 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./dulces.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> Dulces
+                            <a href="./delicias.php" class="dropdown__link">
+                                <i class="ri-cake-3-fill"></i> delicias
                             </a>
                         </li>
 
@@ -197,10 +197,10 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./ofertas.php" class="dropdown__link">
+                            <a href="./accesorios.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
                                     <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Ofertas
+                                </svg> accesorios
                             </a>
                         </li>
 
@@ -270,7 +270,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
     <main class="containerPrincipal containerPrincipal--mar">
         <article class="txt txt--mar">
             <h1>Delicias del Mar</h1>
-            <p>Hemos reunido una amplia variedad de productos frescos y deliciosos del océano para que disfrutes en la comodidad de tu hogar. </p>
+            <p>Hemos reunido una amplia variedad de productos enlatados y deliciosos del océano para que disfrutes en la comodidad de tu hogar. </p>
 
         </article>
 
@@ -280,7 +280,7 @@ $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
         <article class="prueba">
             <h1>Delicias del Mar</h1>
-            <p>Hemos reunido una amplia variedad de productos frescos y deliciosos del océano para que disfrutes en la comodidad de tu hogar.</p>
+            <p>Hemos reunido una amplia variedad de productos enlatados y deliciosos del océano para que disfrutes en la comodidad de tu hogar.</p>
 
         </article>
     </main>

@@ -2189,7 +2189,7 @@ class PHPMailer
                     //* it's not disabled
                     //* we have openssl extension
                     //* we are not already using SSL
-                    //* the server offers STARTTLS
+                    //* the server accessories STARTTLS
                     if ($this->SMTPAutoTLS && $sslext && 'ssl' !== $secure && $this->smtp->getServerExt('STARTTLS')) {
                         $tls = true;
                     }

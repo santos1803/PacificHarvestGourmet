@@ -180,8 +180,8 @@ $con = $db->conectar();
                         </li>
 
                         <li>
-                            <a href="./dulces.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> Dulces
+                            <a href="./delicias.php" class="dropdown__link">
+                                <i class="ri-cake-3-fill"></i> delicias
                             </a>
                         </li>
 
@@ -194,10 +194,10 @@ $con = $db->conectar();
                         </li>
 
                         <li>
-                            <a href="./ofertas.php" class="dropdown__link">
+                            <a href="./accesorios.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
                                     <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Ofertas
+                                </svg> accesorios
                             </a>
                         </li>
 
@@ -346,8 +346,8 @@ $con = $db->conectar();
 
             </article>
             <article class="cardProducto">
-                <a href="dulces.php"><img src="./images/productos/25/principal.png" alt="">
-                    <h5>Dulces</h5>
+                <a href="delicias.php"><img src="./images/productos/25/principal.png" alt="">
+                    <h5>delicias</h5>
                 </a>
 
             </article>
@@ -380,7 +380,7 @@ $con = $db->conectar();
                 </article>
                 <article class="containerParrafos">
                     <h4>Servicio de Valor</h4>
-                    <p>Seleccion de Maricos Enlatados, como Locos, Erizos, Centollas, Caracoles, Machas, Choritosahumados y Salmon en Agua</p>
+                    <p>Seleccion de Mariscos Enlatados, como Locos, Erizos, Centollas, Caracoles, Machas, Choritos ahumados y Salmon en Agua</p>
                 </article>
 
             </section>

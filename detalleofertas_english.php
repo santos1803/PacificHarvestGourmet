@@ -14,10 +14,10 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'ofertas'  ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'accesorios'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'offers'  ");
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'accessories'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["name"];
@@ -209,8 +209,8 @@ if ($id == "" || $token == "") {
                         </li>
 
                         <li>
-                            <a href="./dulces_english.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> Sweets
+                            <a href="./delicias_english.php" class="dropdown__link">
+                                <i class="ri-cake-3-fill"></i> delights
                             </a>
                         </li>
 
@@ -223,10 +223,10 @@ if ($id == "" || $token == "") {
                         </li>
 
                         <li>
-                            <a href="./ofertas_english.php" class="dropdown__link">
+                            <a href="./accesorios_english.php" class="dropdown__link">
                                 <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
                                     <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Oferts
+                                </svg> accessories
                             </a>
                         </li>
 
@@ -249,13 +249,13 @@ if ($id == "" || $token == "") {
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./ofertas.php" class="dropdown__link">
+                            <a href="./accesorios.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./ofertas_english.php" class="dropdown__link">
+                            <a href="./accesorios_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
@@ -370,7 +370,7 @@ if ($id == "" || $token == "") {
                
                 <article class=" categoria">
                     <p>Categorie:</p>
-                    <p><a href="./ofertas_english.php">
+                    <p><a href="./accesorios_english.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>
