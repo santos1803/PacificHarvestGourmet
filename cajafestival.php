@@ -1,65 +1,5 @@
-<?php
-//Configuaracion para que el usuario pueda recuperar la contraseña
-require './php/config.php';
-require './php/dtbbase.php';
-require './clases/clienteFunciones.php';
-
-$user_id = $_GET['id'] ?? $_POST['user_id'] ?? '';
-$token = $_GET['token'] ?? $_POST['token'] ?? '';
-
-if ($user_id == ''  || $token == '') {
-    header("Location: index.php");
-    exit;
-}
-
-
-$db = new Database();
-$con = $db->conectar();
-
-$exito = [];
-$errors = [];
-
-//Validacion para saber cuando la informacion se verifico en la base de datos de forma correcta
-
-if (!verificaTokenRequest($user_id, $token, $con)) {
-    echo "No se puede verificar la informacion";
-    exit;
-}
-
-
-//Validacion que define los posibles mensajes que recibira el usuario al momento de llenar los campos 
-if (!empty($_POST)) {
-
-    $password = trim($_POST["password"]);
-    $repassword = trim($_POST["repassword"]);
-
-    if (esNulo([$user_id, $token, $password, $repassword])) {
-        $errors[] = "Debe llenar todos los campos";
-    }
-
-
-    if (!validaPassword($password, $repassword)) {
-        $errors[] = "Las contraseñas no coinciden";
-    }
-
-    if (count($errors) == 0) {
-        $pass_hash = password_hash($password, PASSWORD_DEFAULT);
-        if (actualizaPassword($user_id, $pass_hash, $con)) {
-            $exito[] = "Su clave ha sido modificada, por favor Inicie Sesion";
-            // echo "Contraseña modificada.<br><a href='login.php'>Iniciar sesion</a>'";
-            // exit;
-        } else {
-            $errors[] = "Error al modificar contraseña. Intentalo nuvamente.";
-        }
-    }
-}
-
-
-?>
-
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -71,19 +11,20 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
-    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./responsive_css/index.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
-    <link rel="stylesheet" href="./responsive_css/registro.css">
+    <link rel="stylesheet" href="./responsive_css/productos.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
-
+    
 </head>
 
 <body>
-    <!--Cabecera de la pagina-->
 
-    <header class="header">
+       <!--Cabecera de la pagina-->
+       <header class="header">
         <nav class="nav container">
             <div class="nav__data">
                 <section class="nav__logo_cart">
@@ -266,13 +207,13 @@ if (!empty($_POST)) {
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./reset_password.php" class="dropdown__link">
+                            <a href="./accesorios.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Español
                             </a>
                         </li>
 
                         <li>
-                            <a href="./reset_password_english.php" class="dropdown__link">
+                            <a href="./accesorios_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> Ingles
                             </a>
                         </li>
@@ -293,12 +234,13 @@ if (!empty($_POST)) {
         </nav>
     </header>
 
+
     <!--FIN Cabecera de la pagina-->
 
 
     <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-    <div id="vacio">
+    <div id="vacio" style="height: 70px;">
 
     </div>
     <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
@@ -306,64 +248,112 @@ if (!empty($_POST)) {
 
 
 
+    <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <!--inicio banner principal-->
+    <main class="containerPrincipal containerPrincipal--of">
+        <article class="txt txt--of">
+            <h1>Caja Festival</h1>
+            <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
 
-    <!-- <div class="containerMariscos">
-      
-      </div> -->
+        </article>
 
-    <!--final banner principal-->
+    </main>
 
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
 
-    <!--Formulario para que el usuario ingrese la nueva contraseña, tambien se usan funciones ya definida antes para que muesten los posibles mensajes al usuario-->
+        <article class="prueba">
+            <h1>Caja Festival</h1>
+            <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
 
-    <section class="form-login form-login--a m-auto pt-4 login_form">
-        <div class="container" style="margin-top: 80px;">
-            <h3>Cambiar Contraseña</h3>
+        </article>
+    </main>
 
-            <?php mostrarMensajes($errors); ?>
-            <?php mostrarExito($exito); ?>
-            <form class="row g-3" action="reset_password.php" method="post" autocomplete="off">
-                <input type="hidden" name="user_id" id="user_id" value="<?= $user_id; ?>" />
-                <input type="hidden" name="token" id="token" value="<?= $token; ?>" />
-                <div class="col-md-6">
-                    <label for="password"><span class="text-danger">*</span>Nueva Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control" requireda>
-                </div>
-                <div class="col-md-6">
-                    <label for="repassword"><span class="text-danger">*</span>Confirmar Contraseña</label>
-                    <input type="password" name="repassword" id="repassword" class="form-control" requireda>
-                </div>
-
-                <div class="col-12">
-                    <button type="submit" id="colorboton" class="btn btn-primary">Confirmar Cambio</button>
-                </div>
-            </form>
-
-            <div class="password_lost">
-                <a href="login.php">Iniciar Sesion</a></span>
-            </div>
-
-        </div>
-
-    </section>
+    <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
 
 
+    <!--SECCION DE MUESTRA DE PRODUCTOS-->
+
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Caja Festival</h2>
+            <p>Se muestran todos los productos</p>
+        </article>
+
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultado as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["nombre"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleaccesorios.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                                    Mas</a>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
+                                al Carrito</button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
+
+
+    <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 
 
 
 
-    <!--Inicio footer-->
 
-
+    <!-- fin del formulario de contacto -->
     <footer class="footer" style="margin-top: 40px;">
         <hr class="hrFooter">
         <img src="./recursos/SVGLogo.svg" alt="">
 
 
     </footer>
+
+
+    <!--FIN Inicio footer-->
 
 
 
@@ -373,6 +363,29 @@ if (!empty($_POST)) {
     <script src="https://kit.fontawesome.com/5d15e4e334.js" crossorigin="anonymous"></script>
 
 
-</body>
+    <!-- Aqui tenemos el script para que los productos agregados se visualicen en el carrito al momento de dar click en el boton-->
 
+    <script>
+        function addProducto(id, token) {
+
+            let url = './clases/carrito.php'
+            let formData = new FormData()
+            formData.append('id', id)
+            formData.append('token', token)
+
+            fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors',
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        let elemento = document.getElementById("num_cart")
+                        elemento.innerHTML = data.numero
+                    }
+                })
+        }
+    </script>
+    
+</body>
 </html>
