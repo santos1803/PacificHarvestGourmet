@@ -12,13 +12,17 @@ $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
-$sqls = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categorie = 'food'  ");
+$sqls = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categorie = 'food' LIMIT 4 ");
 $sqls->execute();
 $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
 
 $sqlss = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categorie = 'seafood' LIMIT 4 ");
 $sqlss->execute();
 $resultadoss = $sqlss->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlsssssss = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categorie = 'box festival' LIMIT 4 ");
+$sqlsssssss->execute();
+$resultadosssssss = $sqlsssssss->fetchAll(PDO::FETCH_ASSOC);
 
 $sqlsss = $con->prepare("SELECT id, name, precio, descuento FROM productos WHERE activo=1  AND categoria = 'condimentos' LIMIT 4 ");
 $sqlsss->execute();
@@ -79,7 +83,7 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
                         <img src="./recursos/SVGLogo.svg" alt="">
                     </a>
 
-                    <a href="./agregarcarrito_english.php" class="carrito ">
+                 <!-- <a href="./agregarcarrito_english.php" class="carrito ">
                         <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
                             <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
                         </svg>
@@ -90,7 +94,7 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
                         <?php } else { ?>
                             <span id="num_cart" class="badge bg-secondary carritosss"></span>
                         <?php } ?>
-                    </a>
+                    </a>  -->
 
                 </section>
 
@@ -164,9 +168,16 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <ul class="dropdown__menu">
-                        <li>
+                         <li>
                             <a href="./producto_english.php" class="dropdown__link">
                                 <i class="fa-solid fa-rectangle-list"></i> General
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./accesorios_english.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
+                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
+                                </svg> Accessories
                             </a>
                         </li>
 
@@ -206,9 +217,11 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
                         <li>
                             <a href="./delicias_english.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> delights
+                                <i class="ri-cake-3-fill"></i> Delights
                             </a>
                         </li>
+                                        
+
 
                         <li>
                             <a href="./mariscos_english.php" class="dropdown__link">
@@ -219,20 +232,14 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                         <li>
-                            <a href="./cajafestival_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
-                                    <path d="M64 32C28.7 32 0 60.7 0 96s28.7 64 64 64h1c3.7 88.9 77 160 167 160h56V128H264 88.8 64c-17.7 0-32-14.3-32-32s14.3-32 32-32H464c8.8 0 16-7.2 16-16s-7.2-16-16-16H64zM224 456c0 13.3 10.7 24 24 24h72V407.8l-64.1-22.4c-12.5-4.4-26.2 2.2-30.6 14.7s2.2 26.2 14.7 30.6l4.5 1.6C233 433.9 224 443.9 224 456zm128 23.3c36.4-3.3 69.5-17.6 96.1-39.6l-86.5-34.6c-3 1.8-6.2 3.2-9.6 4.3v69.9zM472.6 415c24.6-30.3 39.4-68.9 39.4-111c0-12.3-1.3-24.3-3.7-35.9L382.8 355.1c.8 3.4 1.2 7 1.2 10.6c0 4.6-.7 9-1.9 13.1L472.6 415zM336 128H320V320h18.3c9.9 0 19.1 3.2 26.6 8.5l133.5-92.4C471.8 172.6 409.1 128 336 128zM168 192a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
-                                </svg> Festival Box
+                             <a href="./cajafestival_english.php" class="dropdown__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#1c3a6b}</style><path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg> Festival Box
                             </a>
                         </li>
 
-                        <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
-                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> accessories
-                            </a>
-                        </li>
+                      
+                                        
+
 
 
 
@@ -321,7 +328,7 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>accessories</h2>
+            <h2>Accessories</h2>
             <p>Top selling products are shown</p>
         </article>
 
@@ -378,7 +385,7 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
 
         </section>
-        <a href="accesorios.php" class="enlaceBoton btn">VIEW MORE</a>
+        <a href="accesorios_english.php" class="enlaceBoton btn">VIEW MORE</a>
 
 
         <!--FIN Seccion Productos-->
@@ -517,6 +524,73 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
     </div>
 
+    
+    <div class="containerProductos">
+        <article class="containerProductos_Txt">
+            <h2>Festival Box</h2>
+            <p>Top selling products are shown</p>
+        </article>
+
+
+
+        <!--Carta del producto que se autocreara desde la base de datos, siempre y cuando cumpla con los parametros de la consulta-->
+
+        <section class="containerProductos_Cards">
+            <?php foreach ($resultadosssssss as $row) { ?>
+
+                <section class="trajeta">
+
+
+                    <section class="containerProductos_Cards_Img containerProductos_Cards_Img--a">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+                    </section>
+                    <section class="containerProductos_Cards_Txt">
+                        <!--Aqui mostramos el nombre y precio del producto que traemos desde la base de dato-->
+                        <h2>
+                            <?php echo $row["name"]; ?>
+                        </h2>
+                        <article class="seccion_descuento">
+                            <p class="pricess">
+                                <?php echo number_format($row["precio"]); ?>$
+                            </p>
+                        </article>
+
+
+                        <article class="boton_videos boton_videos--b">
+                            <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detallecajafestival_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">View
+                                More</a>
+                            <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                            <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')"><svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+                                    <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                                </svg></button>
+
+
+                        </article>
+                    </section>
+
+                </section>
+            <?php } ?>
+
+
+
+        </section>
+        <a href="cajafestival_english.php" class="enlaceBoton btn">VIEW ALL</a>
+
+
+        <!--FIN Seccion Productos-->
+
+    </div>
+
     <div class="containerProductos">
         <article class="containerProductos_Txt">
             <h2>Condiments</h2>
@@ -584,7 +658,7 @@ $resultadossssss = $sqlssssss->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>delights</h2>
+            <h2>Delights</h2>
             <p>Top selling products are shown</p>
         </article>
 

@@ -14,10 +14,10 @@ if ($id == "" || $token == "") {
 } else {
     $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
     if ($token == $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'accesorios'  ");
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'delicias' OR subcategory= 'jam' ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'accessories'  ");
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'delights' OR subcategory= 'jam'  ");
             $sql->execute([$id]);
             $row = $sql->fetch(PDO::FETCH_ASSOC);
             $nombre = $row["name"];
@@ -37,7 +37,7 @@ if ($id == "" || $token == "") {
             $dir = dir($dir_images);
 
             while (($archivo = $dir->read()) != false) {
-                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpge')|| strpos($archivo, 'png'))) {
+                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpge') || strpos($archivo, 'png'))) {
                     $imagenes[] = $dir_images . $archivo;
                 }
             }
@@ -48,6 +48,10 @@ if ($id == "" || $token == "") {
         exit;
     }
 };
+
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND subcategoria = 'mermelada'  ");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -83,7 +87,7 @@ if ($id == "" || $token == "") {
                         <img src="./recursos/SVGLogo.svg" alt="">
                     </a>
 
-                    <a href="./agregarcarrito_english.php" class="carrito ">
+                 <!-- <a href="./agregarcarrito_english.php" class="carrito ">
                         <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
                             <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
                         </svg>
@@ -94,7 +98,7 @@ if ($id == "" || $token == "") {
                         <?php } else { ?>
                             <span id="num_cart" class="badge bg-secondary carritosss"></span>
                         <?php } ?>
-                    </a>
+                    </a>  -->
 
                 </section>
 
@@ -167,10 +171,18 @@ if ($id == "" || $token == "") {
                         </svg>Products <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
+                     <ul class="dropdown__menu">
                         <li>
                             <a href="./producto_english.php" class="dropdown__link">
                                 <i class="fa-solid fa-rectangle-list"></i> General
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./accesorios_english.php" class="dropdown__link">
+                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
+                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
+                                </svg> Accessories
                             </a>
                         </li>
 
@@ -210,9 +222,11 @@ if ($id == "" || $token == "") {
 
                         <li>
                             <a href="./delicias_english.php" class="dropdown__link">
-                                <i class="ri-cake-3-fill"></i> delights
+                                <i class="ri-cake-3-fill"></i> Delights
                             </a>
                         </li>
+                                        
+
 
                         <li>
                             <a href="./mariscos_english.php" class="dropdown__link">
@@ -223,20 +237,14 @@ if ($id == "" || $token == "") {
                         </li>
 
                         <li>
-                            <a href="./cajafestival_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
-                                    <path d="M64 32C28.7 32 0 60.7 0 96s28.7 64 64 64h1c3.7 88.9 77 160 167 160h56V128H264 88.8 64c-17.7 0-32-14.3-32-32s14.3-32 32-32H464c8.8 0 16-7.2 16-16s-7.2-16-16-16H64zM224 456c0 13.3 10.7 24 24 24h72V407.8l-64.1-22.4c-12.5-4.4-26.2 2.2-30.6 14.7s2.2 26.2 14.7 30.6l4.5 1.6C233 433.9 224 443.9 224 456zm128 23.3c36.4-3.3 69.5-17.6 96.1-39.6l-86.5-34.6c-3 1.8-6.2 3.2-9.6 4.3v69.9zM472.6 415c24.6-30.3 39.4-68.9 39.4-111c0-12.3-1.3-24.3-3.7-35.9L382.8 355.1c.8 3.4 1.2 7 1.2 10.6c0 4.6-.7 9-1.9 13.1L472.6 415zM336 128H320V320h18.3c9.9 0 19.1 3.2 26.6 8.5l133.5-92.4C471.8 172.6 409.1 128 336 128zM168 192a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
-                                </svg> Festival Box
+                             <a href="./cajafestival_english.php" class="dropdown__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#1c3a6b}</style><path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg> Festival Box
                             </a>
                         </li>
 
-                        <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
-                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> accessories
-                            </a>
-                        </li>
+                        
+                                        
+
 
 
 
@@ -257,13 +265,13 @@ if ($id == "" || $token == "") {
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./accesorios.php" class="dropdown__link">
+                            <a href="./delicias.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
+                            <a href="./delicias_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
@@ -283,6 +291,7 @@ if ($id == "" || $token == "") {
 
         </nav>
     </header>
+
     <!--FIN Cabecera de la pagina-->
 
 
@@ -326,14 +335,14 @@ if ($id == "" || $token == "") {
                             </div>
                         <?php } ?>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+                     <!--   <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+                    </button> --> 
+                    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
-                    </button>
+                    </button> -->
                 </div>
 
             </section>
@@ -370,7 +379,6 @@ if ($id == "" || $token == "") {
                     <!-- Este boton redirecciona al carrito de compras-->
                     <button class="boton_comun--b"><a href="agregarcarrito_english.php" id="enlaceBoton">Buy</a></button>
                     <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">Pay With Stripe</a></button>
-
                 </div>
                 
                     
@@ -378,13 +386,45 @@ if ($id == "" || $token == "") {
                
                 <article class=" categoria">
                     <p>Categorie:</p>
-                    <p><a href="./accesorios_english.php">
+                    <p><a href="./delicias_english.php">
                             <?php echo $categoria; ?>
                         </a></p>
                 </article>
 
             </section>
         </section>
+        <?php if (strpos($nombre, "Watt") !== false) { ?>
+
+            <section class="navegador">
+                <?php foreach ($resultado as $row) { ?>
+
+
+
+
+
+
+                    <section class="subMenu">
+
+                        <!--Aqui se define la url de la imagen, la imagen que se muestra se muestra por el id, si el id del producto coincide con el numero de la carpeta se mostrara la imagen, tambien tiene que tener nombre de "principal" y estar en formato jpg-->
+                        <?php
+
+                        $id = $row["id"];
+                        $img = "./images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                            $img = "./images/no-img.png"
+                        ?>
+                        <a class="enlaceImagen" href="detalledelicias_english.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>"><img class="imagenMuestra" src="<?php echo $img; ?>"></a>
+                    </section>
+
+
+
+
+
+
+
+                <?php } ?>
+            </section>
+        <?php } ?>
     </article>
 
     <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
@@ -402,7 +442,6 @@ if ($id == "" || $token == "") {
     </footer>
 
     <!--FIN Inicio footer-->
-
 
 
 

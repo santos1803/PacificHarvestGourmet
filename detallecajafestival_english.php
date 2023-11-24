@@ -1,23 +1,59 @@
 <?php
-
-//Configuracion para mostrar en la pagina solo los productos de la base de datos de la tabla producto cuyo valor de su fila activo sea igual a uno, sin importar la categoria
-
+//Configuracion para mostrar en la pagina solo los productos y sus detalles de la base de datos de la tabla producto cuyo valor de su fila activo sea igual a uno y la categoria sea igua a mariscos, tambien se le agrega una capa des seguridad mostrando el pruducto segun su id y token correspondiente, tambien se definen varios foramtos de imagenes para asi poder tener un carrusel dentro de esta pagina
 require './php/config.php';
 require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
+$id = isset($_GET["id"]) ? $_GET["id"] : "";
+$token = isset($_GET["token"]) ? $_GET["token"] : "";
 
+if ($id == "" || $token == "") {
+    echo "Error al procesar la peticion";
+    exit;
+} else {
+    $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
+    if ($token == $token_tmp) {
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'caja festival'  ");
+        $sql->execute([$id]);
+        if ($sql->fetchColumn() > 0) {
+            $sql = $con->prepare("SELECT name, description, precio, descuento, categorie, enlace FROM productos WHERE id=? AND activo=1 AND categorie = 'box festival'  ");
+            $sql->execute([$id]);
+            $row = $sql->fetch(PDO::FETCH_ASSOC);
+            $nombre = $row["name"];
+            $descripcion = $row["description"];
+            $categoria = $row["categorie"];
+            $precio = $row["precio"];
+            $descuento = $row["descuento"];
+            $enlace = $row["enlace"];
+            $precio_decuento = $precio - (($precio * $descuento) / 100);
+            $dir_images = './images/productos/' . $id . '/';
+            $rutaImg = $dir_images . 'principal.png';
 
+            if (!file_exists($rutaImg)) {
+                $rutaImg = './images/no-img.png';
+            }
+            $imagenes = array();
+            $dir = dir($dir_images);
 
-
+            while (($archivo = $dir->read()) != false) {
+                if ($archivo != 'principal.png' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpge')|| strpos($archivo, 'png'))) {
+                    $imagenes[] = $dir_images . $archivo;
+                }
+            }
+            $dir->close();
+        }
+    } else {
+        echo "Error al procesar la peticion";
+        exit;
+    }
+};
 
 
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -29,19 +65,16 @@ $con = $db->conectar();
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/style.scss">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/detallesproductos.css">
     <link rel="stylesheet" href="./nav_footer_css/footer.css">
     <link rel="stylesheet" href="./responsive_css/nav.css">
-    <link rel="stylesheet" href="./responsive_css/index.css">
+    <link rel="stylesheet" href="./responsive_css/detalles.css">
     <title>Pacific Harvest Gourmet</title>
     <link rel="website icon" type="svg" href="./recursos/SVGLogo.svg">
-
-
 </head>
 
 <body>
-
-    <!--Inicio de nav-->
+    <!--Inicio de Header-->
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
@@ -50,7 +83,7 @@ $con = $db->conectar();
                         <img src="./recursos/SVGLogo.svg" alt="">
                     </a>
 
-                 <!-- <a href="./agregarcarrito_english.php" class="carrito ">
+                    <!-- <a href="./agregarcarrito_english.php" class="carrito ">
                         <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
                             <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32H360V134.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-64 64c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V32H120.1C111 12.8 91.6 0 69.5 0H24zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
                         </svg>
@@ -61,7 +94,7 @@ $con = $db->conectar();
                         <?php } else { ?>
                             <span id="num_cart" class="badge bg-secondary carritosss"></span>
                         <?php } ?>
-                    </a>  -->
+                    </a>  -->  
 
                 </section>
 
@@ -134,8 +167,8 @@ $con = $db->conectar();
                         </svg>Products <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                     </div>
 
-                    <ul class="dropdown__menu">
-                         <li>
+                     <ul class="dropdown__menu">
+                        <li>
                             <a href="./producto_english.php" class="dropdown__link">
                                 <i class="fa-solid fa-rectangle-list"></i> General
                             </a>
@@ -180,7 +213,7 @@ $con = $db->conectar();
                                     <path d="M120 0h80c13.3 0 24 10.7 24 24V64H96V24c0-13.3 10.7-24 24-24zM32 151.7c0-15.6 9-29.8 23.2-36.5l24.4-11.4c11-5.1 23-7.8 35.1-7.8h90.6c12.1 0 24.1 2.7 35.1 7.8l24.4 11.4c14.1 6.6 23.2 20.8 23.2 36.5c0 14.4-7.5 27-18.9 34.1c11.5 8.8 18.9 22.6 18.9 38.2c0 16.7-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40s-8.5 31.4-21.5 40c12.9 8.6 21.5 23.3 21.5 40c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48c0-16.7 8.5-31.4 21.5-40C40.5 415.4 32 400.7 32 384s8.5-31.4 21.5-40C40.5 335.4 32 320.7 32 304s8.5-31.4 21.5-40C40.5 255.4 32 240.7 32 224c0-15.6 7.4-29.4 18.9-38.2C39.5 178.7 32 166.1 32 151.7zM96 240c0 8.8 7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm16 112c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16H112z" />
                                 </svg>
                                 Drinks
-                            </a> --> 
+                            </a> -->
                         </li>
 
                         <li>
@@ -205,13 +238,7 @@ $con = $db->conectar();
                             </a>
                         </li>
 
-                        <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
-                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Accessories
-                            </a>
-                        </li>
+                        
                                         
 
 
@@ -234,13 +261,13 @@ $con = $db->conectar();
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./index.php" class="dropdown__link">
+                            <a href="./cajafestival.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Spanish
                             </a>
                         </li>
 
                         <li>
-                            <a href="./index_english.php" class="dropdown__link">
+                            <a href="./cajafestival_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> English
                             </a>
                         </li>
@@ -260,225 +287,158 @@ $con = $db->conectar();
 
         </nav>
     </header>
+    <!--FIN Cabecera de la pagina-->
 
 
+    <!--Contenedor vacio para espacio entre el header y banner principal-->
 
-
-    <div class="vacio">
+    <div id="vacio" style="height:7vh;">
 
     </div>
-    <main class="containerPrincipal">
-        <article class="txt txt--prin">
-            <h1>One click</h1>
-            <p>Discover the taste of the canned ocean, with authentic culinary treasures from Colombia and Chile.
-                Immerse yourself in a world of canned marine flavors, carefully selected to offer you the freshness and
-                quality you deserve.</p>
-
-
-    </main>
-
-    <main class="containerPrincipal containerPrincipal--a">
-        <!-- <article class="txt">
-            <h1>Todo un click</h1>
-            <p>Descubre el sabor del océano enlatado, con auténticos tesoros culinarios de Colombia y Chile. Sumérgete
-                en un mundo de sabores marinos enlatados. </p>
-            <button class="botonPagina">LEER MAS</button>
-        </article> -->
-        <article class="prueba">
-            <h1>One click</h1>
-            <p>Discover the taste of the canned ocean, with authentic culinary treasures from Colombia and Chile.
-                Immerse yourself in a world of canned marine flavors, carefully selected to offer you the freshness and
-                quality you deserve. </p>
-            <!-- <button class="botonPagina">LEER MAS</button>         -->
-        </article>
-    </main>
-
-
-    <div class="containerSecundario">
-        <section class="flotante">
-            <article class="flotanteTxt">
-                <h1>5</h1>
-
-                <p>years</p>
-                <p>of experience</p>
+    <!--FIN Contenedor vacio para espacio entre el header y banner principal-->
 
 
 
-            </article>
-            <span class="separador"></span>
-            <article class="flotanteTxt">
-                <h1>1<sup>st</sup></h1>
 
-                <p>places </p>
-                <p>in sales</p>
+    <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
+    <div class="containerMariscos ">
 
-            </article>
-            <span class="separador"></span>
-            <article class="flotanteTxt">
-                <h1>+1</h1>
+    </div>
 
-                <p>million people</p>
-                <p>reached</p>
+    <!--FIN BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
 
 
-            </article>
-            <span class="separador"></span>
-            <article class="flotanteTxt">
-                <h1>200</h1>
+    <!--SECCION DE MUESTRA DE PRODUCTOS-->
 
-                <p>products</p>
-                <p>available</p>
+    <article class="containeres">
+        <!-- Carrusel de imagenes para que muestren diferentes fotos del mismo producto-->
+        <section class="row">
+            <section class="row_img">
+                <div id="carouselImages" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="<?php echo $rutaImg; ?>" class="d-block ">
+                        </div>
+                        <?php foreach ($imagenes as $img) { ?>
+                            <div class="carousel-item ">
 
 
+                                <img src="<?php echo $img; ?>" class="d-block ">
 
-            </article>
+                            </div>
+                        <?php } ?>
+                    </div>
+                     <!--  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button> --> -->
+                    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                </div>
+
+            </section>
+            <section class="row_txt">
+                <!-- En esta seccion mostramos nombre, precio. descuento (si lo tiene) y descripcion-->
+                <h1>
+                    <?php echo $nombre; ?>
+                </h1>
+
+                <?php if ($descuento > 0) { ?>
+                    <p class="tachado"><del>
+                            <?php echo MONEDA . number_format($precio); ?>
+                        </del></p>
+                    <h2>
+                        <?php echo MONEDA . number_format($precio_decuento); ?>
+                        <small class="text-success">
+                            <?php echo $descuento; ?>% descuento
+                        </small>
+                    </h2>
+
+                <?php } else { ?>
+
+                    <h2>
+                        <?php echo MONEDA . number_format($precio); ?>
+                    </h2>
+                <?php } ?>
+
+                <p class="lead">
+                    <?php echo $descripcion; ?>
+                </p>
+                <div class="button-hide oculto2">
+                    <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
+                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp; ?>')">Add To Cart</button>
+                    <!-- Este boton redirecciona al carrito de compras-->
+                    <button class="boton_comun--b"><a href="agregarcarrito_english.php" id="enlaceBoton">Buy</a></button>
+                    <button class="boton_comun--c"> <a href="<?php echo $enlace; ?>">Pay With Stripe</a></button>
+
+                </div>
+                
+                    
+
+               
+                <article class=" categoria">
+                    <p>Categorie:</p>
+                    <p><a href="./accesorios_english.php">
+                            <?php echo $categoria; ?>
+                        </a></p>
+                </article>
+
+            </section>
         </section>
+    </article>
 
-    </div>
-    <div class="containerTres">
-        <article>
-
-            <h2>Popular Categories</h2>
-        </article>
-        <section class="cardCategoria">
-            <article class="cardProducto">
-                <a href="./mariscos_english.php"><img src="./recursos/principal.jpg" alt="">
-                    <h5>Seafood</h5>
-                </a>
-
-
-            </article>
-            <article class="cardProducto">
-                <a href="./alimentos_english.php"><img src="./images/productos/1/principal.png" alt="">
-                    <h5>Food</h5>
-                </a>
-
-
-            </article>
-            <article class="cardProducto">
-                <a href="./condimentos_english.php"> <img src="./images/productos/13/principal.png" alt="">
-                    <h5>Condiments</h5>
-                </a>
-
-
-
-            </article>
-            <article class="cardProducto">
-                <a href="./delicias_english.php"> <img src="./images/productos/25/principal.png" alt="">
-                    <h5>delights</h5>
-                </a>
-
-
-            </article>
-
-    </div>
-
-    <div class="containerCuatro">
-        <article class="articleImg articleImg--a">
-            <img src="./recursos/pexels-photo-2696064CHEFS.jpeg" alt="">
-        </article>
-        <article class="articleImg">
-            <img src="./recursos/pexels-photo-8389882.jpeg" alt="">
-        </article>
-        <section class="textoExclusivo">
-            <article class="articleTitulo">
-
-                <h2>We are synonymous with exclusivity.</h2>
-            </article>
-            <article class="articleParrafo">
-                <p>The brand has earned an outstanding reputation for its commitment to sustainability and
-                    responsible fishing. Pacific Harvest works closely with local fishermen and uses selective
-                    fishing methods.</p>
-
-
-            </article>
-
-            <section class="listText">
-                <article class="containerSvg">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
-                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                    </svg>
-                </article>
-                <article class="containerParrafos">
-
-                    <h4>Value Service</h4>
-                    <p>Selection of Canned Seafood, such as Locos, Hedgehogs, Crabs, Snails, Machas, Smoked Choritos and Salmon in Water</p>
-
-
-
-                </article>
-
-            </section>
-            <section class="listText">
-                <article class="containerSvg">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
-                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                    </svg>
-                </article>
-                <article class="containerParrafos">
-
-                    <h4>High Gamma Products</h4>
-                    <p>Our high-end products are carefully selected by our team of experts, who ensure that they meet the highest standards of quality and safety. We work with local and international suppliers who share our vision of offering nutritious and delicious food, respecting the environment and good agricultural and livestock practices. </p>
-
-
-
-                </article>
-
-            </section>
-
-            <section class="listText">
-                <article class="containerSvg">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
-                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                    </svg>
-                </article>
-                <article class="containerParrafos">
-
-                    <h4>For you only the best</h4>
-                    <p>We want our customers to enjoy the best food, without having to leave home or spend more than necessary. We are more than an ecommerce, we are your ally for healthy and sustainable food.</p>
-
-
-
-                </article>
-
-            </section>
-
-        </section>
-
-    </div>
-    <div class="containerPrincipal containerCinco">
-        <article class="txt txt2">
-
-            <h1>We come to you</h1>
-            <p>Shipping can be carried out by different means of transport, such as ships, planes, trucks or
-                trains, depending on the distance and urgency of the shipment.</p>
+    <!--FIN SECCION DE MUESTRA DE PRODUCTOS-->
 
 
 
 
-        </article>
-    </div>
-    <footer class="footer">
+
+    <!-- fin del formulario de contacto -->
+    <footer class="footer" style="margin-top: 40px;">
         <hr class="hrFooter">
         <img src="./recursos/SVGLogo.svg" alt="">
 
 
     </footer>
 
+    <!--FIN Inicio footer-->
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
 
 
 
     <script src="./js/main.js"></script>
     <script src="https://kit.fontawesome.com/5d15e4e334.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        function addProducto(id, token) {
+
+            let url = './clases/carrito.php'
+            let formData = new FormData()
+            formData.append('id', id)
+            formData.append('token', token)
+
+            fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors',
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        let elemento = document.getElementById("num_cart")
+                        elemento.innerHTML = data.numero
+                    }
+                })
+        }
+    </script>
 
 </body>
 
