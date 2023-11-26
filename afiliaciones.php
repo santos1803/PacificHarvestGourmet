@@ -7,7 +7,7 @@ require './php/dtbbase.php';
 $db = new Database();
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'accesorios'  ");
+$sql = $con->prepare("SELECT id, nombre, precio, descuento FROM productos WHERE activo=1  AND categoria = 'Afiliaciones'  ");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -138,17 +138,12 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <ul class="dropdown__menu">
-                        <li>
-                            <a href="./producto.php" class="dropdown__link">
-                                <i class="fa-solid fa-rectangle-list"></i> General
-                            </a>
-                        </li>
 
                         <li>
-                            <a href="./accesorios.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
-                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Accesorios
+                            <a href="./Afiliaciones.php" class="dropdown__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                                </svg> Afiliaciones
                             </a>
                         </li>
 
@@ -224,13 +219,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./accesorios.php" class="dropdown__link">
+                            <a href="./Afiliaciones.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Español
                             </a>
                         </li>
 
                         <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
+                            <a href="./Afiliaciones_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> Ingles
                             </a>
                         </li>
@@ -269,7 +264,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <main class="containerPrincipal containerPrincipal--of">
         <article class="txt txt--of">
-            <h1>accesorios Imperdibles</h1>
+            <h1>Ofertas Imperdibles</h1>
             <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
 
         </article>
@@ -279,7 +274,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
 
         <article class="prueba">
-            <h1>accesorios Imperdibles</h1>
+            <h1>Ofertas Imperdibles</h1>
             <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
 
         </article>
@@ -293,7 +288,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="containerProductos">
         <article class="containerProductos_Txt">
-            <h2>Accesorios</h2>
+            <h2>Afiliaciones</h2>
             <p>Se muestran todos los productos</p>
         </article>
 
@@ -331,7 +326,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                         <article class="boton_videos boton_videos--b">
                             <!--El boton de ver mas va a redireccionar a la pagina de detalles de productos, que correspona al id del producto seleccionado-->
-                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleaccesorios.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
+                            <a class="hidden-btn hidden-btn--a btn btn--a" href="detalleAfiliaciones.php?id=<?php echo $row["id"]; ?>&token=<?php echo hash_hmac("sha1", $row["id"], KEY_TOKEN); ?>">Ver
                                     Mas</a>
                             <!--El boton de agregar carrito va aagregar y mostrar la cantidad de productos agregados en el carrito del nav y detallara los productos en la subpagina de agregar carito-->
                             <button class="hidden-btn boton_comun--b" onclick="addProducto(<?php echo $row['id']; ?>, '<?php echo hash_hmac('sha1', $row['id'], KEY_TOKEN); ?>')">Agregar
