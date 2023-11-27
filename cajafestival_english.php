@@ -136,13 +136,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                      <ul class="dropdown__menu">
 
-                        <li>
-                            <a href="./Afiliaciones.php" class="dropdown__link">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
-                                </svg> Affiliations
-                            </a>
-                        </li>
+                        
 
                         <li>
                             <a href="./alimentos_english.php" class="dropdown__link">
@@ -197,6 +191,14 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <li>
                              <a href="./cajafestival_english.php" class="dropdown__link">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#1c3a6b}</style><path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg> Festival Box
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./Afiliaciones.php" class="dropdown__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                                </svg> Affiliations
                             </a>
                         </li>
 
@@ -265,20 +267,20 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <main class="containerPrincipal containerPrincipal--of">
-        <article class="txt txt--of">
+    <main class="containerPrincipal containerPrincipal--caj">
+        <article class="txt txt--caj">
             <h1>Festival Box</h1>
-            <p>Don't miss the opportunity to acquire your favorite items at special prices. </p>
+            <p>We have gathered a unique selection of products, specially chosen to enhance your enjoyment at a price that you simply won't be able to resist.</p>
 
         </article>
 
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--r">
 
         <article class="prueba">
             <h1>Festival Box</h1>
-            <p>Don't miss the opportunity to acquire your favorite items at special prices. </p>
+            <p>We have gathered a unique selection of products, specially chosen to enhance your enjoyment at a price that you simply won't be able to resist. </p>
 
         </article>
     </main>
