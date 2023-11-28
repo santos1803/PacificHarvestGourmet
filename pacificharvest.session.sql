@@ -51,6 +51,8 @@ INSERT INTO `pacifig2_pacificharvest.session`.`productos` (`id`, `nombre`, `name
 
 INSERT INTO `pacifig2_pacificharvest.session`.`productos` (`id`, `nombre`, `name`, `descripcion`, `description`, `precio`, `descuento`, `categoria`, `categorie`, `subcategoria`, `subcategory`, `enlace`, `activo`, `created_by`) VALUES (NULL, 'Caja Festival', 'Christmas box', '<p>Caja Festival que contiene 1 lata de Locos  + 1 Salmón + 1 Choritos Ahumados + 1 Choritos.</p>', '<p>Christmas box containing 1 can of Locos  + 1 Salmon + 1 Smoked Choritos + 1 Choritos.</p>', '1', '0', 'caja festival', 'box festival', '', '', '#', '1', '');
 
+INSERT INTO `productos` (`id`, `nombre`, `name`, `descripcion`, `description`, `precio`, `descuento`, `categoria`, `categorie`, `subcategoria`, `subcategory`, `enlace`, `activo`, `created_by`) VALUES (NULL, 'Salmón en Agua', 'Salmon in Water', '<p>\r\nDescubra el placer de deleitar su paladar con lo mejor del salmón. \r\n</p>\r\n', '<p>\r\nExperience the pleasure of delighting your palate with the finest salmon.\r\n</p>', '1', '0', 'mariscos', 'seafood', '', '', '#', '1', '');
+
 
 
 
