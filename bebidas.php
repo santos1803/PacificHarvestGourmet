@@ -332,7 +332,7 @@ $resultados = $sqls->fetchAll(PDO::FETCH_ASSOC);
                         </h2>
                         <article class="seccion_descuento">
                             <p class="pricess">
-                                <?php echo number_format($row["precio"]); ?>$
+                                <?php echo number_format($row["precio"]); ?>
                             </p>
                         </article>
 

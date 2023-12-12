@@ -17,7 +17,7 @@ define("CLIENT_ID", "Acmruvy51w90R7yfdzmn3j2oZSYIpFpzKztFOU0twdW6XWPBXFpcWv3459J
     define("KEY_TOKEN", "APR-rap.1234");
 
 //MONEDA se usa para agregar el simbolo $ a los productos
-    define("MONEDA", "$");
+    define("MONEDA", " ");
 
 
 // Aqui definimos parametros para enviar email
