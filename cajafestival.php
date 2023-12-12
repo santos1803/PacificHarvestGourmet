@@ -138,19 +138,8 @@ $resultado = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <ul class="dropdown__menu">
-                        <li>
-                            <a href="./producto.php" class="dropdown__link">
-                                <i class="fa-solid fa-rectangle-list"></i> General
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="./accesorios.php" class="dropdown__link">
-                                <svg style="fill: #1c3a6b;" xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 384 512">
-                                    <path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
-                                </svg> Accesorios
-                            </a>
-                        </li>
+                      
 
                         <li>
                             <a href="./alimentos.php" class="dropdown__link">
@@ -206,6 +195,14 @@ $resultado = $sqlss->fetchAll(PDO::FETCH_ASSOC);
                             </a>
                         </li>
 
+                        <li>
+                            <a href="./Afiliaciones.php" class="dropdown__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                                </svg> Afiliaciones
+                            </a>
+                        </li>
+
 
                     </ul>
                 </li>
@@ -224,13 +221,13 @@ $resultado = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
                     <ul class="dropdown__menu">
                         <li>
-                            <a href="./accesorios.php" class="dropdown__link">
+                            <a href="./cajafestival.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/espana.png" alt=""> Español
                             </a>
                         </li>
 
                         <li>
-                            <a href="./accesorios_english.php" class="dropdown__link">
+                            <a href="./cajafestival_english.php" class="dropdown__link">
                                 <img class="flag_language" src="./recursos/estados-unidos.png" alt=""> Ingles
                             </a>
                         </li>
@@ -267,20 +264,20 @@ $resultado = $sqlss->fetchAll(PDO::FETCH_ASSOC);
 
     <!--BANNER PRINCIPAL PARA LA SECCION DE MARISCOS-->
 
-    <main class="containerPrincipal containerPrincipal--of">
-        <article class="txt txt--of">
+    <main class="containerPrincipal containerPrincipal--caj">
+        <article class="txt txt--caj">
             <h1>Caja Festival</h1>
-            <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
+            <p> Hemos reunido una selección única de productos, especialmente elegidos para potenciar tu goce a un precio que simplemente no podrás resistir.</p>
 
         </article>
 
     </main>
 
-    <main class="containerPrincipal containerPrincipal--a containerPrincipal--j">
+    <main class="containerPrincipal containerPrincipal--a containerPrincipal--r">
 
         <article class="prueba">
             <h1>Caja Festival</h1>
-            <p>No te pierdas la oportunidad de adquirir tus artículos favoritos a precios especiales. </p>
+            <p> Hemos reunido una selección única de productos, especialmente elegidos para potenciar tu goce a un precio que simplemente no podrás resistir. </p>
 
         </article>
     </main>

@@ -237,6 +237,11 @@
     font-weight: initial;
     transition: transform .4s;
   }
+
+  .producto_azul {
+    text-decoration: none;
+    color: #1c3a6b;
+  }
   
   .dropdown__link, 
   .dropdown__sublink {
