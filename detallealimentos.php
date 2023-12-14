@@ -343,10 +343,10 @@ if ($id == "" || $token == "") {
 
                 <?php if ($descuento > 0) { ?>
                     <p class="tachado"><del>
-                            <?php echo MONEDA . number_format($precio); ?>
+                            <?php echo MONEDA . number_format($precio, 2, ".", ","); ?>
                         </del></p>
                     <h2>
-                        <?php echo MONEDA . number_format($precio_decuento); ?>
+                        <?php echo MONEDA . number_format($precio_decuento, 2, ".", ","); ?>
                         <small class="text-success">
                             <?php echo $descuento; ?>% descuento
                         </small>
@@ -355,7 +355,7 @@ if ($id == "" || $token == "") {
                 <?php } else { ?>
 
                     <h2>
-                        <?php echo MONEDA . number_format($precio); ?>
+                        <?php echo MONEDA . number_format($precio, 2, ".", ","); ?>
                     </h2>
                 <?php } ?>
 
